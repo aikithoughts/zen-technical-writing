@@ -6,3 +6,5 @@ language = "en"
 additional-css = ["theme/custom.css"]
 default-theme = "light"
 preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/aikithoughts/zen-technical-writing"
+edit-url-template = "https://github.com/aikithoughts/zen-technical-writing/edit/main/{path}"

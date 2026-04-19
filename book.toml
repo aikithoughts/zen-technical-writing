@@ -1,0 +1,8 @@
+[book]
+title = "Zen and the Art of Technical Writing"
+authors = ["Dave Shevitz"]
+language = "en"
+[output.html]
+additional-css = ["theme/custom.css"]
+default-theme = "light"
+preferred-dark-theme = "navy"

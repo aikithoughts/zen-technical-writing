@@ -1,0 +1,572 @@
+/* ===========================================================
+   Zen and the Art of Technical Writing — custom theme
+   Matches daveshevitz.com design system:
+   - Newsreader serif for display, Source Sans 3 for body
+   - Warm off-white (#faf9f6), forest green accent (#1a4a3a)
+   - Light, generous, editorial
+   =========================================================== */
+
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400;1,600&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+/* ---- Color palette (light theme / default) ---- */
+:root {
+    --sidebar-width: 280px;
+    --page-padding: 24px;
+    --content-max-width: 680px;
+    --menu-bar-height: 50px;
+}
+
+.light, html:not(.js) {
+    /* Background & surfaces */
+    --bg: #faf9f6;
+    --fg: #2c2c2c;
+    --sidebar-bg: #f3f1ec;
+    --sidebar-fg: #2c2c2c;
+    --sidebar-non-existant: #aaaaaa;
+    --sidebar-active: #1a4a3a;
+    --sidebar-spacer: #d4d0c8;
+    --scrollbar: #d4d0c8;
+
+    /* Code blocks */
+    --icons: #5a5a5a;
+    --icons-hover: #1a4a3a;
+    --theme-popup-bg: #faf9f6;
+    --theme-popup-border: #d4d0c8;
+    --theme-hover: #e8f0ec;
+
+    /* Quotes and inline styles */
+    --quote-bg: #e8f0ec;
+    --quote-border: #1a4a3a;
+    --table-border-color: #d4d0c8;
+    --table-header-bg: #e8f0ec;
+    --table-alternate-bg: #f3f1ec;
+
+    /* Links */
+    --links: #1a4a3a;
+
+    /* Inline code */
+    --inline-code-color: #1a4a3a;
+
+    /* Search */
+    --searchbar-border-color: #d4d0c8;
+    --searchbar-bg: #faf9f6;
+    --searchbar-fg: #2c2c2c;
+    --searchbar-shadow-color: rgba(0, 0, 0, 0.08);
+    --searchresults-header-fg: #5a5a5a;
+    --searchresults-border-color: #d4d0c8;
+    --searchresults-li-bg: #f3f1ec;
+    --search-mark-bg: #e8f0ec;
+}
+
+/* ---- Dark theme override (for readers who prefer dark mode) ---- */
+.navy, .coal, .ayu {
+    --bg: #1a1f1c;
+    --fg: #e8e8e5;
+    --sidebar-bg: #141815;
+    --sidebar-fg: #c9c9c5;
+    --sidebar-active: #7fb79f;
+    --sidebar-spacer: #2c332d;
+    --links: #7fb79f;
+    --quote-bg: #22312a;
+    --quote-border: #7fb79f;
+    --inline-code-color: #7fb79f;
+}
+
+/* ---- Typography ---- */
+html {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+    font-family: 'Source Sans 3', -apple-system, sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.content main {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+/* Headings — Newsreader serif, matching site */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    margin-top: 2em;
+    margin-bottom: 0.6em;
+    line-height: 1.25;
+}
+
+.content h1 {
+    font-size: 2.4rem;
+    letter-spacing: -0.02em;
+    margin-top: 0.2em;
+    margin-bottom: 0.8em;
+    line-height: 1.15;
+}
+
+.content h2 {
+    font-size: 1.7rem;
+    margin-top: 2.2em;
+}
+
+.content h3 {
+    font-size: 1.3rem;
+}
+
+.content h4 {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* Body paragraphs */
+.content p {
+    margin-bottom: 1.1em;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Strong / bold */
+.content strong,
+.content b {
+    font-weight: 600;
+}
+
+/* Italics in Newsreader for that editorial feel when they appear in headings */
+.content em,
+.content i {
+    font-style: italic;
+}
+
+/* ---- Links ---- */
+.content a,
+.content a:visited {
+    color: var(--links);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.content a:hover {
+    border-bottom-color: var(--links);
+}
+
+/* ---- Blockquotes — styled like the book callout on daveshevitz.com ---- */
+.content blockquote {
+    background: var(--quote-bg);
+    border-left: 3px solid var(--quote-border);
+    padding: 20px 24px;
+    margin: 1.8em 0;
+    font-style: italic;
+    font-family: 'Newsreader', Georgia, serif;
+    color: var(--fg);
+}
+
+.content blockquote p {
+    margin-bottom: 0.6em;
+}
+
+.content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---- Horizontal rules ---- */
+.content hr {
+    border: none;
+    border-top: 1px solid var(--sidebar-spacer);
+    margin: 2.4em 0;
+}
+
+/* ---- Lists ---- */
+.content ul,
+.content ol {
+    margin-bottom: 1.1em;
+    padding-left: 1.4em;
+}
+
+.content li {
+    margin-bottom: 0.4em;
+}
+
+/* ---- Inline code and code blocks ---- */
+.content code {
+    font-family: 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+    font-size: 0.92em;
+    color: var(--inline-code-color);
+    background: var(--quote-bg);
+    padding: 1px 6px;
+    border-radius: 3px;
+}
+
+.content pre {
+    background: var(--sidebar-bg);
+    padding: 16px 20px;
+    border-radius: 4px;
+    border: 1px solid var(--sidebar-spacer);
+    overflow-x: auto;
+    margin: 1.4em 0;
+}
+
+.content pre code {
+    background: none;
+    padding: 0;
+    color: var(--fg);
+    font-size: 0.9em;
+}
+
+/* ---- Tables ---- */
+.content table {
+    border-collapse: collapse;
+    margin: 1.6em 0;
+    width: 100%;
+}
+
+.content th,
+.content td {
+    padding: 10px 14px;
+    border: 1px solid var(--table-border-color);
+    text-align: left;
+}
+
+.content th {
+    background: var(--table-header-bg);
+    font-weight: 600;
+    font-family: 'Newsreader', Georgia, serif;
+}
+
+.content tbody tr:nth-child(even) {
+    background: va<style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-bg: #faf9f6;
+            --color-text: #2c2c2c;
+            --color-text-light: #5a5a5a;
+            --color-accent: #1a4a3a;
+            --color-accent-light: #e8f0ec;
+            --color-rule: #d4d0c8;
+            --color-link: #1a4a3a;
+            --color-link-hover: #0d2e24;
+            --font-serif: 'Newsreader', Georgia, serif;
+            --font-sans: 'Source Sans 3', -apple-system, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-weight: 300;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 80px 24px 60px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 48px 20px 40px;
+            }
+        }
+
+        .name {
+            font-family: var(--font-serif);
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            color: var(--color-text);
+            margin-bottom: 6px;
+        }
+
+        .tagline {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--color-text-light);
+            margin-bottom: 40px;
+        }
+
+        .rule {
+            border: none;
+            border-top: 1px solid var(--color-rule);
+            margin: 36px 0;
+        }
+
+        .bio p {
+            margin-bottom: 18px;
+            color: var(--color-text);
+        }
+
+        .bio p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bio strong {
+            font-weight: 600;
+        }
+
+        .book {
+            background: var(--color-accent-light);
+            border-left: 3px solid var(--color-accent);
+            padding: 20px 24px;
+            margin: 36px 0;
+        }
+
+        .book-title {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            color: var(--color-accent);
+        }
+
+        .book p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
+        }
+
+        .links-heading {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: var(--color-text);
+        }
+
+        .link-list {
+            list-style: none;
+        }
+
+        .link-list li {
+            margin-bottom: 10px;
+        }
+
+        .link-list a {
+            color: var(--color-link);
+            text-decoration: none;
+            font-weight: 400;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .link-list a:hover {
+            border-bottom-color: var(--color-link);
+        }
+
+        .writing-list {
+            list-style: none;
+        }
+
+        .writing-list li {
+            margin-bottom: 18px;
+        }
+
+        .writing-list a {
+            display: block;
+            color: var(--color-text);
+            text-decoration: none;
+            padding: 16px 20px;
+            border: 1px solid var(--color-rule);
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .writing-list a:hover {
+            border-color: var(--color-accent);
+            background-color: var(--color-accent-light);
+        }
+
+        .writing-title {
+            display: block;
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+            color: var(--color-link);
+        }
+
+        .writing-desc {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
+        .arrow {
+            font-size: 0.85em;
+            opacity: 0.5;
+            margin-left: 2px;
+        }
+
+        .contact {
+            margin-top: 0;
+        }
+
+        .contact a {
+            color: var(--color-link);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .contact a:hover {
+            border-bottom-color: var(--color-link);
+        }
+
+        footer {
+            margin-top: 48px;
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+    </style>r(--table-alternate-bg);
+}
+
+/* ---- Sidebar (table of contents) ---- */
+.sidebar {
+    font-family: 'Source Sans 3', -apple-system, sans-serif;
+    font-weight: 400;
+    font-size: 1.55rem;
+}
+
+.sidebar .sidebar-scrollbox {
+    padding: 20px 16px;
+}
+
+.chapter {
+    line-height: 1.5;
+}
+
+.chapter li.chapter-item {
+    margin: 4px 0;
+}
+
+.chapter li a {
+    color: var(--sidebar-fg);
+    padding: 4px 8px;
+    border-radius: 3px;
+    transition: background-color 0.15s ease;
+}
+
+.chapter li a:hover {
+    background: var(--theme-hover);
+    text-decoration: none;
+}
+
+.chapter li a.active {
+    color: var(--sidebar-active);
+    font-weight: 600;
+    background: var(--theme-hover);
+}
+
+/* Part titles (the lines with # in SUMMARY.md) */
+.chapter li.part-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--sidebar-fg);
+    margin-top: 18px;
+    margin-bottom: 6px;
+    padding: 0 8px;
+    font-size: 1.55rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.chapter li.spacer {
+    border-top: 1px solid var(--sidebar-spacer);
+    margin: 12px 8px;
+}
+
+/* ---- Menu bar (top) ---- */
+.menu-bar {
+    background: var(--bg);
+    border-bottom: 1px solid var(--sidebar-spacer);
+}
+
+.menu-bar,
+.menu-bar:hover,
+.menu-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--fg);
+}
+
+.icon-button {
+    color: var(--icons);
+}
+
+.icon-button:hover {
+    color: var(--icons-hover);
+}
+
+/* ---- Navigation chevrons (prev/next chapter) ---- */
+.nav-chapters {
+    color: var(--icons);
+    transition: color 0.2s ease;
+}
+
+.nav-chapters:hover {
+    color: var(--icons-hover);
+    text-decoration: none;
+}
+
+/* ---- Search ---- */
+#searchbar {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem;
+}
+
+.searchresults-header {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 600;
+}
+
+/* ---- Responsive tweaks ---- */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .content main {
+        padding: 24px 20px 40px;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.4rem;
+    }
+}

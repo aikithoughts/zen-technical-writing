@@ -6,14 +6,14 @@
 
 # Part One: The Journey
 
-- [Introduction](./part-one.md)
+- [Interlude](./part-one.md)
 - [Chapter 1: The Dinner Party](./chapter-01.md)
 - [Chapter 2: Learning the Craft](./chapter-02.md)
 - [Chapter 3: The Promotion](./chapter-03.md)
 
 # Part Two: The Framework
 
-- [Introduction](./part-two.md)
+- [Interlude](./part-two.md)
 - [Chapter 4: The Six Characteristics](./chapter-04.md)
 - [Chapter 5: On Accuracy](./chapter-05.md)
 - [Chapter 6: On Completeness](./chapter-06.md)
@@ -24,7 +24,7 @@
 
 # Part Three: Putting It Together
 
-- [Introduction](./part-three.md)
+- [Interlude](./part-three.md)
 - [Chapter 11: Trade-offs](./chapter-11.md)
 - [Chapter 12: Measurement](./chapter-12.md)
 - [Chapter 13: Applying the Framework](./chapter-13.md)

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+
+  <!-- Gapped circle — black, thicker -->
+  <circle cx="200" cy="180" r="110"
+          fill="none"
+          stroke="#2c2c2c"
+          stroke-width="12"
+          transform="rotate(3, 200, 180)"
+          stroke-dasharray="662 29"
+          stroke-dashoffset="107"
+          stroke-linecap="round"/>
+
+  <!-- Horizon line — ~30% up from the bottom of the circle -->
+  <line x1="99" y1="224" x2="301" y2="224"
+        stroke="#2c2c2c" stroke-width="4"/>
+
+  <!-- Title -->
+  <text x="200" y="345" text-anchor="middle"
+        font-family="Georgia, 'Newsreader', serif"
+        font-size="26" font-weight="600"
+        letter-spacing="-0.5"
+        fill="#2c2c2c">Zen and the Art of</text>
+  <text x="200" y="380" text-anchor="middle"
+        font-family="Georgia, 'Newsreader', serif"
+        font-size="26" font-weight="600"
+        letter-spacing="-0.5"
+        fill="#2c2c2c">Technical Writing</text>
+
+  <!-- Thin rule -->
+  <line x1="160" y1="400" x2="240" y2="400"
+        stroke="#d4d0c8" stroke-width="1"/>
+
+  <!-- Author -->
+  <text x="200" y="430" text-anchor="middle"
+        font-family="Georgia, 'Newsreader', serif"
+        font-size="15" font-style="italic"
+        fill="#5a5a5a">Dave Shevitz</text>
+</svg>

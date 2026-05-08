@@ -1,5 +1,6 @@
 # Summary
 
+[Cover](./cover.md)
 [Prologue](./prologue.md)
 [How to Read This Book](./how-to-read.md)
 

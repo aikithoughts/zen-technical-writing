@@ -8,7 +8,7 @@ I approached this the way I'd seen engineers tackle complex problems: break it d
 
 Over the years that followed, I began to identify patterns in what made content genuinely useful versus merely accurate. I noticed that quality wasn't a single characteristic but rather multiple dimensions that worked together. Some content could be perfectly accurate but still fail users. Other content could be complete and well-organized but lack meaning for its intended audience.
 
-Through analyzing what worked and what didn't across different contexts and products, a pattern emerged. What emerged was a framework built around six core characteristics that, when working together, create content that truly serves users: Accuracy, Completeness, Conciseness, Discoverability, Consistency, and Meaning.
+Through analyzing what worked and what didn't across different contexts and products, a pattern emerged. What emerged was a framework built around six characteristics that, when working together, create content that truly serves users: Accuracy, Completeness, Conciseness, Discoverability, Consistency, and Meaning.
 
 ## The Six Characteristics {#the-six-characteristics}
 
@@ -26,7 +26,7 @@ Meaning serves as the foundation for all the others. Content can be accurate, co
 
 ## Why This Framework Matters {#why-this-framework-matters}
 
-This framework gives us the language to move beyond vague assessments of content quality. Instead of saying "this documentation feels confusing," we can identify that it has a discoverability problem—users can't find what they need or don't know where to go next. Instead of requesting "better docs," product teams can specify whether they need help with accuracy (getting the facts right), completeness (covering the right user scenarios), or meaning (connecting to user goals).
+This framework gives us the language to move beyond vague assessments of content quality. Instead of saying "this documentation feels confusing," we can identify that it has a Discoverability problem—users can't find what they need or don't know where to go next. Instead of requesting "better docs," product teams can specify whether they need help with Accuracy (getting the facts right), Completeness (covering the right user scenarios), or Meaning (connecting to user goals).
 
 For technical writers, this framework provides a systematic way to evaluate and improve content. Rather than relying on intuition alone, we can assess content across each dimension and identify specific areas for improvement.
 

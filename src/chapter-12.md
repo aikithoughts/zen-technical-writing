@@ -42,7 +42,18 @@ We had to move on to other topics, but this exchange always stuck with me.
 
 ## The Iron Triangle {#the-iron-triangle}
 
-Many of us know about the Iron Triangle for project management. If you’re not familiar with it, the triangle looks like this:
+Many of us know about the Iron Triangle for project management. If you're not familiar with it, the triangle looks like this:
+
+<svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1em auto;">
+  <!-- Triangle -->
+  <polygon points="150,20 280,230 20,230" fill="none" stroke="#333" stroke-width="2"/>
+  <!-- Corner labels -->
+  <text x="150" y="14" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#333">Scope</text>
+  <text x="10" y="250" text-anchor="start" font-family="sans-serif" font-size="14" font-weight="bold" fill="#333">Budget</text>
+  <text x="290" y="250" text-anchor="end" font-family="sans-serif" font-size="14" font-weight="bold" fill="#333">Schedule</text>
+  <!-- Center label -->
+  <text x="150" y="160" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#555">Quality</text>
+</svg>
 
 This triangle shows (or makes the case that) the quality of work is constrained by three criteria: scope, schedule, and budget. As you saw in my response to my interviewer (and I’m sure my interviewer knew where I was going with my questions), when asked when I could get something done, I asked about two of these three constraints: schedule (”Can we push out the date?”) and budget (”Can we hire more people?”).
 
@@ -103,4 +114,4 @@ The goal is to make documentation quality a continuous practice rather than a pe
 
 ## Summing up {#summing-up}
 
-"That interview conversation always reminds me that quality is a trajectory, not a fixed state. It reminds me that I need to balance my drive to improve the documentation experience (something that I will always consider to be of high priority) with my understanding that this experience may not always align with my team's objectives. Simultaneously, it is part of my role to ensure that the quality trajectory of our content is always trending up—through continuous attention to the six characteristics, through partnership with engineering, through regular maintenance rather than periodic heroics—making our users' lives better and their efforts more successful.
+That interview conversation always reminds me that quality is a trajectory, not a fixed state. It reminds me that I need to balance my drive to improve the documentation experience (something that I will always consider to be of high priority) with my understanding that this experience may not always align with my team's objectives. Simultaneously, it is part of my role to ensure that the quality trajectory of our content is always trending up—through continuous attention to the six characteristics, through partnership with engineering, through regular maintenance rather than periodic heroics—making our users' lives better and their efforts more successful.

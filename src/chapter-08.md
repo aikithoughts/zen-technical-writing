@@ -6,7 +6,7 @@ But conciseness isn't just about using fewer words. It's about conveying your me
 
 The challenge is that most writers, when they try to be concise, fall into one of two traps. They either strip away so much that their writing becomes cold and mechanical, or they swing in the opposite direction and add so much personality and explanation that they bury their message in unnecessary words. Both approaches fail because they misunderstand what conciseness is really about.
 
-While our previous discussions of accuracy and completeness operated at the content and topic level, conciseness drops us down to the section, paragraph, and sentence level. This is where the rubber meets the road in terms of user experience—where individual sentences either help or hinder comprehension, where word choices either build or erode trust, and where tone either supports or undermines your message.
+While our previous discussions of Accuracy and Completeness operated at the content and topic level, conciseness drops us down to the section, paragraph, and sentence level. This is where the rubber meets the road in terms of user experience—where individual sentences either help or hinder comprehension, where word choices either build or erode trust, and where tone either supports or undermines your message.
 
 ## The False Economy of Extreme Brevity {#the-false-economy-of-extreme-brevity}
 
@@ -132,7 +132,7 @@ However, there's an important caveat when applying coding principles to writing.
 
 While conciseness primarily operates at the sentence and paragraph level, the principles can influence broader content architecture decisions. When you consistently write concisely, you might discover that you need fewer topics than originally planned, or that information can be organized more efficiently.
 
-However, these broader implications are secondary to the primary goal of sentence-level clarity. The completeness framework we discussed earlier provides better guidance for topic-level decisions. Conciseness is most valuable when applied to how you express ideas within those topics, not whether those topics should exist at all.
+However, these broader implications are secondary to the primary goal of sentence-level clarity. The Completeness framework we discussed earlier provides better guidance for topic-level decisions. Conciseness is most valuable when applied to how you express ideas within those topics, not whether those topics should exist at all.
 
 ## Practical Application {#practical-application}
 

@@ -87,7 +87,7 @@ The solution isn't to provide exhaustive context for every piece of content—th
 
 ## Testing for Meaning {#testing-for-meaning}
 
-Unlike the other characteristics of quality, meaning can't be evaluated purely through analytical review. You can audit content for accuracy, completeness, or consistency, but meaning requires observing how real users interact with real content in real contexts.
+Unlike the other characteristics of quality, meaning can't be evaluated purely through analytical review. You can audit content for Accuracy, Completeness, or Consistency, but Meaning requires observing how real users interact with real content in real contexts.
 
 The good news is that you don't need massive user research studies to test for meaning. Jakob Nielsen's research showed that testing with just 5 users can identify 85% of usability problems, and similar principles apply to content meaning. The most striking truth is that zero users give zero insights. As soon as you collect data from a single test user, your insights shoot up and you have already learned almost a third of all there is to know about whether your content creates meaning for users.
 
@@ -112,7 +112,7 @@ The AI technique isn't a replacement for user testing, but it's a useful prelimi
 
 Sometimes creating meaningful content requires trade-offs with other aspects of quality. Meaning might require more explanation than pure conciseness would suggest. It might require organizing content in ways that feel less complete from a feature-coverage perspective. It might require inconsistency in how deeply different topics are covered.
 
-These trade-offs can be uncomfortable for teams used to optimizing for other characteristics. But meaning should usually win these conflicts, because meaningless content can't achieve its purpose regardless of how well it performs in otheron other dimensions.
+These trade-offs can be uncomfortable for teams used to optimizing for other characteristics. But meaning should usually win these conflicts, because meaningless content can't achieve its purpose regardless of how well it performs on other dimensions.
 
 I learned this lesson during a project documenting complex data processing workflows. The most accurate and complete approach would have been to document each processing step in isolation, with comprehensive coverage of all options and configurations. But this approach would have made it nearly impossible for users to understand how the steps connected to solve their actual data problems.
 

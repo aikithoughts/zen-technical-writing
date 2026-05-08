@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 40 280 280">
+  <!-- Gapped circle -->
+  <circle cx="200" cy="180" r="110"
+          fill="none"
+          stroke="#2c2c2c"
+          stroke-width="12"
+          transform="rotate(3, 200, 180)"
+          stroke-dasharray="662 29"
+          stroke-dashoffset="107"
+          stroke-linecap="round"/>
+  <!-- Horizon line -->
+  <line x1="99" y1="224" x2="301" y2="224"
+        stroke="#2c2c2c" stroke-width="4"/>
+</svg>

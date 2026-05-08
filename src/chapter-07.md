@@ -1,115 +1,149 @@
-# Chapter 7: On Completeness {#chapter-7:-on-completeness}
+# Chapter 7: On Conciseness {#chapter-7:-on-conciseness}
 
-Ask most technical writers what makes documentation complete, and they'll give you a laundry list: comprehensive feature coverage, exhaustive API references, detailed troubleshooting guides, multiple examples for every use case. This approach treats completeness as an inventory problem—if you document everything that exists, you've achieved completeness.
+When most people think about conciseness in technical writing, they imagine it as a simple editing exercise: cut unnecessary words, shorten sentences, eliminate redundancy. This approach treats conciseness as purely about brevity—fewer words equals better writing.
 
-But this misses the fundamental question: complete for whom, and for what purpose?
+But conciseness isn't just about using fewer words. It's about conveying your meaning with the fewest words possible while still achieving your communication goals. And those goals extend far beyond just transmitting information—they include building trust, maintaining engagement, and respecting your reader's time and cognitive load.
 
-After working with dozens of product teams across different industries and maturity stages, I've learned that completeness isn't about documenting everything that's possible. It's about documenting everything that's necessary for your users to succeed in their specific contexts. And those contexts vary dramatically based on where your product is in its lifecycle, who your users are, and what they're trying to accomplish.
+The challenge is that most writers, when they try to be concise, fall into one of two traps. They either strip away so much that their writing becomes cold and mechanical, or they swing in the opposite direction and add so much personality and explanation that they bury their message in unnecessary words. Both approaches fail because they misunderstand what conciseness is really about.
 
-The traditional approach to completeness creates several predictable problems. Teams exhaust themselves trying to document every feature and edge case, often before they understand which features actually matter to users. Writers create comprehensive reference materials that nobody reads because they don't match how people actually work. Documentation becomes a reflection of the product's complexity rather than a bridge to the user's success.
+While our previous discussions of Accuracy and Completeness operated at the content and topic level, conciseness drops us down to the section, paragraph, and sentence level. This is where the rubber meets the road in terms of user experience—where individual sentences either help or hinder comprehension, where word choices either build or erode trust, and where tone either supports or undermines your message.
 
-There's a more strategic way to think about completeness—one that adapts to your product's reality and serves your users' actual needs.
+## The False Economy of Extreme Brevity {#the-false-economy-of-extreme-brevity}
 
-## Completeness Across Product Maturity {#completeness-across-product-maturity}
+Consider this example of a letter thanking an aunt for a gift:
 
-Just as accuracy requirements change as products evolve, so does the definition of completeness. The completeness standard that makes sense for a mature enterprise platform would be wasteful and counterproductive for a startup's MVP.
+"Dear Aunt Jane,
 
-For newer products, completeness means thoroughly documenting the specific scenarios that comprise your minimally viable product. These are the user journeys that you've validated, tested, and committed to supporting. Everything else is speculation.
+Thank you for the sweater. It's a lovely shade of blue. I love how warm it is, and it fits perfectly. I know I'll wear it for years to come.
 
-When working on documentation for early-stage products, completeness doesn't mean documenting every possible integration or advanced workflow. It means making sure users can successfully complete the core scenarios that define your product's value proposition. Those fundamental use cases need to be documented completely and clearly. Advanced features and edge cases can wait until the product and user base mature.
+Love,
 
-This focused approach to completeness serves both users and the product team. Users get reliable guidance for the workflows that actually work well. The product team avoids over-committing to features that might change or disappear. Resources go toward perfecting the core experience rather than documenting theoretical possibilities.
+Dave"
 
-As products mature and stabilize, the definition of completeness naturally expands. Your user base grows more diverse, with different skill levels and use cases. Features that were experimental become foundational. Edge cases that affected few users in the early days now impact thousands of users.
+Following conciseness to its extreme, you might revise this to:
 
-But even for mature products, completeness remains strategic rather than exhaustive. Amazon Web Services has thousands of features across hundreds of services, but their documentation doesn't try to document every possible combination and configuration. Instead, they focus completeness efforts on the workflows that drive the most user success and business value.
+"Aunt Jane:
 
-The key insight is that completeness should scale with your product's proven value, not its theoretical capabilities. Document completely what you know works well and supports reliably. Be more selective about scenarios that are possible but not yet proven or prioritized.
+Thank you for the sweater. It is:
 
-## User-Centric Completeness {#user-centric-completeness}
+* Warm
 
-Completeness also varies dramatically based on who your users are and what they're trying to accomplish. What feels complete to a power user will overwhelm a beginner. What seems comprehensive to a developer might be useless to a business user. Even for highly technical documentation, completeness is ultimately about user success, not feature coverage.
+* Blue
 
-Consider database documentation. For a database administrator setting up a new cluster, completeness means detailed coverage of installation, configuration, security settings, monitoring, backup procedures, and disaster recovery. Missing any of these topics leaves them unable to deploy the database safely in production.
+* Well-fitting
 
-For an application developer who just needs to store and retrieve data, completeness means clear guidance on connecting to the database, executing queries, handling errors, and managing connections efficiently. They don't need the DBA-level details about cluster configuration—including that information actually makes the documentation less complete from their perspective because it obscures what they need to know.
+I will wear it for at least two years.
 
-For a data analyst who needs to extract insights from stored data, completeness means comprehensive coverage of query syntax, functions, performance optimization, and data export options. Installation and configuration details are irrelevant to their success.
+Dave"
 
-Same database, same feature set, but three completely different definitions of completeness based on user goals and contexts.
+The second version is undeniably more concise. It uses fewer words, eliminates subjective language, and presents information more efficiently. But it's also a terrible letter. Aunt Jane isn't going to send you anything else any time soon.
 
-This user-centric view of completeness explains why so much technically comprehensive documentation fails to help users accomplish their actual work. The documentation covers everything about the product, but it doesn't cover everything the user needs to be successful with the product.
+This example illustrates the fundamental problem with treating conciseness as pure word reduction. The goal isn't to minimize word count—it's to maximize communication effectiveness. Sometimes that requires more words, not fewer. Sometimes personality and warmth are essential to your message, not obstacles to it.
 
-The most effective documentation teams I've worked with start by mapping user journeys rather than product features. They identify the key scenarios that each user type needs to complete successfully, then ensure those scenarios are documented completely from the user's perspective. Features that don't serve those core journeys get secondary treatment, regardless of how sophisticated or impressive they might be from a technical standpoint.
+The same principle applies to technical writing. Users aren't just trying to extract information from your documentation—they're trying to accomplish goals, solve problems, and build confidence in your product. Pure brevity can undermine these objectives just as much as excessive verbosity.
 
-## The Content Void Problem {#the-content-void-problem}
+## The Three Extremes of Technical Writing Style {#the-three-extremes-of-technical-writing-style}
 
-Even when teams understand that completeness should be user-focused and maturity-appropriate, they often fall into a predictable pattern that creates what I call the "content void”  of documentation completeness.
+When it comes to conciseness in technical writing, I find it helpful to think about three distinct styles that represent different approaches to balancing brevity with communication effectiveness.
 
-Teams love to create quickstarts. These short, "hello world" topics give teams a quick adrenaline rush of writing something clearly valuable. And it's true—a good quickstart is genuinely helpful to new users. It proves that your product works and gives people confidence to explore further.
+### Academic Writing {#academic-writing}
 
-Teams also love to write deep technical tutorials. These are weighty, comprehensive topics that showcase the full power of whatever they're building. Teams love them because they demonstrate impressive capabilities and complex use cases. But if I'm being honest, they also love writing them because they get to show off their own knowledge and technical sophistication.
+Anyone who went to high school or college knows what academic writing sounds like. It's formal, precise, and often unnecessarily complex. Interestingly enough, many of the conventions we associate with academic writing exist because, historically, academics wanted to make people work to understand what they were saying. Complexity was a feature, not a bug—it demonstrated sophistication and seriousness.
 
-What about the content in between? That content frequently gets left behind, because it's harder than writing a quickstart, and nowhere near as exciting as writing an in-depth tutorial. The quickstart can be knocked out in an afternoon. The comprehensive tutorial feels like a significant accomplishment that demonstrates expertise. But the middle content requires understanding user progression, breaking down complex workflows, and creating stepping stones that aren't as flashy but are absolutely critical for user success.
+Academic writing in technical documentation sounds like this:
 
-So you end up with this content void for most content sets. On one side, you have quickstarts that get users started but don't help them progress. On the other side, you have in-depth tutorials that demonstrate advanced capabilities but assume massive leaps in user knowledge and confidence. And in between is a wasteland of missing content that users have to somehow navigate on their own to build their expertise.
+"In order to facilitate the implementation of the authentication mechanism, it is necessary to configure the appropriate parameters within the configuration file, ensuring that the requisite security protocols are properly instantiated before attempting to establish a connection to the remote server."
 
-Consider Angular documentation as an example. You might have a quickstart that shows users how to create their first component—a simple "Hello World" that displays some text and maybe handles a click event. Then you have comprehensive tutorials that walk through building a complete e-commerce application with routing, reactive forms, HTTP client integration, state management, authentication, and deployment strategies.
+This sentence contains accurate information, but it buries simple concepts under layers of unnecessary formality. "Configure authentication settings in the config file before connecting to the server" would convey the same information more effectively.
 
-But what about the progression between these extremes? How do you go from displaying "Hello World" to building components that communicate with each other? How do you handle user input before you're ready for complex reactive forms? How do you make HTTP requests before building a full e-commerce checkout flow? These intermediate steps get skipped, leaving users to figure out the progression on their own.
+Teams often drift toward academic writing because it feels professional and authoritative. Writers who learned formal writing in educational contexts may default to this style without realizing how it affects their readers. The problem isn't that academic writing is wrong—it's that it optimizes for perceived authority rather than user success.
 
-This is why you see documentation sets that have topics like "Create your first component" that immediately jump to "Build a full-featured application with authentication, routing, and API integration." There's nothing in between to help users progress from basic component creation to sophisticated application architecture.
+### Casual Writing {#casual-writing}
 
-The gap creates several problems:
+On the opposite extreme, we have casual writing. This is what many novice writers default to when they want to avoid sounding academic. They've heard that technical writing should be conversational and accessible, so they swing hard in the direction of informality.
 
-**User Abandonment:** Users complete the quickstart successfully, feel confident about the product, then hit a wall when they try to build something real. They can't bridge the gap between the simple example and the complex tutorial, so they either struggle with inadequate guidance or abandon the product entirely.
+Casual writing is equally verbose but in a different way. It fails to respect the user's time by adding unnecessary personality, explanations, and conversational elements that don't serve the user's immediate goals.
 
-**Skewed User Progression:** The only users who successfully advance beyond the quickstart are those who already have significant expertise or unusual persistence. This creates a user base that skews toward advanced users, which can distort product priorities and feedback.
+Casual writing sounds like this:
 
-**Wasted Advanced Content:** Those impressive comprehensive tutorials often don't get used because most users never develop enough confidence and knowledge to attempt them. The content that teams are most proud of becomes least accessible to their actual user base.
+"Alright, so now we're going to check out this really cool authentication function that we just wrote. It's pretty neat how it handles all the security stuff automatically\! Let's dive in and see how it does all this magic behind the scenes. Don't worry if it seems complicated at first—we'll walk through it step by step, and I promise it'll make sense by the end\!"
 
-But here's the silver lining: if you haven't documented how to do something users want to do, the users will tell you\! This focused approach to completeness creates a natural feedback loop where real user needs drive documentation priorities rather than theoretical feature coverage.
+This style might feel friendly and approachable, but it's actually disrespectful to users who are trying to accomplish specific tasks. They don't need encouragement or entertainment—they need clear, actionable information. The chattiness becomes cognitive overhead that interferes with comprehension.
 
-## Filling the Void {#filling-the-void}
+The casual approach often emerges from good intentions. Writers want to sound approachable and human rather than robotic. They've seen examples of technical writing that feels warm and engaging, and they want to replicate that connection with their readers. The desire to avoid sounding like a machine or a textbook is understandable—nobody wants their writing to feel cold or intimidating.
 
-One of the most effective approaches I've found for addressing the content void is to start with those in-depth tutorials that teams want to write anyway, then deliberately break them down into standalone, progressive pieces.
+Some writers are genuinely skilled at using humor and personality to enhance their communication, creating content that's both informative and engaging. But developing that skill requires significant practice and careful attention to audience needs. These skilled writers understand when personality serves the message and when it becomes a distraction. They know how to add warmth without adding confusion, and they can gauge whether their voice is helping or hindering their readers' success.
 
-Take that comprehensive content management system tutorial. Instead of presenting it as a single intimidating guide, decompose it into discrete topics: database schema design, user authentication, basic CRUD operations, input validation, error handling, user authorization, automated testing, deployment considerations. Each piece should stand on its own while also serving as a building block for more complex scenarios.
+Many writers attempt a casual tone without considering how their personality affects comprehension, especially for readers for whom English is a second language. Cultural references, idioms, humor, and conversational asides that feel natural to native speakers can create cognitive overhead and confusion for ESL readers who are already working harder to process technical information in their non-native language. This consideration becomes even more critical when content needs to be localized or translated—casual writing that relies heavily on cultural context or wordplay often doesn't translate well, creating additional barriers for global audiences who depend on clear, direct communication to accomplish their technical goals.
 
-This approach satisfies teams' desire to create impressive comprehensive content while solving the real problem of missing progression. Users can work through the components at their own pace, building confidence and expertise incrementally. They can also mix and match components based on their specific needs rather than following a single prescribed path.
+### Informal Writing: The Sweet Spot {#informal-writing:-the-sweet-spot}
 
-The key is ensuring each middle-ground topic truly stands alone. It should have clear prerequisites, explicit learning objectives, and practical outcomes that users can validate. Avoid the temptation to assume knowledge from previous topics or to set up dependencies that force users through a rigid sequence.
+Neither academic nor casual writing serves users effectively. What we want is what I call informal writing. Informal writing strips away unnecessary academic formality while still respecting the user's time and cognitive resources. It's neither pretentious nor chatty—it's direct, clear, and appropriately human.
 
-Consider authentication and database connectivity as an example. This topic should cover everything needed to securely connect to a database and verify user credentials, including error handling for common failure scenarios. Users should be able to implement this functionality successfully without having read other topics in the series. But it should also integrate cleanly with more advanced topics like user authorization and session management.
+Here's my test for informal writing: Pretend you're working with a colleague on a document. Your colleague is about to board a plane and won't have internet access during the flight. They have just a few minutes before boarding, and they need crucial information from you. How would you convey your message?
 
-Some teams resist this decomposition because they worry about repetition or redundancy. They don't want to explain basic concepts multiple times across different topics. But this concern misses the point—users don't read documentation linearly like a novel. They jump to topics based on immediate needs, often months apart. A little redundancy in service of standalone utility is almost always worth it.
+You wouldn't be formally academic—you know this person, and formality would waste precious time. You also wouldn't be excessively casual or chatty—they need to catch a flight, and joking around would be inappropriate and ineffective. Instead, you'd be clear, direct, and appropriately personal. You'd focus on what they need to know, expressed in the most efficient way possible. And you'd be supportive, because you want your colleague to be successful.
 
-## Identifying What's Missing {#identifying-what's-missing}
+That's informal writing: respectful of the relationship, mindful of constraints, focused on effectiveness.
 
-The challenge is recognizing when you have a content void problem and systematically identifying what belongs in that missing middle ground.
+Applied to our authentication example, informal writing would sound like this:
 
-The most reliable diagnostic is user behavior and feedback patterns. If you see a consistent pattern where users successfully complete your getting-started content but then struggle to progress to more advanced scenarios, you probably have a gap problem. If your support team repeatedly answers questions that seem like they should be covered in documentation, those questions often point to missing middle content.
+"Configure your authentication settings in the config file before connecting to the server. Set the security\_protocol parameter to 'TLS' and add your API key to the credentials section."
 
-Pay attention to the questions users ask in community forums, support tickets, and sales calls. Questions that start with "I've successfully completed the quickstart, but now I need to..." or "The advanced tutorial assumes I know how to..." are clear signals of missing progression content.
+This version is concise without being terse, clear without being condescending, and direct without being robotic. It respects the user's time while providing the information they need to succeed.
 
-Another approach is to audit your existing comprehensive tutorials with fresh eyes. Look for assumptions, leaps in complexity, or points where the tutorial suddenly introduces multiple new concepts simultaneously. These are often opportunities to extract standalone topics that bridge the gap between basic and advanced content.
+## Why Teams Fall Into These Traps {#why-teams-fall-into-these-traps}
 
-Consider involving users in content gap analysis. Users who have successfully progressed from beginner to intermediate or advanced usage can provide valuable insights about what information they wish they'd had at different stages. They remember the struggle points and knowledge gaps that your expert team members may have forgotten or never experienced.
+The academic and casual extremes aren't random choices—they emerge from understandable and well-intentioned thinking.
 
-The most systematic approach is to map actual user progression paths rather than theoretical feature coverage. Track how users actually move through your product and documentation. Where do they get stuck? What workflows do they attempt after completing basic tutorials? What combinations of features do they typically use together? This behavioral data reveals the natural stepping stones that your documentation should provide.
+The **Academic Trap** often catches writers whose last significant writing experience was in college. Academic writing was rewarded in educational contexts, so it feels like "good writing" even when it's counterproductive for user documentation. Writers may also believe that formal language makes them sound more professional or authoritative, especially when documenting complex technical systems.
 
-## Sustainable Completeness {#sustainable-completeness}
+The **Casual Trap** catches writers who want to "sound cool" or make their content more engaging. They've seen examples of successful casual writing—often from skilled writers who have developed that ability over time—and they try to replicate the style without understanding why it worked in those specific contexts. They may also be reacting against overly formal documentation they've encountered, swinging too far in the opposite direction.
 
-Achieving and maintaining appropriate completeness requires ongoing effort and strategic thinking. It's not a one-time documentation project—it's an ongoing alignment between your content strategy and your users' evolving needs.
+It's important to note that these aren't vocational patterns. I've seen casual technical writers and overly formal developer advocates. The tendency toward one extreme or another seems to depend more on individual background and intentions than on job role.
 
-**Start with Core Journeys:** Instead of trying to document everything, identify the 3-5 most important user journeys for your product and ensure those are completely and clearly documented. Everything else is secondary until those core paths work well.
+## Recognizing Your Writing Style {#recognizing-your-writing-style}
 
-**Build Feedback Systems:** Create mechanisms for users to identify gaps and report completeness problems. But more importantly, build processes for acting on that feedback systematically. A "suggest improvements" link that disappears into a backlog isn't useful—you need workflows that turn user feedback into content improvements.
+Most writers have difficulty objectively evaluating their own tone and conciseness. We're too close to our own writing to hear how it sounds to others. Here are some practical techniques for developing awareness of your writing style:
 
-**Measure User Success, Not Content Volume:** Track whether users can successfully complete the workflows your documentation describes, not how many topics you've published. Completion rates, success metrics, and user progression data are better indicators of completeness than content audits.
+**Read Aloud with Minimal Inflection:** Read your content out loud, but try to use as little vocal inflection as possible. Speak in a flat, monotone voice. This technique forces you to hear the actual words and sentence structure without the emotional coloring that your internal voice adds when reading silently. Academic writing will sound pretentious and unnecessarily complex. Casual writing will sound juvenile or condescending.
 
-**Design for Progression:** Explicitly plan how users will develop expertise over time. What should they learn first? What builds on previous knowledge? What are the natural next steps after each major workflow? Design your content architecture to support this progression rather than hoping it emerges naturally.
+**Try Hostile Inflection:** As a follow-up test, try reading your content with deliberately sarcastic or hostile inflection. Quality writing should be resilient enough to survive this kind of stress test—the core message and logic should remain clear even when someone's trying to make it sound bad. If sarcastic delivery completely undermines your writing or reveals potential misinterpretations, it might indicate that your writing relies too heavily on assumed reader goodwill. This technique is particularly useful for identifying problematic word choices like "simply" or "just" that can sound condescending when read sarcastically. You don't necessarily need to change your writing based on this test, but it can help you anticipate how your content might be received and prepare you for potential reader reactions.
 
-**Maintain Content Relationships:** As your product evolves, keep track of how content topics relate to each other. When you update one piece of documentation, consider what other topics might need updates to maintain consistency and completeness across the user journey.
+**Use Text-to-Speech Tools:** Screen readers and text-to-speech software provide an even more objective perspective on your writing. Hearing your content in a synthetic voice reveals patterns you might miss when reading with your own internal voice. The artificial delivery makes obvious any unnecessary complexity or chattiness that interferes with comprehension.
 
-The goal isn't perfect completeness—it's strategic completeness that serves your users' success and grows appropriately with your product's maturity and user base. Focus your completeness efforts where they have the most impact on user outcomes, and resist the temptation to document everything just because it exists.
+**Apply the Coding Analogy:** When working with developers, I often explain conciseness using programming principles they already understand. Code that is too terse becomes difficult to understand and maintain later. Code that is too verbose—using twenty lines when ten would suffice—becomes cluttered and hard to navigate. The best code is tightly written but verbose enough that it remains comprehensible and maintainable.
+
+The same principles apply to technical writing. After all, content is essentially code that gets compiled by the human brain. Your readers need to parse your sentences, understand your logic, and execute your instructions. Unnecessary complexity creates cognitive overhead. Excessive casualness creates processing delays. Optimal writing minimizes both while maximizing comprehension and task completion.
+
+## The Developer Perspective {#the-developer-perspective}
+
+The coding analogy resonates particularly well with technical audiences because it reframes writing quality in terms they already understand and value.
+
+Maintainable Code vs. Maintainable Content: Just as code needs to be maintainable by future developers (including your future self), content needs to be understandable by future readers (including users with different backgrounds and expertise levels). Academic writing creates maintenance problems because it's unnecessarily complex. Casual writing creates maintenance problems because it includes too much irrelevant information.
+
+Performance Optimization: Developers understand that code performance matters—inefficient code wastes computational resources and creates poor user experiences. Similarly, inefficient writing wastes cognitive resources and creates poor reading experiences. Every unnecessary word, every confusing sentence structure, every irrelevant tangent is like inefficient code that slows down the user's mental processing.
+
+Clean Code Principles: The programming concept of "clean code"—code that is easy to read, understand, and modify—applies directly to technical writing. Clean writing follows consistent patterns, uses clear variable names (in writing, this means precise word choices), eliminates redundancy, and focuses on functionality over cleverness.
+
+However, there's an important caveat when applying coding principles to writing. Developers often follow DRY (Don't Repeat Yourself) principles when coding, but this can be problematic when applied too strictly to documentation. It often leads to attempts to "single source" content so that the same message is included in multiple topics through shared snippets or references. This creates a maintenance nightmare—when you need to change a note or explanation, how do you know how many topics are impacted? Does the updated message apply equally to all those different contexts? Unlike code, where a function serves the same purpose everywhere it's called, content often needs slight variations based on context, user type, or specific workflow. Sometimes a little redundancy in documentation is actually beneficial for user comprehension and content maintainability.
+
+## Conciseness Beyond the Sentence Level {#conciseness-beyond-the-sentence-level}
+
+While conciseness primarily operates at the sentence and paragraph level, the principles can influence broader content architecture decisions. When you consistently write concisely, you might discover that you need fewer topics than originally planned, or that information can be organized more efficiently.
+
+However, these broader implications are secondary to the primary goal of sentence-level clarity. The Completeness framework we discussed earlier provides better guidance for topic-level decisions. Conciseness is most valuable when applied to how you express ideas within those topics, not whether those topics should exist at all.
+
+## Practical Application {#practical-application}
+
+Achieving effective conciseness requires ongoing practice and attention. Here are some approaches that work consistently:
+
+**Start with Clarity, Then Trim:** Don't try to be concise in your first draft. Focus on getting your ideas down clearly and completely, then revise for conciseness. It's easier to cut unnecessary words from clear writing than to add clarity to overly brief writing.
+
+**Consider Your Voice and Tone:** Spend time thinking about your tone and voice. How do you want to communicate? Are you a knowledgeable advisor, a respected expert, a visionary leader? Your words construct your personality in the mind of the reader. Think about that personality and make sure your words support it. This isn't about adding unnecessary flourishes—it's about ensuring that every word choice aligns with the relationship you want to build with your readers and the role you want to play in their success.
+
+**Test with Real Users:** The ultimate test of concise writing is whether it helps real users complete real tasks more effectively. You don't need a full user research study—talking with just a few users can yield great insights about whether your attempts at conciseness are helping or creating new barriers to comprehension.
+
+**Consider Your Audience's Context:** Conciseness isn't just about word count—it's about respecting your reader's cognitive resources and time constraints. A user troubleshooting a production issue needs different conciseness than someone learning a new concept. Adjust your approach based on the urgency and complexity of your reader's situation.
+
+The goal isn't to achieve some arbitrary standard of brevity. It's to find the optimal balance between efficiency and effectiveness for your specific users in their specific contexts. Sometimes that means more words, sometimes fewer, but always with intentionality about how those words serve your reader's success.

@@ -1,163 +1,115 @@
-# Chapter 6: On Accuracy {#chapter-6:-on-accuracy}
+# Chapter 6: On Completeness {#chapter-6:-on-completeness}
 
-When most people think about accuracy in technical writing, they imagine it as a binary state: information is either accurate or it isn't. In this view, good technical writing means getting every detail exactly right, while inaccurate writing is simply failed writing. But after years of working with products at different stages of maturity—from startup MVPs to enterprise platforms serving millions of users—I've learned that accuracy is far more nuanced and strategic than that simple binary suggests.
+Ask most technical writers what makes documentation complete, and they'll give you a laundry list: comprehensive feature coverage, exhaustive API references, detailed troubleshooting guides, multiple examples for every use case. This approach treats completeness as an inventory problem—if you document everything that exists, you've achieved completeness.
 
-The traditional approach to accuracy creates impossible situations. Teams demand perfect documentation for imperfect products. Writers spend weeks documenting edge cases that may never ship. Users get frustrated when reality doesn't match the comprehensive promises made in documentation. Meanwhile, the core use cases that actually matter to users get lost in a sea of theoretical completeness.
+But this misses the fundamental question: complete for whom, and for what purpose?
 
-There's a better way to think about accuracy—one that's strategic, user-focused, and aligned with how products actually evolve in the real world.
+After working with dozens of product teams across different industries and maturity stages, I've learned that completeness isn't about documenting everything that's possible. It's about documenting everything that's necessary for your users to succeed in their specific contexts. And those contexts vary dramatically based on where your product is in its lifecycle, who your users are, and what they're trying to accomplish.
 
-## Accuracy Across Product Lifecycles {#accuracy-across-product-lifecycles}
+The traditional approach to completeness creates several predictable problems. Teams exhaust themselves trying to document every feature and edge case, often before they understand which features actually matter to users. Writers create comprehensive reference materials that nobody reads because they don't match how people actually work. Documentation becomes a reflection of the product's complexity rather than a bridge to the user's success.
 
-One of the most common mistakes I see teams make is demanding what I call "GA docs for beta code." Picture this scenario: A product team is preparing to launch a new API. The engineers are still fixing critical bugs discovered in testing. Key features might be delayed to the next release. Error handling is inconsistent across endpoints. But the product manager insists that documentation must be "complete and accurate" before launch.
+There's a more strategic way to think about completeness—one that adapts to your product's reality and serves your users' actual needs.
 
-This creates an impossible situation: writers are asked to document with certainty something that is inherently uncertain. The resulting documentation either becomes obsolete before it's published, or it makes promises the product can't yet keep.
+## Completeness Across Product Maturity {#completeness-across-product-maturity}
 
-I've seen writers spend weeks crafting detailed explanations of features that get cut the day before launch. I've watched support teams field angry customer complaints because the documentation confidently described functionality that was still experimental. I've observed engineering teams delay product launches because they felt the documentation wasn't "accurate enough," even though the core functionality worked perfectly well.
+Just as accuracy requirements change as products evolve, so does the definition of completeness. The completeness standard that makes sense for a mature enterprise platform would be wasteful and counterproductive for a startup's MVP.
 
-The reality is that products and services in different lifecycle stages require fundamentally different approaches to accuracy:
+For newer products, completeness means thoroughly documenting the specific scenarios that comprise your minimally viable product. These are the user journeys that you've validated, tested, and committed to supporting. Everything else is speculation.
 
-Early-stage products (beta releases, version 1.0, proof-of-concepts) only need to be deeply accurate for the specific scenarios and use cases the team wants to enable. If you're launching a beta API for processing payments, you need bulletproof accuracy for the standard payment flow. But you don't need to exhaustively document every possible error condition, edge case, or integration pattern that might theoretically be possible.
+When working on documentation for early-stage products, completeness doesn't mean documenting every possible integration or advanced workflow. It means making sure users can successfully complete the core scenarios that define your product's value proposition. Those fundamental use cases need to be documented completely and clearly. Advanced features and edge cases can wait until the product and user base mature.
 
-Consider Stripe's early API documentation. When they were starting out, they didn't try to document every conceivable payment scenario. Instead, they focused laser-sharp accuracy on the core use case: accepting a payment. The documentation was incredibly precise about that flow—every parameter, every response, every error code that mattered for the basic transaction. But they didn't pretend to have solved every edge case in e-commerce.
+This focused approach to completeness serves both users and the product team. Users get reliable guidance for the workflows that actually work well. The product team avoids over-committing to features that might change or disappear. Resources go toward perfecting the core experience rather than documenting theoretical possibilities.
 
-Growing products (version 2.0, expanding feature sets, new user segments) need accuracy that scales with their ambitions. As your user base grows and diversifies, the range of scenarios that require accurate documentation expands. But it expands strategically, following user demand rather than theoretical completeness.
+As products mature and stabilize, the definition of completeness naturally expands. Your user base grows more diverse, with different skill levels and use cases. Features that were experimental become foundational. Edge cases that affected few users in the early days now impact thousands of users.
 
-Mature products (established platforms, enterprise solutions, widely-adopted tools) need broader accuracy coverage because users will naturally try to push the boundaries of what's possible. When you're serving millions of users across thousands of different use cases, the long tail of edge cases becomes significant. But even then, not every edge case deserves the same level of documentation accuracy.
+But even for mature products, completeness remains strategic rather than exhaustive. Amazon Web Services has thousands of features across hundreds of services, but their documentation doesn't try to document every possible combination and configuration. Instead, they focus completeness efforts on the workflows that drive the most user success and business value.
 
-I sometimes flip the question to product teams: "Would you want beta docs for your GA product?" The answer is always no. Nobody wants their mature, stable product to feel experimental or unreliable. A customer evaluating your enterprise platform doesn't want to read documentation that hedges every statement with "this might work" or "we're still testing this."
+The key insight is that completeness should scale with your product's proven value, not its theoretical capabilities. Document completely what you know works well and supports reliably. Be more selective about scenarios that are possible but not yet proven or prioritized.
 
-This helps teams understand why the reverse is also problematic. Beta software with GA-level documentation promises creates expectations the product can't meet. It's not just misleading—it's strategically counterproductive.
+## User-Centric Completeness {#user-centric-completeness}
 
-## The Right Depth of Accuracy {#the-right-depth-of-accuracy}
+Completeness also varies dramatically based on who your users are and what they're trying to accomplish. What feels complete to a power user will overwhelm a beginner. What seems comprehensive to a developer might be useless to a business user. Even for highly technical documentation, completeness is ultimately about user success, not feature coverage.
 
-The second major misconception about accuracy is that it requires exhaustive technical depth. This leads to documentation that reads like engineering specifications rather than user guides, where every implementation detail is meticulously explained whether it's relevant to the user or not.
+Consider database documentation. For a database administrator setting up a new cluster, completeness means detailed coverage of installation, configuration, security settings, monitoring, backup procedures, and disaster recovery. Missing any of these topics leaves them unable to deploy the database safely in production.
 
-I don't need to understand the chemical reactions in a baking recipe to successfully bake a cake. I need to know the ingredients, the proportions, the temperature, and the timing. The fact that gluten proteins form networks when hydrated and agitated might be fascinating to a food scientist, but it's not necessary information for someone who just wants to make bread.
+For an application developer who just needs to store and retrieve data, completeness means clear guidance on connecting to the database, executing queries, handling errors, and managing connections efficiently. They don't need the DBA-level details about cluster configuration—including that information actually makes the documentation less complete from their perspective because it obscures what they need to know.
 
-Similarly, users don't need to understand every technical detail of how a system works to use it effectively. They need to understand the parts that affect their decisions and actions.
+For a data analyst who needs to extract insights from stored data, completeness means comprehensive coverage of query syntax, functions, performance optimization, and data export options. Installation and configuration details are irrelevant to their success.
 
-Consider database documentation. A developer using your database API needs to know that certain operations are atomic, but they probably don't need to understand the specific locking mechanisms that make atomicity possible. They need to know that indexes improve query performance, but they don't need to understand B-tree algorithms unless they're doing database optimization work.
+Same database, same feature set, but three completely different definitions of completeness based on user goals and contexts.
 
-The key is providing the right level of accuracy for the task at hand. This means focusing on what users need to know to accomplish their goals, not everything there is to know about the subject.
+This user-centric view of completeness explains why so much technically comprehensive documentation fails to help users accomplish their actual work. The documentation covers everything about the product, but it doesn't cover everything the user needs to be successful with the product.
 
-But here's where it gets tricky: different users have different depth requirements even for the same task. A database administrator setting up replication needs to understand consistency models in much more depth than an application developer writing simple queries. The same system, the same feature, but very different accuracy requirements.
+The most effective documentation teams I've worked with start by mapping user journeys rather than product features. They identify the key scenarios that each user type needs to complete successfully, then ensure those scenarios are documented completely from the user's perspective. Features that don't serve those core journeys get secondary treatment, regardless of how sophisticated or impressive they might be from a technical standpoint.
 
-I've seen technical writers get paralyzed by this variation. They try to accommodate every possible depth requirement in a single document, creating sprawling explanations that satisfy nobody. The beginner gets lost in details they don't need. The expert gets frustrated by explanations of concepts they already understand.
+## The Content Void Problem {#the-content-void-problem}
 
-The solution isn't to find some middle ground that disappoints everyone equally. It's to be strategic about layering information. Start with the accuracy level that serves your primary user's immediate goals. Then provide clear paths to deeper information for users who need it.
+Even when teams understand that completeness should be user-focused and maturity-appropriate, they often fall into a predictable pattern that creates what I call the "content void”  of documentation completeness.
 
-Amazon Web Services does this well in their documentation. Their getting-started guides focus on the accuracy needed to complete basic tasks—creating resources, configuring settings, testing functionality. But they link extensively to deeper reference material, troubleshooting guides, and architectural best practices for users who need that additional depth.
+Teams love to create quickstarts. These short, "hello world" topics give teams a quick adrenaline rush of writing something clearly valuable. And it's true—a good quickstart is genuinely helpful to new users. It proves that your product works and gives people confidence to explore further.
 
-The principle is simple: accurate enough to be useful, deep enough to be trustworthy, but no deeper than necessary for the immediate task.
+Teams also love to write deep technical tutorials. These are weighty, comprehensive topics that showcase the full power of whatever they're building. Teams love them because they demonstrate impressive capabilities and complex use cases. But if I'm being honest, they also love writing them because they get to show off their own knowledge and technical sophistication.
 
-## User-Centric Accuracy {#user-centric-accuracy}
+What about the content in between? That content frequently gets left behind, because it's harder than writing a quickstart, and nowhere near as exciting as writing an in-depth tutorial. The quickstart can be knocked out in an afternoon. The comprehensive tutorial feels like a significant accomplishment that demonstrates expertise. But the middle content requires understanding user progression, breaking down complex workflows, and creating stepping stones that aren't as flashy but are absolutely critical for user success.
 
-Perhaps most importantly, accuracy is inherently user-centric. What counts as accurate depends entirely on who's using the information and what they're trying to accomplish. This seems obvious, but it's one of the most frequently violated principles in technical documentation.
+So you end up with this content void for most content sets. On one side, you have quickstarts that get users started but don't help them progress. On the other side, you have in-depth tutorials that demonstrate advanced capabilities but assume massive leaps in user knowledge and confidence. And in between is a wasteland of missing content that users have to somehow navigate on their own to build their expertise.
 
-Information that's perfectly accurate for a seasoned developer might be misleading or incomplete for someone new to software development. Consider this statement in API documentation: "Authentication uses standard OAuth 2.0 flow." For an experienced developer, this is accurate and sufficient—they know what OAuth 2.0 is, how it works, and what they need to implement. For a junior developer or someone new to API integration, this statement is technically accurate but practically useless. They need to understand what OAuth 2.0 means, why it's used, and what specific steps they need to take.
+Consider Angular documentation as an example. You might have a quickstart that shows users how to create their first component—a simple "Hello World" that displays some text and maybe handles a click event. Then you have comprehensive tutorials that walk through building a complete e-commerce application with routing, reactive forms, HTTP client integration, state management, authentication, and deployment strategies.
 
-The same technical detail that's essential context for one audience might be distracting noise for another. A system administrator needs to know about memory usage patterns when configuring a server. An end user of the application running on that server doesn't need that information—it would just create unnecessary anxiety about performance.
+But what about the progression between these extremes? How do you go from displaying "Hello World" to building components that communicate with each other? How do you handle user input before you're ready for complex reactive forms? How do you make HTTP requests before building a full e-commerce checkout flow? These intermediate steps get skipped, leaving users to figure out the progression on their own.
 
-This user-centric view of accuracy explains why so much technically correct documentation fails to help users accomplish their goals. The information is accurate in an abstract sense, but it's not accurate for the specific person trying to use it in a specific context.
+This is why you see documentation sets that have topics like "Create your first component" that immediately jump to "Build a full-featured application with authentication, routing, and API integration." There's nothing in between to help users progress from basic component creation to sophisticated application architecture.
 
-I learned this lesson the hard way early in my career. I was documenting a complex enterprise software system, and I prided myself on getting every technical detail exactly right. The engineering team praised the documentation for its technical accuracy. But user support was still overwhelmed with questions that seemed like they should have been answered in the docs.
+The gap creates several problems:
 
-The problem wasn't that the documentation was inaccurate—it was that it was accurate for the wrong audience. I had optimized for technical precision rather than user success. The documentation answered questions that engineers had about the system, not questions that users had about accomplishing their work.
+**User Abandonment:** Users complete the quickstart successfully, feel confident about the product, then hit a wall when they try to build something real. They can't bridge the gap between the simple example and the complex tutorial, so they either struggle with inadequate guidance or abandon the product entirely.
 
-This means accuracy isn't just about getting the facts right—it's about getting the right facts for the right audience. It's about understanding not just what is true, but what truths matter to the people who will use this information.
+**Skewed User Progression:** The only users who successfully advance beyond the quickstart are those who already have significant expertise or unusual persistence. This creates a user base that skews toward advanced users, which can distort product priorities and feedback.
 
-Consider the difference between these two accurate descriptions of the same software feature:
+**Wasted Advanced Content:** Those impressive comprehensive tutorials often don't get used because most users never develop enough confidence and knowledge to attempt them. The content that teams are most proud of becomes least accessible to their actual user base.
 
-Engineer-accurate: "The system implements exponential backoff with jitter for retry logic, starting with a 1-second delay and doubling until reaching a maximum of 30 seconds, with randomization to prevent thundering herd scenarios."
+But here's the silver lining: if you haven't documented how to do something users want to do, the users will tell you\! This focused approach to completeness creates a natural feedback loop where real user needs drive documentation priorities rather than theoretical feature coverage.
 
-User-accurate: "If your upload fails, the system will automatically retry several times with increasing delays between attempts. You don't need to manually retry—just wait and the system will handle it."
+## Filling the Void {#filling-the-void}
 
-Both statements are factually correct. But they're accurate for completely different audiences and use cases. The first is accurate for someone who needs to understand the implementation (perhaps to configure it or troubleshoot it). The second is accurate for someone who just needs to know what to expect when using the feature.
+One of the most effective approaches I've found for addressing the content void is to start with those in-depth tutorials that teams want to write anyway, then deliberately break them down into standalone, progressive pieces.
 
-The best documentation often includes both levels of accuracy, but clearly separated and targeted. The user-facing explanation focuses on what the user needs to know to be successful. The implementation details are available for users who need that deeper understanding, but they don't get in the way of users who don't.
+Take that comprehensive content management system tutorial. Instead of presenting it as a single intimidating guide, decompose it into discrete topics: database schema design, user authentication, basic CRUD operations, input validation, error handling, user authorization, automated testing, deployment considerations. Each piece should stand on its own while also serving as a building block for more complex scenarios.
 
-## Managing Accuracy in Practice {#managing-accuracy-in-practice}
+This approach satisfies teams' desire to create impressive comprehensive content while solving the real problem of missing progression. Users can work through the components at their own pace, building confidence and expertise incrementally. They can also mix and match components based on their specific needs rather than following a single prescribed path.
 
-Understanding these principles is one thing; implementing them in real organizations with real constraints is another. The most effective approach I've found is to create what I call a "content accuracy hierarchy" that aligns with how users actually discover and consume information.
+The key is ensuring each middle-ground topic truly stands alone. It should have clear prerequisites, explicit learning objectives, and practical outcomes that users can validate. Avoid the temptation to assume knowledge from previous topics or to set up dependencies that force users through a rigid sequence.
 
-The foundation of this hierarchy is focusing canonical documentation on what's established and working reliably. This is your official documentation—the content that appears in your main doc site, gets linked from your product interface, and represents what your company officially supports.
+Consider authentication and database connectivity as an example. This topic should cover everything needed to securely connect to a database and verify user credentials, including error handling for common failure scenarios. Users should be able to implement this functionality successfully without having read other topics in the series. But it should also integrate cleanly with more advanced topics like user authorization and session management.
 
-For this canonical content, accuracy standards should be high but strategically focused. Document the scenarios you want users to succeed with. Be precise about the features that are stable and supported. Don't hedge or equivocate about functionality that works reliably.
+Some teams resist this decomposition because they worry about repetition or redundancy. They don't want to explain basic concepts multiple times across different topics. But this concern misses the point—users don't read documentation linearly like a novel. They jump to topics based on immediate needs, often months apart. A little redundancy in service of standalone utility is almost always worth it.
 
-But what about newer or experimental features? What about edge cases that might work but aren't fully supported? This is where the hierarchy becomes crucial.
+## Identifying What's Missing {#identifying-what's-missing}
 
-Let blog posts, developer advocates, community content, and experimental documentation explore the cutting edge. These content types have different expectations and allow for more uncertainty. A blog post titled "Exploring Advanced Use Cases with \[Product X\]" signals that readers are venturing into less certain territory. A developer advocate's conference talk about "bleeding edge features" sets appropriate expectations about stability and support.
+The challenge is recognizing when you have a content void problem and systematically identifying what belongs in that missing middle ground.
 
-This creates a clear content hierarchy: official documentation represents what the company stands behind, while other content sources can acknowledge uncertainty and explore emerging possibilities.
+The most reliable diagnostic is user behavior and feedback patterns. If you see a consistent pattern where users successfully complete your getting-started content but then struggle to progress to more advanced scenarios, you probably have a gap problem. If your support team repeatedly answers questions that seem like they should be covered in documentation, those questions often point to missing middle content.
 
-I've seen this work particularly well at companies like HashiCorp. Their official Terraform documentation focuses laser-sharp accuracy on core workflows and stable features. But their blog, community examples, and developer advocate content explores newer providers, experimental features, and complex architectural patterns that might not be ready for official documentation.
+Pay attention to the questions users ask in community forums, support tickets, and sales calls. Questions that start with "I've successfully completed the quickstart, but now I need to..." or "The advanced tutorial assumes I know how to..." are clear signals of missing progression content.
 
-When documentation does need to cover less-established scenarios—and sometimes it must—the key is being transparent about the level of support. Users should understand when they're in well-supported territory versus when they're venturing into areas that might change or require troubleshooting.
+Another approach is to audit your existing comprehensive tutorials with fresh eyes. Look for assumptions, leaps in complexity, or points where the tutorial suddenly introduces multiple new concepts simultaneously. These are often opportunities to extract standalone topics that bridge the gap between basic and advanced content.
 
-Some effective ways to signal this:
+Consider involving users in content gap analysis. Users who have successfully progressed from beginner to intermediate or advanced usage can provide valuable insights about what information they wish they'd had at different stages. They remember the struggle points and knowledge gaps that your expert team members may have forgotten or never experienced.
 
-Clear labeling: "Preview feature," "Beta functionality," "Advanced configuration"
+The most systematic approach is to map actual user progression paths rather than theoretical feature coverage. Track how users actually move through your product and documentation. Where do they get stuck? What workflows do they attempt after completing basic tutorials? What combinations of features do they typically use together? This behavioral data reveals the natural stepping stones that your documentation should provide.
 
-Explicit support statements: "This workflow is supported by our customer success team" versus "This is a community-contributed solution"
+## Sustainable Completeness {#sustainable-completeness}
 
-Honest limitations: "This integration works well for datasets under 10GB" rather than claiming unlimited scalability
+Achieving and maintaining appropriate completeness requires ongoing effort and strategic thinking. It's not a one-time documentation project—it's an ongoing alignment between your content strategy and your users' evolving needs.
 
-Update commitments: "This documentation is updated with each product release" versus "This guide was last updated in Q2 2023"
+**Start with Core Journeys:** Instead of trying to document everything, identify the 3-5 most important user journeys for your product and ensure those are completely and clearly documented. Everything else is secondary until those core paths work well.
 
-The goal isn't to make users feel uncertain about your product. It's to help them make informed decisions about which features to rely on for critical workflows and which ones to experiment with in non-production environments.
+**Build Feedback Systems:** Create mechanisms for users to identify gaps and report completeness problems. But more importantly, build processes for acting on that feedback systematically. A "suggest improvements" link that disappears into a backlog isn't useful—you need workflows that turn user feedback into content improvements.
 
-## Common Accuracy Pitfalls {#common-accuracy-pitfalls}
+**Measure User Success, Not Content Volume:** Track whether users can successfully complete the workflows your documentation describes, not how many topics you've published. Completion rates, success metrics, and user progression data are better indicators of completeness than content audits.
 
-Even with these principles in mind, teams still make predictable mistakes when managing accuracy. Here are the patterns I see most often:
+**Design for Progression:** Explicitly plan how users will develop expertise over time. What should they learn first? What builds on previous knowledge? What are the natural next steps after each major workflow? Design your content architecture to support this progression rather than hoping it emerges naturally.
 
-The Perfectionist Trap: Teams delay publishing documentation until they can make it "completely accurate." Meanwhile, users struggle with no documentation at all. Remember: accurate documentation about 80% of use cases is infinitely more valuable than perfect documentation that doesn't exist.
+**Maintain Content Relationships:** As your product evolves, keep track of how content topics relate to each other. When you update one piece of documentation, consider what other topics might need updates to maintain consistency and completeness across the user journey.
 
-The Kitchen Sink Problem: Writers try to document every possible scenario with equal accuracy and detail. This creates overwhelming documents where critical information gets lost among edge cases. Be strategic about what deserves detailed accuracy treatment.
-
-The Oracle Fallacy: Documentation promises more certainty than the product actually provides. This is especially common with AI/ML products, where outcomes are inherently probabilistic. Don't let your documentation make promises your product can't keep.
-
-The Static Mindset: Teams treat accuracy as a one-time achievement rather than an ongoing process. Product features evolve, user needs change, and business priorities shift. Accuracy requires maintenance and updates, not just initial precision.
-
-The Expert Bubble: Subject matter experts review documentation for accuracy, but they're not representative of actual users. What seems accurate and complete to an expert might be confusing or insufficient for someone less familiar with the domain.
-
-## The Business Impact {#the-business-impact}
-
-Companies often struggle with content accuracy because they haven't connected documentation quality to business outcomes. They see accuracy as a "nice to have" rather than a strategic necessity. But inaccurate documentation creates measurable business costs that compound over time.
-
-Increased Support Overhead: Every inaccurate piece of documentation generates support tickets. I've tracked cases where a single misleading sentence in API documentation generated dozens of support requests per week. The cost isn't just the support team's time—it's also the engineering time required to investigate issues that turn out to be documentation problems rather than product problems.
-
-Slower User Adoption: Users who can't trust your documentation will be hesitant to adopt new features or expand their usage of your product. They'll stick with workflows they've already figured out rather than risk encountering more documentation that doesn't match reality. This directly impacts feature adoption metrics and expansion revenue.
-
-Frustrated User Churn: Users who repeatedly encounter inaccurate documentation develop learned helplessness. They stop trusting your content and start looking for alternative solutions. In B2B contexts, this can mean losing entire accounts over documentation quality issues.
-
-Reduced Team Velocity: When internal documentation is inaccurate, your own teams move slower. Engineers waste time trying solutions that don't work. Product managers make decisions based on outdated information. Sales teams make promises that can't be kept. The productivity cost ripples through the entire organization.
-
-But measuring these costs is genuinely difficult, which is why accuracy often gets deprioritized. Unlike feature development, where you can track user engagement and conversion rates, documentation accuracy has indirect and delayed impact that's harder to quantify.
-
-The companies that do prioritize accuracy have usually learned this lesson through painful experience. They've lost customers, wasted engineering cycles, or missed market opportunities because of documentation problems. The abstract concept of "quality" became concrete when it hit their revenue or their team's productivity.
-
-Some of the contributing factors I see most often:
-
-Feature Shipping Pressure: Teams focus too heavily on shipping features because that's what directly generates revenue. Documentation is seen as overhead rather than an enabler of that revenue. But this creates a false economy—rushed documentation often costs more in support and user confusion than it saves in development time.
-
-Measurement Challenges: It's very difficult to test the effectiveness of documentation in traditional product metrics. How do you know if people are using your documentation effectively? How do you measure the counterfactual—the support tickets that didn't happen because documentation was accurate? The business impact is real but often invisible to standard analytics.
-
-Technical Depth Mismatches: Technical writers aren't always technical enough to properly assess accuracy, especially for complex developer tools or enterprise software. Some writers would bristle at me saying this, but it's true and it's important. You can't accurately document what you don't understand. This doesn't mean every technical writer needs to be a software engineer, but there needs to be sufficient technical depth somewhere in the content creation process.
-
-The most successful teams I've worked with address these challenges head-on. They've found ways to measure documentation effectiveness (user success rates, support ticket categorization, onboarding completion metrics). They've invested in technical writers who can engage meaningfully with the products they're documenting. And they've connected documentation quality to business metrics that leadership cares about.
-
-## Building Sustainable Accuracy {#building-sustainable-accuracy}
-
-The goal isn't perfect accuracy—it's sustainable accuracy that serves your users and your business over time. This requires systems and processes, not just individual effort.
-
-Establish Update Cycles: Different types of content need different accuracy maintenance schedules. API reference documentation might need updates with every release. Conceptual guides might be reviewed quarterly. Getting-started tutorials might need monthly verification. Don't treat all content the same way.
-
-Create Feedback Loops: Build mechanisms for users to report accuracy problems, and more importantly, build processes for acting on that feedback quickly. A "report an issue" link that goes into a black hole is worse than no feedback mechanism at all.
-
-Involve the Right People: Subject matter experts should review content for technical accuracy, but they shouldn't be the only reviewers. Include people who represent your actual user base in the review process. Their confusion often reveals accuracy problems that experts miss.
-
-Design for Change: Accept that your product will change and design your documentation processes accordingly. This might mean focusing on principles rather than specific UI elements, or creating modular content that can be updated independently.
-
-Track What Matters: Identify the business metrics that documentation accuracy affects—support ticket volume, feature adoption rates, user onboarding success—and track them over time. When you can connect documentation improvements to business outcomes, it becomes easier to justify continued investment.
-
-The companies that achieve sustainable accuracy treat it as a product capability, not a content problem. They build systems, processes, and cultures that support ongoing accuracy rather than hoping it will emerge from individual effort and good intentions.
+The goal isn't perfect completeness—it's strategic completeness that serves your users' success and grows appropriately with your product's maturity and user base. Focus your completeness efforts where they have the most impact on user outcomes, and resist the temptation to document everything just because it exists.

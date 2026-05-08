@@ -1,115 +1,102 @@
-# Chapter 14: AI and the Future of Technical Writing {#chapter-14:-ai-and-the-future-of-technical-writing}
+# Chapter 14: What I Do Now {#chapter-14:-what-i-do-now}
 
-I have a small confession: I'm excited about AI's role in technical writing. Not because I think it will replace technical writers—quite the opposite. I think AI will free us to focus on the content that truly matters, the content that makes users think "that's really cool."
+I'm still asked what I do for a living. But lately, I think I've had a better answer—especially as my role has evolved from technical writer to content strategist.
 
-For decades, technical writers have been buried under the sheer volume of necessary but routine documentation. Every API needs reference docs. Every feature needs a how-to guide. Every product needs a quickstart. This essential content consumes enormous amounts of time and energy, leaving little capacity for the kind of writing that genuinely transforms user experiences.
+"I help tell stories that matter to users. And I help my colleagues in documentation and training find ways to make sure we tell our customers what they want and need to know, and not just what we want to tell them."
 
-AI changes this equation fundamentally. For the first time, we have tools that can handle much of the routine content creation, freeing human writers to focus on what Steven Brust calls "something really cool"—the connections, insights, and strategic guidance that only humans can provide.
+And when people want to know more—and increasingly, they do—I have a real framework to share with them.
 
-## The Liberation from Routine {#the-liberation-from-routine}
+## The Framework That Changed Everything {#the-framework-that-changed-everything}
 
-The average documentation set contains thousands of pages of content that, while necessary, follows predictable patterns. API reference pages describe endpoints, parameters, and responses using consistent formats. How-to guides walk through step-by-step procedures. Troubleshooting docs catalog common problems and solutions. Getting-started tutorials introduce basic concepts and workflows.
+My quest for quality started with my failure to get promoted at Google, when I was told my writing quality wasn't good enough. That feedback devastated me, but it also sparked the most important question of my career: How do we actually define content quality?
 
-This content is essential—users absolutely need it. But creating it manually is often a mechanical exercise that doesn't require the strategic thinking, user empathy, and creative problem-solving that make technical writers valuable. We spend our days documenting individual trees instead of helping users navigate the forest.
+The answer, as it turns out, isn't a single definition—it's a systematic approach to understanding quality through six interconnected characteristics:
 
-AI shows significant promise for this routine content creation. Large language models can generate draft API documentation from code comments and specifications. They can create initial procedural how-to guides from product requirements and feature descriptions. Early experiments show they can even help produce troubleshooting guides from support ticket patterns and known issue databases.
+**Accuracy** that's appropriate for your product's maturity and your users' needs, not just technically correct in the abstract.
 
-The potential for AI to maintain this content as products evolve is particularly exciting. AI could update documentation automatically when API endpoints change, regenerate reference pages when new parameters are added, and flag related content for review when features are deprecated. While these capabilities are still emerging, the foundational technology exists.
+**Completeness** that covers what users need to succeed in their workflows, not everything that exists in your product.
 
-This isn't just about efficiency—though the time savings are substantial. It's about focus. When AI handles the routine documentation, technical writers can invest their expertise where it creates the most value for users.
+**Conciseness** that respects users' time and cognitive load while maintaining the warmth and context they need.
 
-## The Content We Couldn't Write Before {#the-content-we-couldn't-write-before}
+**Discoverability** that works with how users actually find and navigate content, not how we wish they would.
 
-Here's what gets me excited about this shift: we can finally tackle the content we never had time to create. The sophisticated, strategic content that helps users succeed with complex systems and workflows.
+**Consistency** that reduces mental overhead across topics, documentation sets, and entire product ecosystems.
 
-Consider the connections between services. In a typical cloud platform like AWS, users don't just use S3 for storage or Lambda for computing—they build architectures where these services work together to solve business problems. But documentation traditionally covers services in isolation because it's too resource-intensive to document every possible integration pattern.
+**Meaning** that connects information to purpose, helping users understand not just what to do but why it matters.
 
-AI could potentially generate the routine documentation for individual services, freeing technical writers to create content about architectural patterns, integration strategies, and design principles. Instead of documenting what each service does, we could focus on why you'd combine them and how they work together in real-world scenarios.
+These characteristics don't exist in isolation—they work together to create content that truly serves users. When content has strong meaning, accuracy becomes more valuable because it supports something that matters. When content is discoverable, consistency becomes more important because users will encounter multiple pieces in unpredictable sequences. When content is complete and concise, it creates the space for meaning to emerge.
 
-Or consider the user journey content that falls between traditional documentation categories. Users don't progress linearly from "beginner" to "advanced"—they develop expertise in specific areas while remaining novices in others. A database expert might be a complete beginner with machine learning. A frontend developer might need help with infrastructure concepts.
+## From Individual Craft to Systematic Practice {#from-individual-craft-to-systematic-practice}
 
-Traditional documentation struggles with these complex user journeys because they don't fit neatly into product-focused organization. But as AI becomes more capable of handling routine feature documentation, technical writers could create content organized around user progression patterns, workflow sequences, and cross-functional challenges.
+What excites me most about this framework isn't that it helps individual writers create better content—though it does. It's that it transforms technical writing from individual craft to systematic practice.
 
-## The "Something Really Cool" Principle {#the-"something-really-cool"-principle}
+Teams can use these characteristics to evaluate content objectively rather than relying on subjective preferences. Product managers can specify what kind of quality they need rather than asking vaguely for "better docs." Organizations can invest in content improvements that align with business outcomes rather than hoping that more writing automatically means better user experiences.
 
-Steven Brust, one of my favorite fantasy authors, keeps a sign on his desk: "And now I'm going to tell you something really cool." He tries to live up to that statement in everything he writes.
+Most importantly, these characteristics scale. They work whether you're writing a single API reference or architecting content experiences across dozens of products and services. They apply whether you're a solo technical writer at a startup or part of a content organization at a company with millions of users.
 
-This principle transforms how I think about technical writing. Instead of asking "What do users need to know about this feature?" I ask "What's genuinely exciting about what users can accomplish with this feature?"
+## The Questions That Drive Quality {#the-questions-that-drive-quality}
 
-AI could enable this shift in mindset by handling the "what users need to know" content. When the routine documentation exists, I can focus on the "here's something really cool you can do" content that creates genuine enthusiasm and drives adoption.
+Throughout this book, I've shared stories and frameworks, but at its core, quality technical writing comes down to asking better questions:
 
-Consider a tutorial about deploying machine learning models. The traditional approach documents the deployment process step-by-step—configure the environment, upload the model, set up the inference endpoint, test the deployment. This content is necessary but not particularly inspiring.
+Instead of "Is this information correct?" ask "Is this accurate for my users in their specific context?"
 
-But what's really cool is the broader concept: "You've spent weeks training a model that can predict customer behavior, detect fraud, or recommend products. Now you're going to put that intelligence directly into your users' hands through your application." That transformation from trained model to user-facing capability—that's exciting. That's worth writing about with enthusiasm.
+Instead of "Have I documented everything?" ask "Have I provided everything users need to succeed in their workflows?"
 
-## Beyond Individual Products {#beyond-individual-products}
+Instead of "How can I make this shorter?" ask "How can I respect my users' time while giving them what they need?"
 
-One of the most significant opportunities AI could create is documentation that spans product boundaries. Users don't think in terms of individual products—they think in terms of workflows and outcomes that often require multiple tools working together.
+Instead of "Where should this content live?" ask "How will users actually discover and navigate this information?"
 
-Traditional documentation is organized around individual products because that's how companies are structured and how development teams are divided. But users are trying to accomplish goals that cross these boundaries: "I need to collect user data, process it for insights, and present those insights in my application."
+Instead of "Does this match our style guide?" ask "Will users have a consistent experience as they move through our content ecosystem?"
 
-As AI becomes more capable of maintaining individual product documentation, human writers could focus on the cross-product workflows that deliver complete solutions. Instead of explaining how each service works in isolation, we could show how they combine to solve real problems.
+Instead of "What does this feature do?" ask "Why should users care about this capability?"
 
-This shift is already happening in forward-thinking companies. AWS has architectural guidance that shows how multiple services work together for common use cases. Stripe has integration guides that assume you're building complete applications, not just processing payments in isolation. Google Cloud has solution architectures that demonstrate end-to-end workflows.
+These questions shift the focus from internal concerns to user outcomes. They move us from documenting products to serving people. They transform technical writing from a necessary evil into a competitive advantage.
 
-But these examples represent a tiny fraction of the cross-product content that users actually need. As AI becomes more capable of handling routine documentation, technical writers could invest in the strategic content that helps users architect complete solutions.
+## The AI Amplification {#the-ai-amplification}
 
-## The Quality Amplification Effect {#the-quality-amplification-effect}
+As I was finishing this book, I kept thinking about how AI changes everything I've written here. Does a systematic approach to content quality matter when machines can generate documentation at unprecedented scale and speed?
 
-Here's where AI becomes particularly promising when combined with the quality framework we've been discussing throughout this book. AI doesn't just create more content—it has the potential to help ensure that content meets our quality standards systematically.
+The answer is: more than ever.
 
-Accuracy: AI can verify that code examples compile and run correctly. It can check that API documentation matches actual service behavior. It shows promise for flagging inconsistencies between different pieces of content.
+AI amplifies whatever approach you bring to content creation. If you don't have clear standards for quality, AI will produce more content that fails to help users succeed. But if you have systematic ways to evaluate and improve content, AI becomes an incredibly powerful tool for achieving quality at scale.
 
-Completeness: AI could potentially identify gaps in documentation coverage by analyzing user workflows and support ticket patterns. It might suggest missing content based on product roadmaps and feature releases.
+The six characteristics framework works just as well for evaluating AI-generated content as human-generated content. AI can help with accuracy by checking code examples and flagging inconsistencies. It can support completeness by identifying content gaps and suggesting coverage improvements. It can enhance discoverability through better metadata and cross-referencing.
 
-Conciseness: AI tools can help identify verbose explanations and suggest more efficient alternatives. They show capability for maintaining consistent voice and tone across large documentation sets.
+But AI can't replace human judgment about meaning, user workflows, and strategic content priorities. If anything, as AI handles more routine documentation tasks, human technical writers become more valuable for the strategic, creative, and empathetic work that creates genuinely useful content experiences.
 
-Discoverability: AI could generate appropriate metadata, tags, and cross-references to improve content findability. It might suggest logical next steps and related content.
+## Where to Start {#where-to-start}
 
-Consistency: AI shows particular promise for maintaining consistent terminology, formatting, and structural patterns across thousands of pages of content.
+If you're feeling overwhelmed by everything we've covered, start small. Pick one piece of content you've written recently—a tutorial, a how-to guide, an API reference—and evaluate it against the six characteristics:
 
-Meaning: This is where human judgment remains essential, but AI can help test whether content successfully conveys intended meaning through summarization techniques and other analytical approaches.
+* Is it accurate for your intended users in their specific context?  
+* Does it provide everything those users need to succeed?  
+* Does it respect their time while giving them sufficient context?  
+* Can users find it and navigate from it to related information?  
+* Is it consistent with other content they might encounter?  
+* Does it connect to something users actually care about accomplishing?
 
-The result isn't just more content—it's more consistent, maintainable, and user-focused content than we could create manually.
+Don't try to optimize across all characteristics simultaneously. Pick the one or two that seem most problematic and focus your improvement efforts there. Quality is an iterative process, not a one-time achievement.
 
-## The Strategic Role Evolution {#the-strategic-role-evolution}
+If you're working with a team, start conversations about these characteristics. What does accuracy mean for your product and users? How do you currently evaluate completeness? What consistency standards matter most for your content ecosystem? These discussions will reveal assumptions and priorities that can guide your content strategy.
 
-This shift positions technical writers as content strategists and user advocates rather than content generators. Instead of asking "How do I document this feature?" we ask "How does this feature fit into user workflows?" and "What strategic guidance do users need to succeed with this capability?"
+If you're leading content efforts across an organization, consider how these characteristics could inform your investment decisions. Which characteristic improvements would have the greatest impact on user success and business outcomes? How could you measure progress against these quality dimensions over time?
 
-This evolution requires developing new skills:
+## The Real Answer {#the-real-answer}
 
-User journey mapping: Understanding how users progress through complex workflows that span multiple products and teams.
+Back to that conference conversation. The product manager I was talking with wanted to know more about measuring content quality, so I walked her through the six characteristics. By the end of our conversation, she was thinking about how to apply them to her own team's documentation challenges.
 
-Content ecosystem thinking: Designing information architectures that support user goals rather than mirroring internal product organization.
+"This is exactly what we've been missing," she said. "We keep asking our writers for 'better docs' but we've never been able to explain what that means."
 
-Strategic prioritization: Identifying which content investments will have the greatest impact on user success and business outcomes.
+That's when I realized I finally had the real answer to that original question from my parents' dinner party. I'm not just a technical writer who creates content. I'm someone who helps teams systematically understand and achieve content quality. I help organizations move beyond hoping their documentation will be useful to ensuring it actually serves users effectively.
 
-Cross-functional collaboration: Working with product managers, engineers, and designers to ensure that user needs drive content strategy rather than internal convenience.
+I help teams build documentation that users are grateful to find rather than frustrated to need.
 
-AI tool proficiency: Understanding how to leverage AI effectively while maintaining editorial oversight and strategic direction.
+And that transformation—from necessary evil to competitive advantage, from afterthought to strategic asset, from something users tolerate to something they value—that's what technical writing can be when we stop accepting "good enough" and start demanding quality.
 
-But these aren't entirely new skills—they're extensions of what the best technical writers already do. We're already user advocates who think strategically about information architecture and content impact. AI just gives us more capacity to apply these skills where they matter most.
+The framework exists. The tools are available. The only question is whether we'll use them to create content that truly serves the people who depend on our work.
 
-## The Implementation Reality {#the-implementation-reality}
+I think we should. I think we must. I think we can.
 
-The transition to AI-augmented technical writing isn't automatic or simple. Organizations need to develop processes for AI content generation, review, and maintenance. Teams need to learn which content types work well with AI assistance and which require human creativity and judgment.
+And, most of all, I think we should care.
 
-There are also legitimate concerns about AI-generated content quality, particularly around accuracy and meaning. AI can produce content that looks professionally written but contains subtle errors or fails to address user needs effectively.
-
-The solution isn't to avoid AI tools but to implement them thoughtfully within robust editorial processes. AI-generated content should go through the same quality review processes as human-generated content. The six characteristics framework we've discussed throughout this book provides a systematic approach for evaluating AI content just as it does for human content.
-
-Most importantly, AI should augment human judgment, not replace it. Technical writers remain responsible for content strategy, user advocacy, and ensuring that documentation serves real user needs effectively.
-
-## Looking Forward {#looking-forward}
-
-I believe we're at the beginning of a golden age for technical writing. For the first time, we have tools that can handle routine content creation at scale, freeing human writers to focus on strategic, creative, and genuinely valuable content.
-
-This doesn't mean fewer technical writing jobs—it means more impactful technical writing jobs. Instead of being buried under routine documentation tasks, technical writers can focus on the user experience challenges, strategic content initiatives, and cross-product guidance that drive real business value.
-
-The writers who thrive in this environment will be those who embrace AI as a powerful tool while doubling down on the uniquely human skills that make technical writing valuable: empathy for user needs, strategic thinking about content impact, and the ability to find and convey what's genuinely exciting about complex technical capabilities.
-
-As Steven Brust reminds us, our job is to tell users something really cool. AI just gives us more time and capacity to figure out what that cool thing is and share it effectively.
-
-The future of technical writing isn't about competing with AI—it's about leveraging AI to do what humans do best: understand user needs, think strategically about information architecture, and create content that transforms how people accomplish their goals.
-
-And that, I think, is really cool.
+Because when care leads, quality follows.

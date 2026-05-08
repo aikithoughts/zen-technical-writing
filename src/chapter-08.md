@@ -1,149 +1,127 @@
-# Chapter 8: On Conciseness {#chapter-8:-on-conciseness}
+# Chapter 8: On Discoverability {#chapter-8:-on-discoverability}
 
-When most people think about conciseness in technical writing, they imagine it as a simple editing exercise: cut unnecessary words, shorten sentences, eliminate redundancy. This approach treats conciseness as purely about brevity—fewer words equals better writing.
+In my twenty-five years of writing technical documentation and thinking about how users actually consume information, there is one metaphor that continues to persist, over and over again: the book metaphor. If you look at any documentation set, they all have a left navigation that outlines the contents of the documentation just like you would with a book. There's an introduction, a number of chapters organized in logical sequence, and an underlying assumption—whether acknowledged or not—that users will read the content in that order, from start to finish.
 
-But conciseness isn't just about using fewer words. It's about conveying your meaning with the fewest words possible while still achieving your communication goals. And those goals extend far beyond just transmitting information—they include building trust, maintaining engagement, and respecting your reader's time and cognitive load.
+That's not how people read technical documentation.
 
-The challenge is that most writers, when they try to be concise, fall into one of two traps. They either strip away so much that their writing becomes cold and mechanical, or they swing in the opposite direction and add so much personality and explanation that they bury their message in unnecessary words. Both approaches fail because they misunderstand what conciseness is really about.
+The book metaphor made sense when documentation was literally printed in books, when users had to flip through pages sequentially to find information. But in our digital world of search engines and AI assistants, where users can land on any page from any search query, this linear thinking actively works against user success.
 
-While our previous discussions of Accuracy and Completeness operated at the content and topic level, conciseness drops us down to the section, paragraph, and sentence level. This is where the rubber meets the road in terms of user experience—where individual sentences either help or hinder comprehension, where word choices either build or erode trust, and where tone either supports or undermines your message.
+The reality is that any topic might be the first topic a user reads, and any topic might be the last. Users don't start at your carefully crafted introduction and work their way through your logical progression. They arrive at your content through Google searches, AI queries, colleague recommendations, and support ticket links. They jump between topics based on immediate needs, not your intended narrative flow.
 
-## The False Economy of Extreme Brevity {#the-false-economy-of-extreme-brevity}
+When we think about putting documentation systems together—because they are systems, not books—we need to acknowledge how users actually discover and navigate content.
 
-Consider this example of a letter thanking an aunt for a gift:
+## Beyond Content Types {#beyond-content-types}
 
-"Dear Aunt Jane,
+The traditional approach to documentation organization focuses on content types: reference materials, API documentation, conceptual overviews, tutorials, and troubleshooting guides, just to name a few. This approach assumes that users think in terms of content types—that they wake up in the morning and decide, "Today I need to read some conceptual material."
 
-Thank you for the sweater. It's a lovely shade of blue. I love how warm it is, and it fits perfectly. I know I'll wear it for years to come.
+Users don't think this way. They think in terms of goals and problems: "I need to integrate payments into my application" or "Why is my API call failing?" They don't care whether the answer comes from a reference page, a tutorial, or a troubleshooting guide—they just want to accomplish their objective.
 
-Love,
+The best documentation sets don't restrict themselves to artificial content-type boundaries. Stripe's API documentation exemplifies this approach beautifully. They didn't limit their API reference to just describing objects and methods. They included comprehensive coverage of authentication workflows, checkout processes, webhook handling, and error management—topics that traditional thinking would categorize as "conceptual" or "tutorial" content that doesn't "belong" in an API reference.
 
-Dave"
+This works because Stripe organized their documentation around user workflows rather than internal content taxonomies. When developers are implementing payment processing, they need to understand both the specific API calls and the broader context of how those calls fit into secure transaction flows. Stripe's documentation serves both needs in one coherent experience rather than forcing users to jump between different content types to piece together a complete understanding.
 
-Following conciseness to its extreme, you might revise this to:
+## The Sherpa Approach {#the-sherpa-approach}
 
-"Aunt Jane:
+Great documentation doesn't just respond to user queries—it acts like a sherpa or guide. It's there to get you where you want to go, but also to help you discover interesting and valuable things along the way that you might not have known to look for.
 
-Thank you for the sweater. It is:
+A good sherpa doesn't just follow your exact instructions to get from point A to point B. They help you understand the terrain, point out important landmarks, suggest better routes based on current conditions, and alert you to opportunities or hazards you might not be aware of. They're proactive guides who enhance your journey rather than reactive responders who only answer direct questions.
 
-* Warm
+Traditional documentation is more like basic signposts. It points you toward the specific destination you asked about, but it doesn't help you discover that you're asking the wrong question, or that there's a better route you haven't considered, or that there's a related destination that would solve your broader problem more elegantly.
 
-* Blue
+But implementing the sherpa approach requires careful balance and respect for user intentions. There's a tension between guiding users toward valuable discoveries and respecting their immediate goals and cognitive load.
 
-* Well-fitting
+## Respecting User Time and Intent {#respecting-user-time-and-intent}
 
-I will wear it for at least two years.
+The first principle of discoverable documentation is respecting your users' time and intentions. Users aren't typically on a journey to find something new and exciting—they're trying to get something specific done, often under pressure or time constraints.
 
-Dave"
+I learned this lesson clearly during my time at Stripe, where we faced constant pressure from product teams who wanted to promote beta features and new capabilities in our documentation. These teams were acting with good intentions—they wanted to share innovative solutions that could genuinely help users. But those users weren't browsing for innovations. They were trying to implement payment processing, resolve integration issues, or meet project deadlines.
 
-The second version is undeniably more concise. It uses fewer words, eliminates subjective language, and presents information more efficiently. But it's also a terrible letter. Aunt Jane isn't going to send you anything else any time soon.
+Adding promotional content or feature callouts to task-focused documentation creates cognitive overhead that interferes with user success. It's like a sherpa asking if you want to climb Kilimanjaro instead when you're focused on reaching Everest base camp before dark. Kilimanjaro might be a genuinely rewarding expedition, but it's not what you signed up for and it doesn't help you accomplish your immediate goal.
 
-This example illustrates the fundamental problem with treating conciseness as pure word reduction. The goal isn't to minimize word count—it's to maximize communication effectiveness. Sometimes that requires more words, not fewer. Sometimes personality and warmth are essential to your message, not obstacles to it.
+This doesn't mean never exposing users to new capabilities—it means being strategic about when and how you do it. The key is understanding the difference between users who are in exploration mode versus execution mode, and designing your content experience accordingly.
 
-The same principle applies to technical writing. Users aren't just trying to extract information from your documentation—they're trying to accomplish goals, solve problems, and build confidence in your product. Pure brevity can undermine these objectives just as much as excessive verbosity.
+## Orientation and Self-Triage {#orientation-and-self-triage}
 
-## The Three Extremes of Technical Writing Style {#the-three-extremes-of-technical-writing-style}
+Since any topic might be a user's first encounter with your documentation, every piece of content needs to help users quickly determine whether they're in the right place. This is like calling a support line and reaching the wrong department—a good support center quickly helps you identify where you actually need to be and gets you there efficiently.
 
-When it comes to conciseness in technical writing, I find it helpful to think about three distinct styles that represent different approaches to balancing brevity with communication effectiveness.
+Effective content orientation happens upfront, usually in the first paragraph or section. There's a simple pattern you can use to implement this approach consistently. For every topic, create a three-sentence introduction: The first sentence explains why the content matters—what value or outcome it provides. The second sentence describes what the topic will specifically cover. The third sentence offers links to related topics in case the user realizes they're in the wrong place.
 
-### Academic Writing {#academic-writing}
+Good orientation also includes contextual information about prerequisites, scope, and related topics. If a user needs to complete other setup steps first, or if the content assumes familiarity with certain concepts, that should be clear from the beginning. Similarly, if there are alternative approaches or more appropriate starting points for their specific situation, those should be signposted early.
 
-Anyone who went to high school or college knows what academic writing sounds like. It's formal, precise, and often unnecessarily complex. Interestingly enough, many of the conventions we associate with academic writing exist because, historically, academics wanted to make people work to understand what they were saying. Complexity was a feature, not a bug—it demonstrated sophistication and seriousness.
+However, be careful not to create prerequisite chains that frustrate users. I've encountered documentation sets where I had to navigate through three levels of prerequisites before I could access the topic I actually wanted to read. Good orientation mentions essential prerequisites without creating a maze of dependencies that prevents users from reaching their goals.
 
-Academic writing in technical documentation sounds like this:
+This upfront investment in orientation saves time for both users who are in the right place (they can proceed with confidence) and users who are in the wrong place (they can redirect their efforts quickly rather than getting lost in irrelevant content).
 
-"In order to facilitate the implementation of the authentication mechanism, it is necessary to configure the appropriate parameters within the configuration file, ensuring that the requisite security protocols are properly instantiated before attempting to establish a connection to the remote server."
+## No Dead Ends {#no-dead-ends}
 
-This sentence contains accurate information, but it buries simple concepts under layers of unnecessary formality. "Configure authentication settings in the config file before connecting to the server" would convey the same information more effectively.
+One of my fundamental rules for documentation structure is that no topic should ever be a dead end. Every piece of content should give users logical places to go next, should they choose to continue their journey.
 
-Teams often drift toward academic writing because it feels professional and authoritative. Writers who learned formal writing in educational contexts may default to this style without realizing how it affects their readers. The problem isn't that academic writing is wrong—it's that it optimizes for perceived authority rather than user success.
+This principle flows naturally from thinking like your users. After completing a tutorial, users might want to learn more about the API calls they just implemented, or they might want to add additional features to what they built, or they might want to understand how to troubleshoot common issues. After reading a reference page, they might want to see practical examples of implementation, or understand how that feature fits into larger workflows.
 
-### Casual Writing {#casual-writing}
+Designing for logical next steps requires understanding user progression patterns and common workflow sequences. It also helps identify unintended gaps in your content—if you can't think of appropriate next steps for a topic, that might indicate missing content that would serve your users.
 
-On the opposite extreme, we have casual writing. This is what many novice writers default to when they want to avoid sounding academic. They've heard that technical writing should be conversational and accessible, so they swing hard in the direction of informality.
+The "no dead ends" principle doesn't mean overwhelming users with every possible option. It means providing 2-3 thoughtful suggestions that represent the most common and valuable paths forward from that specific content. These suggestions should be based on actual user behavior and feedback rather than assumptions about what users might find interesting.
 
-Casual writing is equally verbose but in a different way. It fails to respect the user's time by adding unnecessary personality, explanations, and conversational elements that don't serve the user's immediate goals.
+## The Information Architecture Problem {#the-information-architecture-problem}
 
-Casual writing sounds like this:
+Despite the importance of user-centric organization, information architecture remains crucial even in an age of search and AI-powered content discovery. I've seen many documentation sets—Angular was one example when I worked on it several years ago, though it has improved since—where the categories of content simply didn't make sense. They were generic, poorly defined, and worst of all, there was often content that didn't fit into any of the established buckets.
 
-"Alright, so now we're going to check out this really cool authentication function that we just wrote. It's pretty neat how it handles all the security stuff automatically\! Let's dive in and see how it does all this magic behind the scenes. Don't worry if it seems complicated at first—we'll walk through it step by step, and I promise it'll make sense by the end\!"
+To this day, when I see a section of documentation labeled "Advanced Topics," I know what that really means: "We didn't know where to put this information, so we shoved it here." Advanced Topics is the kitchen junk drawer of documentation—a catch-all category that serves no one well.
 
-This style might feel friendly and approachable, but it's actually disrespectful to users who are trying to accomplish specific tasks. They don't need encouragement or entertainment—they need clear, actionable information. The chattiness becomes cognitive overhead that interferes with comprehension.
+The broader problem is relying on complexity-based categories at all. Terms like "Fundamentals," "Intermediate," and "Advanced" are meaningless without user context. What's fundamental to a database administrator is radically different from what's fundamental to an application developer. What Stripe considers basic payment processing might be incredibly advanced for someone who's never handled financial transactions before.
 
-The casual approach often emerges from good intentions. Writers want to sound approachable and human rather than robotic. They've seen examples of technical writing that feels warm and engaging, and they want to replicate that connection with their readers. The desire to avoid sounding like a machine or a textbook is understandable—nobody wants their writing to feel cold or intimidating.
+These vague labels are actually a symptom of not understanding your users well enough. Effective information architecture uses categories that describe actual user goals and contexts: "Setting up authentication," "Handling payment failures," "Multi-party transactions," "Compliance requirements." These labels help users identify relevant content based on what they're trying to accomplish rather than forcing them to guess which arbitrary complexity level matches their needs.
 
-Some writers are genuinely skilled at using humor and personality to enhance their communication, creating content that's both informative and engaging. But developing that skill requires significant practice and careful attention to audience needs. These skilled writers understand when personality serves the message and when it becomes a distraction. They know how to add warmth without adding confusion, and they can gauge whether their voice is helping or hindering their readers' success.
+## The Garage Cleanout Process {#the-garage-cleanout-process}
 
-Many writers attempt a casual tone without considering how their personality affects comprehension, especially for readers for whom English is a second language. Cultural references, idioms, humor, and conversational asides that feel natural to native speakers can create cognitive overhead and confusion for ESL readers who are already working harder to process technical information in their non-native language. This consideration becomes even more critical when content needs to be localized or translated—casual writing that relies heavily on cultural context or wordplay often doesn't translate well, creating additional barriers for global audiences who depend on clear, direct communication to accomplish their technical goals.
+When I work with teams on information architecture, I often use the typical garage that you'd find anywhere in the United States as a metaphor. In the US, people store all sorts of things in their garages—tools, holiday decorations, sports equipment, old furniture, boxes of miscellaneous items. So much accumulates that many people can't even park their cars in their garages anymore.
 
-### Informal Writing: The Sweet Spot {#informal-writing:-the-sweet-spot}
+Sooner or later, a homeowner decides they need to clean their garage out. This process has two essential steps. First, you pull everything out and ask yourself: "Do I actually need this? Why?" You ruthlessly get rid of things that aren't important or useful anymore. Second, when you put things back, you organize them not only so you know where everything is, but so there's room for additional items as you acquire them.
 
-Neither academic nor casual writing serves users effectively. What we want is what I call informal writing. Informal writing strips away unnecessary academic formality while still respecting the user's time and cognitive resources. It's neither pretentious nor chatty—it's direct, clear, and appropriately human.
+The same principle applies to documentation. Review everything in your current information architecture and honestly assess whether it's still helpful to users. You can determine helpfulness partially through user feedback and analytics, but you can also evaluate it by observing how often content gets updated and maintained. Content that consistently falls behind or gets ignored probably isn't serving an important user need.
 
-Here's my test for informal writing: Pretend you're working with a colleague on a document. Your colleague is about to board a plane and won't have internet access during the flight. They have just a few minutes before boarding, and they need crucial information from you. How would you convey your message?
+When you rebuild your content system, look at your product roadmap and planned releases. Can you quickly identify where future content would fit in your new information architecture? If you can't immediately see where new features or capabilities would belong, your IA needs more work.
 
-You wouldn't be formally academic—you know this person, and formality would waste precious time. You also wouldn't be excessively casual or chatty—they need to catch a flight, and joking around would be inappropriate and ineffective. Instead, you'd be clear, direct, and appropriately personal. You'd focus on what they need to know, expressed in the most efficient way possible. And you'd be supportive, because you want your colleague to be successful.
+This is a continuous process, not a one-time project. Every couple of years, you should review your documentation and clean out the garage. Products evolve, user needs change, and content that was once valuable may become obsolete or redundant.
 
-That's informal writing: respectful of the relationship, mindful of constraints, focused on effectiveness.
+## The Development Analogy {#the-development-analogy}
 
-Applied to our authentication example, informal writing would sound like this:
+When working with developer audiences, I often explain information architecture problems using programming concepts they already understand. Just as novice developers might create a "helper" class that seems logical initially but quickly becomes a dumping ground for unrelated properties and methods, documentation teams create categories like "Advanced Topics" that seem reasonable but become incoherent grab bags over time.
 
-"Configure your authentication settings in the config file before connecting to the server. Set the security\_protocol parameter to 'TLS' and add your API key to the credentials section."
+Both problems stem from taking the easy categorization path instead of doing the harder work of understanding actual relationships and usage patterns. It's much easier to create an "Advanced Topics" category than to figure out why certain content doesn't fit your existing structure, or whether your structure needs to evolve to accommodate new types of content.
 
-This version is concise without being terse, clear without being condescending, and direct without being robotic. It respects the user's time while providing the information they need to succeed.
+Like helper classes, these vague documentation categories seem harmless at first. "Advanced Topics" might start with 2-3 legitimately complex pieces of content. But over time, anything that doesn't obviously fit elsewhere gets tossed there, until it becomes an incoherent collection that serves no user need effectively.
 
-## Why Teams Fall Into These Traps {#why-teams-fall-into-these-traps}
+The maintenance problems parallel programming as well. Helper classes become harder to refactor over time because dependencies become unclear and interconnected. Similarly, the longer you let content accumulate in vague organizational buckets, the harder it becomes to reorganize properly because you lose track of user relationships and workflow connections.
 
-The academic and casual extremes aren't random choices—they emerge from understandable and well-intentioned thinking.
+## The Roadmap Test {#the-roadmap-test}
 
-The **Academic Trap** often catches writers whose last significant writing experience was in college. Academic writing was rewarded in educational contexts, so it feels like "good writing" even when it's counterproductive for user documentation. Writers may also believe that formal language makes them sound more professional or authoritative, especially when documenting complex technical systems.
+I mentioned earlier that, when cleaning out your garage, you should not only remove what you don't need, but think about what you might need in the future. For documentation, I call this the Roadmap Test. Look at your product's planned features and releases for the next 12-18 months. For each new capability or enhancement, ask yourself: "Where would documentation for this feature belong in our current IA? Can I identify the logical location immediately, or would I be tempted to create a new top-level category or throw it into a miscellaneous section?"
 
-The **Casual Trap** catches writers who want to "sound cool" or make their content more engaging. They've seen examples of successful casual writing—often from skilled writers who have developed that ability over time—and they try to replicate the style without understanding why it worked in those specific contexts. They may also be reacting against overly formal documentation they've encountered, swinging too far in the opposite direction.
+If you constantly struggle to place future content in your existing structure, that's a strong signal that your IA is organized around your current product state rather than user workflows and goals. Good information architecture should be flexible enough to accommodate product evolution without requiring constant restructuring.
 
-It's important to note that these aren't vocational patterns. I've seen casual technical writers and overly formal developer advocates. The tendency toward one extreme or another seems to depend more on individual background and intentions than on job role.
+The roadmap test also helps you identify emerging content themes that might warrant new organizational approaches. If you notice that several upcoming features all relate to a specific user workflow or use case that isn't well-represented in your current structure, that might indicate an opportunity to reorganize around that user journey.
 
-## Recognizing Your Writing Style {#recognizing-your-writing-style}
+And just as you don't clean out your garage only once, you should continuously examine your information architecture. The roadmap test isn't a one-time evaluation—it's an ongoing practice that helps you stay ahead of organizational problems before they become entrenched.
 
-Most writers have difficulty objectively evaluating their own tone and conciseness. We're too close to our own writing to hear how it sounds to others. Here are some practical techniques for developing awareness of your writing style:
+## Discoverability in the Age of AI {#discoverability-in-the-age-of-ai}
 
-**Read Aloud with Minimal Inflection:** Read your content out loud, but try to use as little vocal inflection as possible. Speak in a flat, monotone voice. This technique forces you to hear the actual words and sentence structure without the emotional coloring that your internal voice adds when reading silently. Academic writing will sound pretentious and unnecessarily complex. Casual writing will sound juvenile or condescending.
+Even as users increasingly find content through AI queries rather than browsing hierarchical navigation, underlying information architecture remains crucial. AI systems need to understand the relationships between concepts, the logical progression of user workflows, and the context in which different pieces of content are most valuable.
 
-**Try Hostile Inflection:** As a follow-up test, try reading your content with deliberately sarcastic or hostile inflection. Quality writing should be resilient enough to survive this kind of stress test—the core message and logic should remain clear even when someone's trying to make it sound bad. If sarcastic delivery completely undermines your writing or reveals potential misinterpretations, it might indicate that your writing relies too heavily on assumed reader goodwill. This technique is particularly useful for identifying problematic word choices like "simply" or "just" that can sound condescending when read sarcastically. You don't necessarily need to change your writing based on this test, but it can help you anticipate how your content might be received and prepare you for potential reader reactions.
+Well-structured information architecture actually enhances AI-powered discovery by providing clear semantic relationships that help AI systems surface the most relevant content for specific queries. When your IA is organized around user goals and workflows, AI tools can better match user intent with appropriate content, even when users don't know exactly what they're looking for.
 
-**Use Text-to-Speech Tools:** Screen readers and text-to-speech software provide an even more objective perspective on your writing. Hearing your content in a synthetic voice reveals patterns you might miss when reading with your own internal voice. The artificial delivery makes obvious any unnecessary complexity or chattiness that interferes with comprehension.
+The sherpa principle becomes even more important in AI-mediated discovery. When users ask an AI assistant for help, they want guidance that goes beyond just answering their immediate question—they want to understand the broader context, learn about related concepts that might be relevant, and discover solutions they hadn't considered.
 
-**Apply the Coding Analogy:** When working with developers, I often explain conciseness using programming principles they already understand. Code that is too terse becomes difficult to understand and maintain later. Code that is too verbose—using twenty lines when ten would suffice—becomes cluttered and hard to navigate. The best code is tightly written but verbose enough that it remains comprehensible and maintainable.
+## Building for Discovery {#building-for-discovery}
 
-The same principles apply to technical writing. After all, content is essentially code that gets compiled by the human brain. Your readers need to parse your sentences, understand your logic, and execute your instructions. Unnecessary complexity creates cognitive overhead. Excessive casualness creates processing delays. Optimal writing minimizes both while maximizing comprehension and task completion.
+Effective discoverability requires thinking systematically about user journeys while designing for the reality that users will enter and exit your content at unpredictable points. This means:
 
-## The Developer Perspective {#the-developer-perspective}
+**Every topic must be able to act as an entry point** into the rest of the documentation set while connecting meaningfully to the broader system. Users should be able to understand and act on the content regardless of where they came from or what they read previously.
 
-The coding analogy resonates particularly well with technical audiences because it reframes writing quality in terms they already understand and value.
+**Navigation should reflect user workflows** rather than internal product organization. Categories and labels should match how users think about their work, not how your company organizes its feature development.
 
-Maintainable Code vs. Maintainable Content: Just as code needs to be maintainable by future developers (including your future self), content needs to be understandable by future readers (including users with different backgrounds and expertise levels). Academic writing creates maintenance problems because it's unnecessarily complex. Casual writing creates maintenance problems because it includes too much irrelevant information.
+**Content relationships should be explicit** rather than assumed. If topics build on each other or relate to common workflows, those connections should be clearly surfaced through strategic linking, contextual suggestions, and logical progression cues.
 
-Performance Optimization: Developers understand that code performance matters—inefficient code wastes computational resources and creates poor user experiences. Similarly, inefficient writing wastes cognitive resources and creates poor reading experiences. Every unnecessary word, every confusing sentence structure, every irrelevant tangent is like inefficient code that slows down the user's mental processing.
+**Discovery should be progressive** rather than overwhelming. Instead of presenting users with every possible option, focus on the 2-3 most valuable next steps based on common usage patterns and user feedback.
 
-Clean Code Principles: The programming concept of "clean code"—code that is easy to read, understand, and modify—applies directly to technical writing. Clean writing follows consistent patterns, uses clear variable names (in writing, this means precise word choices), eliminates redundancy, and focuses on functionality over cleverness.
-
-However, there's an important caveat when applying coding principles to writing. Developers often follow DRY (Don't Repeat Yourself) principles when coding, but this can be problematic when applied too strictly to documentation. It often leads to attempts to "single source" content so that the same message is included in multiple topics through shared snippets or references. This creates a maintenance nightmare—when you need to change a note or explanation, how do you know how many topics are impacted? Does the updated message apply equally to all those different contexts? Unlike code, where a function serves the same purpose everywhere it's called, content often needs slight variations based on context, user type, or specific workflow. Sometimes a little redundancy in documentation is actually beneficial for user comprehension and content maintainability.
-
-## Conciseness Beyond the Sentence Level {#conciseness-beyond-the-sentence-level}
-
-While conciseness primarily operates at the sentence and paragraph level, the principles can influence broader content architecture decisions. When you consistently write concisely, you might discover that you need fewer topics than originally planned, or that information can be organized more efficiently.
-
-However, these broader implications are secondary to the primary goal of sentence-level clarity. The Completeness framework we discussed earlier provides better guidance for topic-level decisions. Conciseness is most valuable when applied to how you express ideas within those topics, not whether those topics should exist at all.
-
-## Practical Application {#practical-application}
-
-Achieving effective conciseness requires ongoing practice and attention. Here are some approaches that work consistently:
-
-**Start with Clarity, Then Trim:** Don't try to be concise in your first draft. Focus on getting your ideas down clearly and completely, then revise for conciseness. It's easier to cut unnecessary words from clear writing than to add clarity to overly brief writing.
-
-**Consider Your Voice and Tone:** Spend time thinking about your tone and voice. How do you want to communicate? Are you a knowledgeable advisor, a respected expert, a visionary leader? Your words construct your personality in the mind of the reader. Think about that personality and make sure your words support it. This isn't about adding unnecessary flourishes—it's about ensuring that every word choice aligns with the relationship you want to build with your readers and the role you want to play in their success.
-
-**Test with Real Users:** The ultimate test of concise writing is whether it helps real users complete real tasks more effectively. You don't need a full user research study—talking with just a few users can yield great insights about whether your attempts at conciseness are helping or creating new barriers to comprehension.
-
-**Consider Your Audience's Context:** Conciseness isn't just about word count—it's about respecting your reader's cognitive resources and time constraints. A user troubleshooting a production issue needs different conciseness than someone learning a new concept. Adjust your approach based on the urgency and complexity of your reader's situation.
-
-The goal isn't to achieve some arbitrary standard of brevity. It's to find the optimal balance between efficiency and effectiveness for your specific users in their specific contexts. Sometimes that means more words, sometimes fewer, but always with intentionality about how those words serve your reader's success.
+The goal isn't to control how users navigate your content—it's to support their natural discovery patterns while gently guiding them toward information that will help them succeed. Like a good sherpa, effective documentation gets users where they want to go while helping them discover valuable things they didn't know they needed.

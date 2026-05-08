@@ -1,142 +1,117 @@
-# Chapter 11: On Meaning {#chapter-11:-on-meaning}
+# Chapter 11: The Quality Trajectory {#chapter-11:-the-quality-trajectory}
 
-For content to have any quality, it has to have meaning for its intended user.
+When I interviewed at Google, I was asked the following question:
 
-This seems obvious, almost trivially true. Of course documentation needs to be meaningful to users. But meaning in technical writing is more complex and fragile than most people realize. Content can be perfectly accurate, strategically complete, efficiently concise, easily discoverable, and rigorously consistent—and still fail completely if it doesn't connect to what users are actually trying to accomplish.
+“We have 6 projects that need to get done. You only have time to do 3 of them. What do you do?”
 
-Meaning isn't just about having relevant information. It's about creating content that resonates with users' mental models, supports their workflows, and helps them make progress toward their goals. Without meaning, all the other characteristics of quality become irrelevant.
+I answered without hesitation: “I do 3 of them and I make sure the people I work with understand this.”
 
-I've seen this failure of meaning countless times: API documentation that meticulously describes every parameter but doesn't explain when you'd use the API. Tutorials that walk through every step of a process but never clarify what problem the process solves. Reference guides that comprehensively catalog features but don't connect those features to user outcomes.
+The interviewer—a dev manager—replied: “But we need all 6 things done.”
 
-The cruel irony is that teams often create meaningless content while believing they're being user-focused. They conduct user research, gather requirements, and carefully document what users asked for. But they miss the deeper layer of meaning that connects information to purpose.
+“Are we hiring more staff—assuming there’s time to do so?” I asked.
 
-## The Difference Between Information and Meaning {#the-difference-between-information-and-meaning}
+“No.”
 
-Information is what your product does. Meaning is why it matters to your users.
+“Are we willing to move the deadline?”
 
-Consider these two approaches to documenting the same authentication feature:  
-Information-focused: "The authenticate() method accepts a username string and password string as parameters and returns a boolean value indicating success or failure."
+“Can’t.”
 
-Meaning-focused: "Before users can access protected resources in your application, you need to verify their identity. The authenticate() method takes their login credentials and confirms whether they should be granted access."
+“Well then,” I said. “We’re doing 3 things. Let’s figure out which 3 are the most important.”
 
-Both are accurate. The first is more technically precise. But the second creates meaning by connecting the technical capability to the user's broader goal of controlling access to their application.  
-The information-focused approach treats documentation as a catalog of capabilities. The meaning-focused approach treats documentation as a bridge between capabilities and accomplishments.
+“They’re all important.”
 
-This distinction becomes critical as systems grow more complex. Users can memorize information about individual features, but they need meaning to understand how those features work together to solve their problems.
+“I’m sure they are, but they’re all not equally important.” I continued. “Look, you’re a dev manager, right?”
 
-## The Three Levels of Meaning {#the-three-levels-of-meaning}
+“Yup\!”
 
-Meaning in technical documentation operates at three interconnected levels: task-level, workflow-level, and strategic-level. Understanding these levels helps explain why some documentation feels immediately useful while other documentation requires users to do significant translation work.
+“I’m sure the list of feature requests and bug fixes exceeds what your team can handle in a given period of time. You have to triage too.”
 
-### Task-Level Meaning {#task-level-meaning}
+“Good point,” my interviewer said. We were both enjoying the conversation. “But is there any way you can do more than 3?”
 
-At the most granular level, meaning connects individual actions to immediate outcomes. When you document a specific API call, configuration setting, or user interface element, task-level meaning answers the question: "What does this accomplish?"
+This is where the conversation got interesting. To me, at least.
 
-Poor task-level meaning sounds like this: "Set the retry\_count parameter to control retries." This tells users what the parameter does but not why they'd want to control retries or how to decide what value to use.
+“Sure,” I said, after taking a moment to think. “Let’s say we have 3 months until our deadline. Each project takes 1 month to complete. That includes one week for tech reviews and testing.
 
-Strong task-level meaning sounds like this: "Set retry\_count to 3 to automatically recover from temporary network failures without overwhelming your servers with repeated requests." This connects the technical action to a meaningful outcome users care about.
+“If we agree that we don’t need tech reviews or testing, then we can get 4 projects done instead of 3\. How does that sound?”
 
-Task-level meaning requires understanding not just what your product does, but what problems that functionality solves for users. It requires connecting features to outcomes that matter in users' contexts.
+My interviewer thought for a moment. “Hm. I’m not sure I want to publish something that we haven’t reviewed.”
 
-### Workflow-Level Meaning {#workflow-level-meaning}
+“It’s not my preferred way of doing things either,” I replied. “But sometimes it happens, and it’s sometimes the right call to make. But it does come at a cost, so we have to think about what the trade-offs are.”
 
-The second level connects individual tasks to larger workflows that users are trying to complete. This is where many documentation sets struggle, because it requires understanding how users actually work, not just how your product works.
+We had to move on to other topics, but this exchange always stuck with me.
 
-Workflow-level meaning answers questions like: "When would I use this?" and "What do I do next?" It acknowledges that users don't invoke features in isolation—they're following sequences of actions to accomplish larger goals.
+## The Iron Triangle {#the-iron-triangle}
 
-I learned the importance of workflow-level meaning during my time documenting AWS architecture patterns. Individual services like EC2 and RDS were well-documented at the task level—users could learn how to launch instances or create databases. But users struggling to architect complete applications needed to understand how these services connected to support real-world workflows.
+Many of us know about the Iron Triangle for project management. If you're not familiar with it, the triangle looks like this:
 
-The breakthrough came when we started organizing content around workflow patterns: "Building a scalable web application," "Processing batch data reliably," "Implementing disaster recovery." Each pattern showed how multiple services worked together to solve a complete problem, not just how each service worked individually.
+<svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" style="max-width:300px;display:block;margin:1em auto;">
+  <!-- Triangle -->
+  <polygon points="150,20 280,230 20,230" fill="none" stroke="#333" stroke-width="2"/>
+  <!-- Corner labels -->
+  <text x="150" y="14" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#333">Scope</text>
+  <text x="10" y="250" text-anchor="start" font-family="sans-serif" font-size="14" font-weight="bold" fill="#333">Budget</text>
+  <text x="290" y="250" text-anchor="end" font-family="sans-serif" font-size="14" font-weight="bold" fill="#333">Schedule</text>
+  <!-- Center label -->
+  <text x="150" y="160" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#555">Quality</text>
+</svg>
 
-This workflow-level meaning transformed our documentation from a collection of service manuals into guidance for accomplishing business goals.
+This triangle shows (or makes the case that) the quality of work is constrained by three criteria: scope, schedule, and budget. As you saw in my response to my interviewer (and I’m sure my interviewer knew where I was going with my questions), when asked when I could get something done, I asked about two of these three constraints: schedule (”Can we push out the date?”) and budget (”Can we hire more people?”).
 
-### Strategic-Level Meaning {#strategic-level-meaning}
+The iron triangle isn’t a perfect analogy of quality—more on that in a moment. But it is a good way of determining how different constraints impact the quality of a given documentation project.
 
-The highest level of meaning connects workflows to business outcomes and strategic objectives. This level answers the question: "Why does this matter to my organization?"
+## A missing piece: Trajectory {#a-missing-piece:-trajectory}
 
-Strategic-level meaning is often overlooked in technical documentation because it seems "too high-level" or "too business-focused." But for decision-makers evaluating tools and approaches, this level of meaning is crucial.
+One way the iron triangle isn’t perfect is that it assumes that quality is a constant, fixed state. It’s not—it has a trajectory that changes over the lifetime of the documentation. And, if you don’t pay attention to that trajectory—if you only focus on how scope, cost, and time affect a project in the immediate or near-term, you risk enabling a downward trajectory of quality that becomes increasingly difficult to recover from.
 
-When Stripe documents their payment processing capabilities, they don't just explain how to charge credit cards (task-level) or how to build a checkout flow (workflow-level). They connect these capabilities to business outcomes like reducing cart abandonment, expanding to international markets, and maintaining PCI compliance (strategic-level).
+On the flip side, it is equally important to remember that you can always increase your quality trajectory. This idea is encompassed in the saying: “Don’t let perfect be the enemy of good.” It’s understandable that, for all releases, nothing will be perfect. It’s also understandable that some parts of the product will be closer to perfection than others. When it comes to documentation, I find that I need to remind myself that this is okay\! Unevenness in content quality is very normal. But this fact also reminds me that I should remain committed to equalizing the state of all the documentation—from APIs to tutorials. For example, sometimes you need to prioritize improving the documentation for an existing feature over documenting a brand new feature. Sometimes you need to be laser-focused on the API and set that cool tutorial you’re working on aside. And sometimes, you need to take a step back to make sure the whole documentation experience is working as it should.
 
-This strategic meaning helps users understand not just what they can build with Stripe, but why they should invest time and resources in building it.
+By keeping this focus, I can help make sure that the quality trajectory of our content is always trending up.
 
-## The User Journey Connection {#the-user-journey-connection}
+## The documentation decay cycle {#the-documentation-decay-cycle}
 
-Meaningful content aligns with how users actually discover, evaluate, and use your product. This requires understanding user journeys not just within your documentation, but within their broader context of solving problems and accomplishing goals.
+Here's a pattern I've seen play out repeatedly across multiple companies: A team launches a new product or feature with great documentation. They've invested time and energy into creating comprehensive, well-organized content. Users are happy. The documentation is genuinely helpful.
 
-Most documentation fails at meaning because it's organized around product capabilities rather than user journeys. Teams create content that mirrors their internal organization—separate sections for each feature, organized by the team that built them—rather than content that matches how users approach problems.
+Then the team moves on to the next priority. The product continues to evolve—new features get added, APIs change, workflows get optimized. But the documentation updates become sporadic. Small inaccuracies creep in. Gaps in content start to appear but don’t get addressed. The information architecture that made sense at launch becomes strained as content gets tacked on without strategic planning.
 
-I experienced this challenge firsthand while working on Angular documentation. The framework had dozens of features: components, services, directives, pipes, routing, HTTP clients, testing utilities, and more. The natural inclination was to document each feature thoroughly in its own section.  
-But users weren't trying to learn about Angular features in isolation. They were trying to build applications. Their journey started with problems like "I need to display dynamic data" or "I need to handle user input" or "I need to make API calls."
+For a while, nobody notices. The core documentation still mostly works. Users can usually figure things out. Support tickets increase gradually, not dramatically.
 
-We discovered that meaningful documentation needed to start with these user problems and then explain how Angular's features solved them. Instead of a section called "HTTP Client" with comprehensive coverage of every method and option, we created content organized around user needs: "Fetching data from APIs," "Handling loading states," "Managing authentication tokens."
+Then the complaints reach a critical mass. Users are frustrated. Support is overwhelmed. Leadership demands action.
 
-This shift from feature-focused to journey-focused organization dramatically improved the meaning our documentation provided to users.
+I experienced this firsthand early in my time at Google. Something triggered a complete documentation overhaul across Google Cloud Platform. "Code purple" refers to when hospitals stop accepting new patients to focus on critical cases—and that's exactly what we did. For months, the entire documentation team ceased any new work and focused exclusively on improving existing documentation. New templates were defined, new styles and patterns were implemented. It was a long, grueling effort, and we were all exhausted by the end of it.
 
-## The Context Problem {#the-context-problem}
+I saw a similar pattern with Angular documentation. When I joined that project, we found entire sections that had been around for years but were no longer relevant or even accurate. The number of times I would ask a question about a given Angular topic, only to get the response: “How long has THAT been there? That’s not even true anymore\!” became hard to track. To address this, I implemented a rule: if you needed to update a topic, you had to review the entire topic, not just what you changed. There were simply too many instances of old or outdated content to trust that any topic was current. 
 
-One of the biggest threats to meaningful content is what I call the context problem: teams create documentation that makes sense within their context but loses meaning when users encounter it in different contexts.
+The good news: for Google Cloud Platform, some of those best practices that were defined during that code purple experience continue to benefit customers to this day. And the Angular team recently revamped their entire documentation set. But each is still an unfortunate example of what happens when an engineering organization decides to de-emphasize documentation quality for too long. And these efforts are no guarantee that the problem won’t repeat itself in the future, as the demands for more documentation for more features continues to grow.
 
-This happens because teams know too much about their own product. They understand the assumptions, background knowledge, and workflow patterns that make their content meaningful. Users approaching the same content without that context struggle to extract meaning from it.
+This boom-and-bust approach to documentation quality is expensive, exhausting, and ultimately inefficient. It’s like only taking your car in for maintenance when the engine breaks down. Sure, you can do it, but regular maintenance would have everyone’s lives a lot easier. (Well, maybe the mechanic is okay with how things are, but that’s taking the analogy too far.)
 
-Consider this common example: "Configure your webhook endpoint to handle payment notifications." To the team that wrote this, the meaning is clear—they understand what webhooks are, why payment notifications matter, and what "handling" them entails. To a user who's never worked with webhooks before, this instruction is meaningless without additional context.
+## Maintaining Upward Trajectory {#maintaining-upward-trajectory}
 
-The context problem becomes more severe as organizations scale. Different teams develop different contexts and assumptions. What seems obviously meaningful to the team building a feature may be incomprehensible to users (or even to other teams within the same company).
+Think about how a plane stays in the air. The engines don't fire once during takeoff and then shut off. They run continuously throughout the entire flight, providing constant thrust to keep the plane aloft. The moment the engines stop, the plane begins to descend.
 
-The solution isn't to provide exhaustive context for every piece of content—that would make documentation overwhelming and inefficient. Instead, it's to understand which contextual knowledge is essential for meaning and which is optional for your specific users.
+Documentation works the same way. You can't achieve quality once and then stop paying attention. Quality requires continuous energy and focus. Every product update, every new feature, every API change affects your documentation's trajectory. If you're not actively maintaining and improving your content, it's decaying—even if you can't see it happening yet.
 
-## Testing for Meaning {#testing-for-meaning}
+Maintaining an upward quality trajectory means always thinking about documentation. Is it accurate as the product evolves? Is it complete for the workflows users actually need? Is it still relevant, or has it been superseded by new approaches? Does it maintain consistency with newer content? Does it still connect to what users care about accomplishing?
 
-Unlike the other characteristics of quality, meaning can't be evaluated purely through analytical review. You can audit content for Accuracy, Completeness, or Consistency, but Meaning requires observing how real users interact with real content in real contexts.
+This is where the six characteristics framework becomes essential for sustainable quality. Each characteristic degrades over time if not maintained:
 
-The good news is that you don't need massive user research studies to test for meaning. Jakob Nielsen's research showed that testing with just 5 users can identify 85% of usability problems, and similar principles apply to content meaning. The most striking truth is that zero users give zero insights. As soon as you collect data from a single test user, your insights shoot up and you have already learned almost a third of all there is to know about whether your content creates meaning for users.
+* **Accuracy drifts** as products evolve. APIs change, features get deprecated, recommended practices shift. Documentation that was perfectly accurate at launch can become misleading or wrong months later.  
+* **Completeness develops gaps** as new features get added. Each product release potentially creates new user workflows that need documentation. The content set that felt complete last quarter may have significant holes today.  
+* **Conciseness suffers** as content accumulates. Teams add new information without removing obsolete content, leading to bloated topics that bury important information under outdated material.  
+* **Discoverability breaks down** as the information architecture strains under content growth. The navigation structure that worked for 50 topics becomes unwieldy with 500 topics.  
+* **Consistency fragments** as different people contribute content over time, especially if standards aren't actively maintained and reinforced.  
+* **Meaning erodes** as the gap between what documentation describes and what users actually need grows wider. Content written for last year's user journeys may not serve this year's use cases.
 
-For testing content meaning specifically, you can get valuable insights by observing 5-8 users attempt to apply what they've learned from your documentation. The key questions are: Can they successfully use the information to accomplish their goals? Do they understand not just what to do, but why they're doing it? Can they adapt the guidance to their specific context, or can they only repeat the exact steps you provided?
+The solution isn't occasional heroic efforts—it's continuous, sustainable attention to documentation quality. This requires:
 
-### AI as a Meaning Test {#ai-as-a-meaning-test}
+* **Partnership with engineering:** Documentation cannot be an afterthought that happens after code is complete. Writers need to be involved in planning conversations, understand what's changing and why, and have time allocated for documentation updates in every release cycle.  
+* **Regular content audits:** Systematically review existing content to identify accuracy problems, completeness gaps, and relevance issues before they compound into crisis-level problems. The rubric from Chapter 12 can help teams assess whether content is ready for production—and whether existing content is still production-ready.  
+* **Deprecation policies:** Just as engineering teams deprecate old code, documentation teams need clear policies for retiring outdated content. Keeping obsolete information around creates confusion and erodes trust.  
+* **Quality gates:** New content should meet the same quality standards as initial documentation. It's tempting to accept lower quality for "just one more feature" when deadlines loom, but each compromise accelerates the decay cycle.  
+* **Investment in foundations:** Sometimes you need to prioritize improving the documentation for existing features over documenting brand new features. Sometimes you need to refactor your information architecture rather than adding more content to a strained structure. These foundational investments maintain trajectory even though they don't produce visible new content.
 
-There's also a surprisingly effective technique using AI tools to test whether your content has clear meaning. Here's how it works:
+The goal is to make documentation quality a continuous practice rather than a periodic project. Small, consistent investments in maintenance prevent the decay that leads to crisis-level overhauls.
 
-1. **Write your documentation** as you normally would  
-2. **Write a separate summary** of what you think the main purpose and key takeaways of that documentation should be  
-3. **Ask an AI tool to summarize your documentation** without showing it your intended summary  
-4. **Compare the two summaries** \- either manually or by asking the AI to compare them
+## Summing up {#summing-up}
 
-If the AI's summary aligns with your intended purpose and takeaways, there's a good chance your content successfully conveys meaning. If the summaries diverge significantly, it often indicates that your content isn't clearly connecting information to purpose.
-
-This technique works because AI tools are reasonably good at extracting apparent meaning from text, but they're not good at inferring meaning that isn't explicitly present. If an AI can identify the same key purposes and takeaways that you intended, it suggests that those meanings are clearly embedded in your content rather than just existing in your head.
-
-The AI technique isn't a replacement for user testing, but it's a useful preliminary check that can help you identify meaning problems before you invest time in user research. It's particularly helpful for quickly testing multiple drafts or revisions to see which version more clearly conveys your intended meaning.
-
-## When Meaning Conflicts with Other Characteristics {#when-meaning-conflicts-with-other-characteristics}
-
-Sometimes creating meaningful content requires trade-offs with other aspects of quality. Meaning might require more explanation than pure conciseness would suggest. It might require organizing content in ways that feel less complete from a feature-coverage perspective. It might require inconsistency in how deeply different topics are covered.
-
-These trade-offs can be uncomfortable for teams used to optimizing for other characteristics. But meaning should usually win these conflicts, because meaningless content can't achieve its purpose regardless of how well it performs on other dimensions.
-
-I learned this lesson during a project documenting complex data processing workflows. The most accurate and complete approach would have been to document each processing step in isolation, with comprehensive coverage of all options and configurations. But this approach would have made it nearly impossible for users to understand how the steps connected to solve their actual data problems.
-
-Instead, we organized the content around common data processing scenarios: cleaning customer data, aggregating sales metrics, preparing data for machine learning. Each scenario was less comprehensive than a complete feature reference would have been, but far more meaningful to users trying to accomplish specific goals.
-
-The result was documentation that sacrificed some theoretical completeness to gain practical meaning. Users could successfully apply what they learned because they understood not just how to use individual features, but why those features mattered in their context.
-
-## Building Meaning Systematically {#building-meaning-systematically}
-
-Creating meaningful content requires intentional design and ongoing attention. It's not something that emerges naturally from accurate, complete information.
-
-Start with User Goals: Before documenting features, understand what users are trying to accomplish. What problems are they solving? What outcomes do they need to achieve? How does your product fit into their broader workflows?
-
-Connect Features to Outcomes: For every capability you document, explicitly connect it to user benefits. Don't just explain what a feature does—explain why users would want that outcome.  
-Provide Context Appropriately: Identify what background knowledge users need to extract meaning from your content. Provide essential context upfront, but don't overwhelm users with information they don't need for their specific goals.
-
-Test with Real Users: Regularly validate that users can extract meaning from your content by observing them attempt to apply what they've learned. Look for gaps between what you think you've communicated and what users actually understand.
-
-Maintain Connection to Purpose: As products evolve and expand, regularly review whether your content still connects clearly to user purposes. Feature additions and changes can gradually erode the meaning of existing content.
-
-## The Foundation of Quality {#the-foundation-of-quality}
-
-Meaning serves as the foundation for all other aspects of content quality. Accurate information that doesn't connect to user goals is meaningless precision. Complete coverage that doesn't help users accomplish anything is meaningless comprehensiveness. Concise writing that doesn't serve user purposes is meaningless efficiency.
-
-But when content has strong meaning—when it clearly connects to what users are trying to accomplish—the other characteristics of quality become powerful amplifiers of that meaning. Accuracy ensures that the meaningful connections you've created are reliable. Completeness ensures that users can follow meaningful paths to completion. Conciseness ensures that meaning isn't buried under unnecessary information. Discoverability ensures that users can find meaningful content when they need it. Consistency ensures that meaning remains reliable across different contexts.
-
-Without meaning, technical writing becomes merely technical information. With meaning, it becomes a tool that empowers users to solve problems and accomplish goals. And that transformation is what quality in technical writing is ultimately about.
+That interview conversation always reminds me that quality is a trajectory, not a fixed state. It reminds me that I need to balance my drive to improve the documentation experience (something that I will always consider to be of high priority) with my understanding that this experience may not always align with my team's objectives. Simultaneously, it is part of my role to ensure that the quality trajectory of our content is always trending up—through continuous attention to the six characteristics, through partnership with engineering, through regular maintenance rather than periodic heroics—making our users' lives better and their efforts more successful.

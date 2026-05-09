@@ -14,27 +14,11 @@ One day, I was at a friend's apartment—a common gathering place for a whole ho
 
 Our conversation continued as I peppered her with questions about being a technical writer. What did she do all day? How did she learn about the technical topics she wrote about? What was it like working with engineers? By the time I went home that day, I knew I had found what I wanted to do as a career.
 
-## The Foundation {#the-foundation}
+## Getting Started {#getting-started}
 
-Looking back, I had two things going for me—one obvious and one not so obvious. The obvious thing was that I loved to write, and the University of Washington had a subcategory of its English degree that it called "English with a Writing Emphasis." Basically, it meant that I had to focus on two writing styles. I opted for poetry and expository writing. That spoke to me. I was even known for writing my essays in poetry form, because I found it amusing.
+I had two things going for me: I loved to write—I got my English degree from the University of Washington with a focus on poetry and expository writing—and all of my friends were computer science majors. I didn't realize how valuable that second part was at the time, but it taught me that code wasn't anything magical. It was challenging, sure, but it was something you could learn.
 
-The non-obvious advantage? All of my friends were computer science majors. I didn't realize this was valuable at the time, but it taught me that code wasn't anything magical. It was challenging, sure, and required training and practice to do well. But my friends who were computer science majors weren't geniuses—and I mean no offense by this. Coding, programming, software engineering—these are hard things, but they're things you can learn. I just hadn't spent the time they had learning them.
-
-When I graduated college, though, I had a shiny English degree and no idea what I wanted to do with it. I fell into working in computer sales, which I was terrible at. I didn't like making people buy things. But I was pretty good at explaining how things worked, and that seemed valuable. Still, I had no idea what I actually wanted to do.
-
-After that green pen conversation, I went back to UW and took their Certificate in Technical Writing Course. I lucked out a little—at the time I was in school, around the 1990s, tech companies were hiring all over the place. I ended up landing a job as a technical writer at a very small company.
-
-## Learning the Craft {#learning-the-craft}
-
-That first job lasted until they shut down. Then I went to another small company, where I documented wireless access points and point-of-sale devices. Eventually I wanted to do more, so I found myself at a startup. That's where I cut my teeth on a whole lot of things. A few experiences stand out.
-
-The startup had very little money. They couldn't even buy a copy of Word. So I learned about open source and XML and how to write transforms so that I could create PDFs and webhelp. I still have the book on XSL-FO that I used. I don't want to ever read it again, though.
-
-I needed to learn more about how to write code. One of the founders of the company handed me a book on Perl. I think it was "Perl for Dummies" but I don't remember. I will never forget that he wasn't gatekeeping his knowledge. He wanted me to understand how to write code. I particularly remember that his goal was to help me learn how to create.
-
-I also learned how to lead projects and think about documentation strategically, not just as isolated topics but as part of a larger system that needed to work together.
-
-Unfortunately, the startup didn't quite make it. My next stop was F5 Networks.
+After that green pen conversation, I went back to UW and got my Certificate in Technical Writing. It was the 1990s, tech companies were hiring everywhere, and I landed my first job as a technical writer at a small company. From there I bounced through a couple of small shops and a startup, each one teaching me something new—how to build docs from nothing, how to think about documentation as a system, how to learn just enough code to be dangerous. Eventually, the startup didn't quite make it. My next stop was F5 Networks.
 
 ## Learning to Push Back {#learning-to-push-back}
 
@@ -60,9 +44,7 @@ To this day, that's one of the highest compliments I've ever received in my care
 
 ## Understanding User Journeys {#understanding-user-journeys}
 
-Amazon was another evolutionary leap. When I was first there—10+ years ago—cloud computing was new. I joined as a curriculum developer, which is another tech adjacent role. My job was to create courseware on Architecture on AWS. This is where I got firsthand experience that users don't use products in isolation.
-
-The course covered how to set up an AWS account, how to create EC2 instances, how to connect those instances to RDS or DynamoDB, how to set up load balancing—all of these different products and services that had to work together. In fact, they really didn't do much all by themselves, when you think about it\! I also learned the importance of exploring on your own. I would build out my own networks, trying to set up a NAT server, and so on. To me Cloud Computing was such an amazing playground. And if you messed something up, you could just delete it and start over. Which I had to do a lot.
+Amazon was another evolutionary leap. When I was first there—10+ years ago—cloud computing was new. I joined as a curriculum developer, creating courseware on AWS architecture. This is where I got firsthand experience that users don't use products in isolation. Everything I was teaching—compute, storage, networking, databases—had to work together. None of it did much by itself.
 
 There's another piece that's important. At Amazon, I honed my belief that you don't need to be an expert to be a great communicator. And, in fact, being an expert can actually be a hindrance. I remember getting into a discussion with a colleague about this.
 
@@ -87,8 +69,6 @@ I was new to the company, so of course I didn't know. "Not a clue," I replied.
 "And you know what that means?" I said. "It means he's not a technical writer. He needs me to be knowledgeable about what I do, so he can focus on what he does. Just because you're a brilliant engineer doesn't mean you're a great writer. And just because I am a writer doesn't mean I don't know what I'm talking about."
 
 Another major experience at Google was when I was the lead writer for Angular. That was when I needed to learn about strategy. The Angular docs were, at that time, an untended garden. It was probably nice at one point, but it was now overgrown and difficult to sift through. I had to advocate for focusing more on strategy—cleaning up outdated docs, deleting unneeded content—instead of constantly chasing new features. I had to learn, again, how to deal with senior leadership who thought their programming expertise automatically made them writing experts. And I needed to do this as a collaborator, not as an adversary.
-
-I also learned how to develop systems for maintaining content. I put together programs to help localization efforts, for example. And I developed policies for deprecating content.
 
 ## The Quest for Quality {#the-quest-for-quality}
 

@@ -1,4 +1,4 @@
-# Chapter 1: The dinner party {#chapter-1:-the-dinner-party}
+# Chapter 1: The Dinner Party {#chapter-1:-the-dinner-party}
 
 In a sleepy gated community on the outskirts of Augusta, Georgia, the event of the season is about to take place.
 

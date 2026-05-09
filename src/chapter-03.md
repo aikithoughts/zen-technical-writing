@@ -1,4 +1,4 @@
-# Chapter 3: A personal reckoning  {#chapter-3:-a-personal-reckoning}
+# Chapter 3: A Personal Reckoning {#chapter-3:-a-personal-reckoning}
 
 When I joined Google, it was as a Technical Writer. This title was, on paper, a step down (level-wise) from previous roles. So, after about a year, I did what most of us would do: try for promotion. I worked with my manager to put together my justification—what we called a 'promotion packet'—a comprehensive document listing my accomplishments, links to content I created, and testimonials from colleagues. Then I waited.
 

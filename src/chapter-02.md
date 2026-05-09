@@ -1,4 +1,4 @@
-# Chapter 2: My journey {#chapter-2:-my-journey}
+# Chapter 2: My Journey {#chapter-2:-my-journey}
 
 I never thought I'd become a technical writer. In fact, I didn't even know the job existed when I graduated college. But my path to technical writing—and my passion for advocating for content quality—started with a green pen.
 

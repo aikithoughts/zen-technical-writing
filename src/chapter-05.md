@@ -1,163 +1,84 @@
 # Chapter 5: On Accuracy {#chapter-5:-on-accuracy}
 
-When most people think about accuracy in technical writing, they imagine it as a binary state: information is either accurate or it isn't. In this view, good technical writing means getting every detail exactly right, while inaccurate writing is simply failed writing. But after years of working with products at different stages of maturity—from startup MVPs to enterprise platforms serving millions of users—I've learned that accuracy is far more nuanced and strategic than that simple binary suggests.
+When I think about accuracy, I think about TIMESTAMPS.
 
-The traditional approach to accuracy creates impossible situations. Teams demand perfect documentation for imperfect products. Writers spend weeks documenting edge cases that may never ship. Users get frustrated when reality doesn't match the comprehensive promises made in documentation. Meanwhile, the core use cases that actually matter to users get lost in a sea of theoretical completeness.
+Let me explain.
 
-There's a better way to think about accuracy—one that's strategic, user-focused, and aligned with how products actually evolve in the real world.
+One of the first projects I worked on for Google was documenting a SQL dialect. I didn't know a lot about SQL at the time, except for this famous comic from XCKD and running simple queries such as `SELECT * FROM table;`. But anything is learnable, and I set to work.
 
-## Accuracy Across Product Lifecycles {#accuracy-across-product-lifecycles}
+One of the data formats I needed to document was `TIMESTAMP`. Timestamp represents an absolute point in time, independent of any time zone or convention like daylight saving time. That seems like a pretty simple explanation, but there is a lot of work to make this a reality. There are timezones, conventions like daylight savings time, leap seconds—all sorts of things go into making sure that the timestamp that's stored is correct. Or, to put another way, to make it accurate.
 
-One of the most common mistakes I see teams make is demanding what I call "GA docs for beta code." Picture this scenario: A product team is preparing to launch a new API. The engineers are still fixing critical bugs discovered in testing. Key features might be delayed to the next release. Error handling is inconsistent across endpoints. But the product manager insists that documentation must be "complete and accurate" before launch.
+I think the complexity of `TIMESTAMP` in SQL is very similar to the complexity of accuracy in technical documentation. You'd think it's very easy to look at a piece of content and say whether it's accurate or not, but the truth is it's not that simple:
 
-This creates an impossible situation: writers are asked to document with certainty something that is inherently uncertain. The resulting documentation either becomes obsolete before it's published, or it makes promises the product can't yet keep.
+* What's accurate for a newly-released product may not be the same as for a more mature one. 
+* What's accurate for a one-person development shop may not be sufficient for an enterprise corporation
+* What's accurate for a novice developer may not be accurate for an experienced one (and, interestingly enough, the reverse is also true)
 
-I've seen writers spend weeks crafting detailed explanations of features that get cut the day before launch. I've watched support teams field angry customer complaints because the documentation confidently described functionality that was still experimental. I've observed engineering teams delay product launches because they felt the documentation wasn't "accurate enough," even though the core functionality worked perfectly well.
+Of course, accuracy is important when you think about documentation. And I'd rather have no documentation than content I know to be inaccurate. But to think about accuracy correctly, we have to use the term as a framework, not as a binary.
 
-The reality is that products and services in different lifecycle stages require fundamentally different approaches to accuracy:
+## Accuracy principle #1: Respect the product state
 
-Early-stage products (beta releases, version 1.0, proof-of-concepts) only need to be deeply accurate for the specific scenarios and use cases the team wants to enable. If you're launching a beta API for processing payments, you need bulletproof accuracy for the standard payment flow. But you don't need to exhaustively document every possible error condition, edge case, or integration pattern that might theoretically be possible.
+If you talk with any technical writer, they'll have a story similar to the one I'm about to tell you. I'm sharing this because I've chosen not to name the company or the product. But, to be fair, you could probably insert *any* company and *any* product, and it would likely be true.
 
-Consider Stripe's early API documentation. When they were starting out, they didn't try to document every conceivable payment scenario. Instead, they focused laser-sharp accuracy on the core use case: accepting a payment. The documentation was incredibly precise about that flow—every parameter, every response, every error code that mattered for the basic transaction. But they didn't pretend to have solved every edge case in e-commerce.
+The product I was working on was brand new. Pre-release, as it were. Often, when products are in this state, the team is focused on what they call the MVP, or Minimally Viable Product. (Lately, this has changed to MLP, or Minimally Loveable Product, but the idea is the same.) An MVP is just that: it's enough of the product that folks can see the potential. It's more than a proof of concept, which is often held together with paperclips and bubblegum. But it's not the full product yet either.
 
-Growing products (version 2.0, expanding feature sets, new user segments) need accuracy that scales with their ambitions. As your user base grows and diversifies, the range of scenarios that require accurate documentation expands. But it expands strategically, following user demand rather than theoretical completeness.
+When products are in this state, things can be incredibly dynamic. Features come and go. What worked yesterday doesn't work today, and may work completely differently tomorrow. Key user journeys are added and tossed aside. All of this is totally normal. The team is in full-fledged create mode, and creating things is messy.
 
-Mature products (established platforms, enterprise solutions, widely-adopted tools) need broader accuracy coverage because users will naturally try to push the boundaries of what's possible. When you're serving millions of users across thousands of different use cases, the long tail of edge cases becomes significant. But even then, not every edge case deserves the same level of documentation accuracy.
+But often, when I'm on a product that's in this state, I don't get the same luxury. The team doesn't care what state the product is in; they want real, full-fledged documentation. I call this "asking for GA docs for beta code." And this ask creates an impossible situation: as the writer, I am being asked to document with certainty something that is inherently uncertain. It's like trying to describe an elephant when you've never seen one. And it's dark. And you're in another room. And also, no one told you there was an elephant in the first place.
 
-I sometimes flip the question to product teams: "Would you want beta docs for your GA product?" The answer is always no. Nobody wants their mature, stable product to feel experimental or unreliable. A customer evaluating your enterprise platform doesn't want to read documentation that hedges every statement with "this might work" or "we're still testing this."
+That's why, one principle to consider when you're thinking about accuracy is to respect the product state. Acknowledge the fact that products and services in different lifecycle stages require fundamentally different levels of accuracy:
 
-This helps teams understand why the reverse is also problematic. Beta software with GA-level documentation promises creates expectations the product can't meet. It's not just misleading—it's strategically counterproductive.
+* Early-stage products (previews, beta releases, and so on)
+might only need to be accurate for the specific scenarios and use cases the team wants to enable. The primary users are going to be early adopters, and those users expect rough edges and content gaps. It's unreasonable and unproductive to try to document every possible error condition, edge case, or integration pattern that might one day exist.
 
-## The Right Depth of Accuracy {#the-right-depth-of-accuracy}
+* Products that are more mature, such as those that just reached general availability, need a different level of accuracy. Now we're moving beyond early adopters and asking the larger potential user base to adopt the product. Those users will encounter more scenarios, have more demands, and need more information than those early adopters.
 
-The second major misconception about accuracy is that it requires exhaustive technical depth. This leads to documentation that reads like engineering specifications rather than user guides, where every implementation detail is meticulously explained whether it's relevant to the user or not.
+* Enterprise-level products require a different type of accuracy. These enterprises often want to know everything they can about the products they use. In addition, they also may have constraints like regulatory compliance that they have to consider.
 
-I don't need to understand the chemical reactions in a baking recipe to successfully bake a cake. I need to know the ingredients, the proportions, the temperature, and the timing. The fact that gluten proteins form networks when hydrated and agitated might be fascinating to a food scientist, but it's not necessary information for someone who just wants to make bread.
+When you think about accuracy, you need to think about the state of your product, and adjust your acceptance criteria accordingly.
 
-Similarly, users don't need to understand every technical detail of how a system works to use it effectively. They need to understand the parts that affect their decisions and actions.
+## Accuracy principle #2: Respect the user's knowledge
 
-Consider database documentation. A developer using your database API needs to know that certain operations are atomic, but they probably don't need to understand the specific locking mechanisms that make atomicity possible. They need to know that indexes improve query performance, but they don't need to understand B-tree algorithms unless they're doing database optimization work.
+When you think about the accuracy of your content, you need to consider the knowledge your user has when they're reading it.
 
-The key is providing the right level of accuracy for the task at hand. This means focusing on what users need to know to accomplish their goals, not everything there is to know about the subject.
+I first started thinking about this principle when I was the lead writer for Angular. Because Angular was an open source project, I had the opportunity to directly engage with members of the community, listening to their experiences and making decisions based on what they shared.
 
-But here's where it gets tricky: different users have different depth requirements even for the same task. A database administrator setting up replication needs to understand consistency models in much more depth than an application developer writing simple queries. The same system, the same feature, but very different accuracy requirements.
+It won't surprise you when I tell you that I found the Angular community incredibly diverse. On one end of the spectrum you had people who had been working with Angular from its very early days, who would regale you of their migration from Angular 1.0 (which became known as AngularJS) and Angular 2.0 (which turned into the Angular in use today). And on the other end of the spectrum we had people who were brand new to software development in general, let alone web development or JavaScript frameworks.
 
-I've seen technical writers get paralyzed by this variation. They try to accommodate every possible depth requirement in a single document, creating sprawling explanations that satisfy nobody. The beginner gets lost in details they don't need. The expert gets frustrated by explanations of concepts they already understand.
+This diversity is incredible. But it's also means that creating content that's accurate is more difficult than it might first appear. A good example of this challenge is with Angular's change detection. Change detection, as the name implies, is the process in which Angular updates component values in an application. For most Angular developers, the smart thing to do is to let Angular handle change detection on its own. It's simpler and, most of the time, it does the right thing at the right times. 
 
-The solution isn't to find some middle ground that disappoints everyone equally. It's to be strategic about layering information. Start with the accuracy level that serves your primary user's immediate goals. Then provide clear paths to deeper information for users who need it.
+But not all the time. And for some situations and applications, it makes more sense for the developer to take control of when Angular makes updates. But doing so comes at a cost: at the time I worked on Angular, this decision applied to your entire application. There wasn't a way to tell Angular: handle change detection as you see fit, except in this case.
 
-Amazon Web Services does this well in their documentation. Their getting-started guides focus on the accuracy needed to complete basic tasks—creating resources, configuring settings, testing functionality. But they link extensively to deeper reference material, troubleshooting guides, and architectural best practices for users who need that additional depth.
+So when I was writing about change detection, I had to decide what level of accuracy made the most sense. Should I say: "Let Angular handle it?" That would make the framework more accessible and understandable to new developers. Or do I explain change detection more fully, which would satisfy advanced developers but risk making the framework seem too complicated to adopt?
 
-The principle is simple: accurate enough to be useful, deep enough to be trustworthy, but no deeper than necessary for the immediate task.
+I ultimately decided to go with the first option: explain what change detection was and how Angular handled it for you. Then we planned to write a different topic that provided a deeper dive into how change detection worked. (I left the team before we could turn that topic into a reality.) The idea is that you don't have to be 100% accurate. Instead, you have to be accurate *enough* so the user can use the information you're providing.
 
-## User-Centric Accuracy {#user-centric-accuracy}
+## Accuracy principle #3: Respect the user's journey
 
-Perhaps most importantly, accuracy is inherently user-centric. What counts as accurate depends entirely on who's using the information and what they're trying to accomplish. This seems obvious, but it's one of the most frequently violated principles in technical documentation.
+In the previous section, I describe that, to create content that is accurate, you have to consider the user's knowledge at the time of reading. Another user aspect that you must consider is their journey.
 
-Information that's perfectly accurate for a seasoned developer might be misleading or incomplete for someone new to software development. Consider this statement in API documentation: "Authentication uses standard OAuth 2.0 flow." For an experienced developer, this is accurate and sufficient—they know what OAuth 2.0 is, how it works, and what they need to implement. For a junior developer or someone new to API integration, this statement is technically accurate but practically useless. They need to understand what OAuth 2.0 means, why it's used, and what specific steps they need to take.
+Users read for different reasons. For technical documentation, the most common reason is to do. Users who are reading to do want to get the task done and get back to work. Accuracy, for these users, means content that 100% reflects reality, that's clear, and doesn't require them to make any more decisions than necessary.
 
-The same technical detail that's essential context for one audience might be distracting noise for another. A system administrator needs to know about memory usage patterns when configuring a server. An end user of the application running on that server doesn't need that information—it would just create unnecessary anxiety about performance.
+Another reason users read is to discover. Readers in this mindset may not have a specific task they want to accomplish. They have an idea, or they're vetting an approach. These users often want more options, so they can weigh the pros and cons and make an informed decision.
 
-This user-centric view of accuracy explains why so much technically correct documentation fails to help users accomplish their goals. The information is accurate in an abstract sense, but it's not accurate for the specific person trying to use it in a specific context.
+Senior team members often read to influence. These are your principal engineers, your senior architects, who aren't looking for step-by-step instructions but instead are looking at how to make thoughtful decisions about how the systems are built.
 
-I learned this lesson the hard way early in my career. I was documenting a complex enterprise software system, and I prided myself on getting every technical detail exactly right. The engineering team praised the documentation for its technical accuracy. But user support was still overwhelmed with questions that seemed like they should have been answered in the docs.
+Lastly, a fourth reason users read is to direct. This group is often your managers, your leadership teams, who need enough information to guide their organizations in a direction that aligns with their business goals.
 
-The problem wasn't that the documentation was inaccurate—it was that it was accurate for the wrong audience. I had optimized for technical precision rather than user success. The documentation answered questions that engineers had about the system, not questions that users had about accomplishing their work.
+As you can imagine, accuracy means something different for each of these groups. That's okay—but it means you need to understand the user journey your content is enabling so you can calibrate your definition of accuracy accordingly.
 
-This means accuracy isn't just about getting the facts right—it's about getting the right facts for the right audience. It's about understanding not just what is true, but what truths matter to the people who will use this information.
+## Questions list: accuracy
 
-Consider the difference between these two accurate descriptions of the same software feature:
+When you understand the state of your product, when you respect your users' knowledge, and when you understand the journey that user is on, you can start thinking about what accuracy means for your content. When I reach this stage, I usually ask myself these questions:
 
-Engineer-accurate: "The system implements exponential backoff with jitter for retry logic, starting with a 1-second delay and doubling until reaching a maximum of 30 seconds, with randomization to prevent thundering herd scenarios."
+* Are API names used correctly?
+* Do code examples function correctly and follow current best practices?
+* Is the depth of detail appropriate for the intended audience?
+* Are all steps accurate and complete?
+* Is the intended result of the task clearly stated and verifiable?
+* Are terms defined clearly and at an appropriate level of detail?
+* Are concepts explained with sufficient context?
+* Is alternate text for graphics comprehensive enough to stand alone?
+* Are all claims and statements backed by current data/research?
 
-User-accurate: "If your upload fails, the system will automatically retry several times with increasing delays between attempts. You don't need to manually retry—just wait and the system will handle it."
-
-Both statements are factually correct. But they're accurate for completely different audiences and use cases. The first is accurate for someone who needs to understand the implementation (perhaps to configure it or troubleshoot it). The second is accurate for someone who just needs to know what to expect when using the feature.
-
-The best documentation often includes both levels of accuracy, but clearly separated and targeted. The user-facing explanation focuses on what the user needs to know to be successful. The implementation details are available for users who need that deeper understanding, but they don't get in the way of users who don't.
-
-## Managing Accuracy in Practice {#managing-accuracy-in-practice}
-
-Understanding these principles is one thing; implementing them in real organizations with real constraints is another. The most effective approach I've found is to create what I call a "content accuracy hierarchy" that aligns with how users actually discover and consume information.
-
-The foundation of this hierarchy is focusing canonical documentation on what's established and working reliably. This is your official documentation—the content that appears in your main doc site, gets linked from your product interface, and represents what your company officially supports.
-
-For this canonical content, accuracy standards should be high but strategically focused. Document the scenarios you want users to succeed with. Be precise about the features that are stable and supported. Don't hedge or equivocate about functionality that works reliably.
-
-But what about newer or experimental features? What about edge cases that might work but aren't fully supported? This is where the hierarchy becomes crucial.
-
-Let blog posts, developer advocates, community content, and experimental documentation explore the cutting edge. These content types have different expectations and allow for more uncertainty. A blog post titled "Exploring Advanced Use Cases with \[Product X\]" signals that readers are venturing into less certain territory. A developer advocate's conference talk about "bleeding edge features" sets appropriate expectations about stability and support.
-
-This creates a clear content hierarchy: official documentation represents what the company stands behind, while other content sources can acknowledge uncertainty and explore emerging possibilities.
-
-I've seen this work particularly well at companies like HashiCorp. Their official Terraform documentation focuses laser-sharp accuracy on core workflows and stable features. But their blog, community examples, and developer advocate content explores newer providers, experimental features, and complex architectural patterns that might not be ready for official documentation.
-
-When documentation does need to cover less-established scenarios—and sometimes it must—the key is being transparent about the level of support. Users should understand when they're in well-supported territory versus when they're venturing into areas that might change or require troubleshooting.
-
-Some effective ways to signal this:
-
-Clear labeling: "Preview feature," "Beta functionality," "Advanced configuration"
-
-Explicit support statements: "This workflow is supported by our customer success team" versus "This is a community-contributed solution"
-
-Honest limitations: "This integration works well for datasets under 10GB" rather than claiming unlimited scalability
-
-Update commitments: "This documentation is updated with each product release" versus "This guide was last updated in Q2 2023"
-
-The goal isn't to make users feel uncertain about your product. It's to help them make informed decisions about which features to rely on for critical workflows and which ones to experiment with in non-production environments.
-
-## Common Accuracy Pitfalls {#common-accuracy-pitfalls}
-
-Even with these principles in mind, teams still make predictable mistakes when managing accuracy. Here are the patterns I see most often:
-
-The Perfectionist Trap: Teams delay publishing documentation until they can make it "completely accurate." Meanwhile, users struggle with no documentation at all. Remember: accurate documentation about 80% of use cases is infinitely more valuable than perfect documentation that doesn't exist.
-
-The Kitchen Sink Problem: Writers try to document every possible scenario with equal accuracy and detail. This creates overwhelming documents where critical information gets lost among edge cases. Be strategic about what deserves detailed accuracy treatment.
-
-The Oracle Fallacy: Documentation promises more certainty than the product actually provides. This is especially common with AI/ML products, where outcomes are inherently probabilistic. Don't let your documentation make promises your product can't keep.
-
-The Static Mindset: Teams treat accuracy as a one-time achievement rather than an ongoing process. Product features evolve, user needs change, and business priorities shift. Accuracy requires maintenance and updates, not just initial precision.
-
-The Expert Bubble: Subject matter experts review documentation for accuracy, but they're not representative of actual users. What seems accurate and complete to an expert might be confusing or insufficient for someone less familiar with the domain.
-
-## The Business Impact {#the-business-impact}
-
-Companies often struggle with content accuracy because they haven't connected documentation quality to business outcomes. They see accuracy as a "nice to have" rather than a strategic necessity. But inaccurate documentation creates measurable business costs that compound over time.
-
-Increased Support Overhead: Every inaccurate piece of documentation generates support tickets. I've tracked cases where a single misleading sentence in API documentation generated dozens of support requests per week. The cost isn't just the support team's time—it's also the engineering time required to investigate issues that turn out to be documentation problems rather than product problems.
-
-Slower User Adoption: Users who can't trust your documentation will be hesitant to adopt new features or expand their usage of your product. They'll stick with workflows they've already figured out rather than risk encountering more documentation that doesn't match reality. This directly impacts feature adoption metrics and expansion revenue.
-
-Frustrated User Churn: Users who repeatedly encounter inaccurate documentation develop learned helplessness. They stop trusting your content and start looking for alternative solutions. In B2B contexts, this can mean losing entire accounts over documentation quality issues.
-
-Reduced Team Velocity: When internal documentation is inaccurate, your own teams move slower. Engineers waste time trying solutions that don't work. Product managers make decisions based on outdated information. Sales teams make promises that can't be kept. The productivity cost ripples through the entire organization.
-
-But measuring these costs is genuinely difficult, which is why accuracy often gets deprioritized. Unlike feature development, where you can track user engagement and conversion rates, documentation accuracy has indirect and delayed impact that's harder to quantify.
-
-The companies that do prioritize accuracy have usually learned this lesson through painful experience. They've lost customers, wasted engineering cycles, or missed market opportunities because of documentation problems. The abstract concept of "quality" became concrete when it hit their revenue or their team's productivity.
-
-Some of the contributing factors I see most often:
-
-Feature Shipping Pressure: Teams focus too heavily on shipping features because that's what directly generates revenue. Documentation is seen as overhead rather than an enabler of that revenue. But this creates a false economy—rushed documentation often costs more in support and user confusion than it saves in development time.
-
-Measurement Challenges: It's very difficult to test the effectiveness of documentation in traditional product metrics. How do you know if people are using your documentation effectively? How do you measure the counterfactual—the support tickets that didn't happen because documentation was accurate? The business impact is real but often invisible to standard analytics.
-
-Technical Depth Mismatches: Technical writers aren't always technical enough to properly assess accuracy, especially for complex developer tools or enterprise software. Some writers would bristle at me saying this, but it's true and it's important. You can't accurately document what you don't understand. This doesn't mean every technical writer needs to be a software engineer, but there needs to be sufficient technical depth somewhere in the content creation process.
-
-The most successful teams I've worked with address these challenges head-on. They've found ways to measure documentation effectiveness (user success rates, support ticket categorization, onboarding completion metrics). They've invested in technical writers who can engage meaningfully with the products they're documenting. And they've connected documentation quality to business metrics that leadership cares about.
-
-## Building Sustainable Accuracy {#building-sustainable-accuracy}
-
-The goal isn't perfect accuracy—it's sustainable accuracy that serves your users and your business over time. This requires systems and processes, not just individual effort.
-
-Establish Update Cycles: Different types of content need different accuracy maintenance schedules. API reference documentation might need updates with every release. Conceptual guides might be reviewed quarterly. Getting-started tutorials might need monthly verification. Don't treat all content the same way.
-
-Create Feedback Loops: Build mechanisms for users to report accuracy problems, and more importantly, build processes for acting on that feedback quickly. A "report an issue" link that goes into a black hole is worse than no feedback mechanism at all.
-
-Involve the Right People: Subject matter experts should review content for technical accuracy, but they shouldn't be the only reviewers. Include people who represent your actual user base in the review process. Their confusion often reveals accuracy problems that experts miss.
-
-Design for Change: Accept that your product will change and design your documentation processes accordingly. This might mean focusing on principles rather than specific UI elements, or creating modular content that can be updated independently.
-
-Track What Matters: Identify the business metrics that documentation accuracy affects—support ticket volume, feature adoption rates, user onboarding success—and track them over time. When you can connect documentation improvements to business outcomes, it becomes easier to justify continued investment.
-
-The companies that achieve sustainable accuracy treat it as a product capability, not a content problem. They build systems, processes, and cultures that support ongoing accuracy rather than hoping it will emerge from individual effort and good intentions.
+You may not need all of these questions, or you may add a few of your own, but these questions are starting point for understanding how accurate your content is.

@@ -47,3 +47,18 @@ At first, I wasn't sure I understood the difference between the two. If content 
 What I did come to understand is this: these characteristics, whether alone or in combination, do not provide a definitive answer regarding the quality of your content. Instead, what they do is provide signposts, lighted pathways, that encourage you to explore that characteristic in more detail. If your content seems to fall short when it comes to accuracy, that doesn't necessarily mean the content is inaccurate. It means that accuracy is something you should research further. Perhaps the content is accurate, but for the wrong type of user. Perhaps the code examples are correct, but the explanations of that code are wrong.
 
 In other words, these characteristics allow you to start your journey. And, in my opinion, that's enough.
+
+## A quick note on how these characteristics intersect
+
+One of my passions in life is Aikido. And in my style, we had a set of principles that we displayed in the front of the dojo:
+
+* Keep one point (your center of balance)
+* Relax
+* Positive mind
+* Correct posture
+
+This isn't a book about aikido, so I won't go into these principles in detail. But I bring them up because, when we talked about them in class, we often pointed out that all four of these principles intersect. If you have your center of balance, you were relaxed. You had a positive mindset. And you likely had good posture. On the other hand, if your posture was bad, you probably were holding tension, which meant you weren't relaxed. You probably didn't have a positive mindset, and you probably didn't have your balance.
+
+In other words, if you had one principle, you probably had all four. And if you didn't have one, you probably lacked all of them.
+
+The same is true of this quality characteristics. Each one intersects. What affects accuracy also affects completeness. What impacts conciseness also impacts meaning. And so on. You'll see, as you read through these chapters, that some of my examples could easily be moved to a different characteristic. I'm okay with that; after all, the point here is to build a vocabulary, not create another set of rules.

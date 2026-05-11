@@ -1,5 +1,7 @@
 # Chapter 9: Consistency {#chapter-9:-consistency}
 
+> **Under development:** This chapter is still being written and may have entirely different words in it at any moment.
+
 No single piece of writing exists on its own. Every topic, every document, every help article is part of a larger ecosystem of information that users navigate to accomplish their goals. For users to navigate this ecosystem effectively, we need to think about another aspect of quality: consistency.
 
 Consistency in technical documentation means that users can rely on predictable patterns, terminology, structure, and voice as they move between different pieces of information—whether within a single topic, across a documentation set, or throughout an entire product ecosystem.

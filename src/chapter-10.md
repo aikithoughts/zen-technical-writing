@@ -1,5 +1,7 @@
 # Chapter 10: On Meaning {#chapter-10:-on-meaning}
 
+> **Under development:** This chapter is still being written and may have entirely different words in it at any moment.
+
 For content to have any quality, it has to have meaning for its intended user.
 
 This seems obvious, almost trivially true. Of course documentation needs to be meaningful to users. But meaning in technical writing is more complex and fragile than most people realize. Content can be perfectly accurate, strategically complete, efficiently concise, easily discoverable, and rigorously consistent—and still fail completely if it doesn't connect to what users are actually trying to accomplish.

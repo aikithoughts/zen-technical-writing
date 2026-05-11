@@ -1,5 +1,7 @@
 # Chapter 11: The Quality Trajectory {#chapter-11:-the-quality-trajectory}
 
+> **Under development:** This chapter is still being written and may have entirely different words in it at any moment.
+
 When I interviewed at Google, I was asked the following question:
 
 “We have 6 projects that need to get done. You only have time to do 3 of them. What do you do?”

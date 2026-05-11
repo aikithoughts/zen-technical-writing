@@ -1,5 +1,7 @@
 # Chapter 8: On Discoverability {#chapter-8:-on-discoverability}
 
+> **Under development:** This chapter is still being written and may have entirely different words in it at any moment.
+
 In my twenty-five years of writing technical documentation and thinking about how users actually consume information, there is one metaphor that continues to persist, over and over again: the book metaphor. If you look at any documentation set, they all have a left navigation that outlines the contents of the documentation just like you would with a book. There's an introduction, a number of chapters organized in logical sequence, and an underlying assumption—whether acknowledged or not—that users will read the content in that order, from start to finish.
 
 That's not how people read technical documentation.

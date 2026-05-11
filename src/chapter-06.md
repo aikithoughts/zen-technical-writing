@@ -1,5 +1,7 @@
 # Chapter 6: On Completeness {#chapter-6:-on-completeness}
 
+> **Under development:** This chapter is still being written and may have entirely different words in it at any moment.
+
 Ask most technical writers what makes documentation complete, and they'll give you a laundry list: comprehensive feature coverage, exhaustive API references, detailed troubleshooting guides, multiple examples for every use case. This approach treats completeness as an inventory problem—if you document everything that exists, you've achieved completeness.
 
 But this misses the fundamental question: complete for whom, and for what purpose?

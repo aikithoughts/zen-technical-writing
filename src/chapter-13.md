@@ -1,5 +1,7 @@
 # Chapter 13: AI and the Future of Technical Writing {#chapter-13:-ai-and-the-future-of-technical-writing}
 
+> **Under development:** This chapter is still being written and may have entirely different words in it at any moment.
+
 I have a small confession: I'm excited about AI's role in technical writing. Not because I think it will replace technical writers—quite the opposite. I think AI will free us to focus on the content that truly matters, the content that makes users think "that's really cool."
 
 For decades, technical writers have been buried under the sheer volume of necessary but routine documentation. Every API needs reference docs. Every feature needs a how-to guide. Every product needs a quickstart. This essential content consumes enormous amounts of time and energy, leaving little capacity for the kind of writing that genuinely transforms user experiences.

@@ -1,5 +1,7 @@
 # Chapter 7: On Conciseness {#chapter-7:-on-conciseness}
 
+> **Under development:** This chapter is still being written and may have entirely different words in it at any moment.
+
 When most people think about conciseness in technical writing, they imagine it as a simple editing exercise: cut unnecessary words, shorten sentences, eliminate redundancy. This approach treats conciseness as purely about brevity—fewer words equals better writing.
 
 But conciseness isn't just about using fewer words. It's about conveying your meaning with the fewest words possible while still achieving your communication goals. And those goals extend far beyond just transmitting information—they include building trust, maintaining engagement, and respecting your reader's time and cognitive load.

@@ -38,7 +38,7 @@ It's a lot like testing code. What tests are important, what tests are trivial? 
 
 ## Where completeness goes wrong
 
-Completeness is very closely tied with another characteristic: consistency. And that's for a very simple reason. It's rare for content to be consistently complete. Too often, the easily-explained is documented fully, and the harder to explain is documented more shallowly. That happened with Angular. The easy things to explain [Claude: TODO, name them, e.g., components, templates, data binding] were documented in full. Many of the harder things to explain, like change detection or content projection, were documented lightly or not at all.
+Completeness is very closely tied with another characteristic: consistency. And that's for a very simple reason. It's rare for content to be consistently complete. Too often, the easily-explained is documented fully, and the harder to explain is documented more shallowly. That happened with Angular. The easy things to explain, like components, templates, data binding, event binding, and directives, were documented in full. Many of the harder things to explain, like change detection or content projection, were documented lightly or not at all.
 
 [Claude: Bridge into the old draft's lines, which were yours.]
 
@@ -50,11 +50,9 @@ Then what?
 
 Well, that depends, doesn't it? What kind of business are you? Do you sell goods or services? Are you in the United States or in Europe? What types of things do you sell? What kinds of things do you do? The list is endless, and Stripe can't make those decisions for you. You're on your own. But you don't know what you don't know yet.
 
-Another example: migrating from an on-premises network to AWS. If you just lift and shift your network topology to AWS, you'll be paying a lot more money than you would have otherwise (or, at least, that was true in the early 2000s). [Claude: Fact check. AWS launched EC2 and S3 in 2006, so "the early days of AWS" or "the early 2010s" is probably safer than "early 2000s."] But migrating to AWS meant you have to actually *know* your network and your business. What kind of database system do you need? SQL? NoSQL? Something else? What kind of capacity do you need, and when? AWS can help you get up and running, but it can't tell you which services to use and how to use them effectively.
+Another example: migrating from an on-premises network to AWS. If you just lift and shift your network topology to AWS, you'll be paying a lot more money than you would have otherwise (or, at least, that was true in the 2010s). But migrating to AWS meant you have to actually *know* your network and your business. What kind of database system do you need? SQL? NoSQL? Something else? What kind of capacity do you need, and when? AWS can help you get up and running, but it can't tell you which services to use and how to use them effectively.
 
 That's the content gap. At its worst, it's a case of "this is too hard to explain, so we don't bother."
-
-[Claude: Naming. You called it the "content gap" today; the old draft called it the "content void." Pick one and use it throughout.]
 
 But here's the silver lining: if you haven't documented how to do something users want to do, the users will tell you!
 

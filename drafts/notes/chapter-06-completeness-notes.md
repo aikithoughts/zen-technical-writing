@@ -27,7 +27,7 @@ When I worked on GoogleSQL, there were a lot of nuances. Every function had subt
 
 Completeness is also very closely tied with another characteristic: consistency. And that's for a very simple reason. It's rare for content to be consistently complete. Too often, the easily-explained is documented fully, and the harder to explain is documented more shallowly. That happened with Angular. The easy things to explain were documented in full. Many of the harder things to explain, like change detection or content projection, were documented lightly or not at all.
 
-(To fill in: which Angular basics were well documented. Possibly components, templates, data binding, event binding, directives.)
+(Confirmed by Dave: the well-documented basics were components, templates, data binding, event binding, and directives.)
 
 ## Weighting
 
@@ -61,7 +61,7 @@ Then what?
 
 Well, that depends, doesn't it? What kind of business are you? Do you sell goods or services? Are you in the United States or in Europe? What types of things do you sell? What kinds of things do you do? The list is endless, and Stripe can't make those decisions for you. You're on your own. But you don't know what you don't know yet.
 
-Another example: Migrating from an on-premises network to AWS. If you just lift and shift your network topology to AWS, you'll be paying a lot more money than you would have otherwise (or, at least, that was true in the early 2000s). But migrating to AWS meant you have to actually *know* your network and your business. What kind of database system do you need? SQL? NoSQL? Something else? What kind of capacity do you need, and when? AWS can help you get up and running, but it can't tell you which services to use and how to use them effectively.
+Another example: Migrating from an on-premises network to AWS. If you just lift and shift your network topology to AWS, you'll be paying a lot more money than you would have otherwise (or, at least, that was true in the 2010s). But migrating to AWS meant you have to actually *know* your network and your business. What kind of database system do you need? SQL? NoSQL? Something else? What kind of capacity do you need, and when? AWS can help you get up and running, but it can't tell you which services to use and how to use them effectively.
 
 That's the content gap. At its worse, it's a case of "this is too hard to explain, so we don't bother."
 
@@ -75,3 +75,4 @@ That's the content gap. At its worse, it's a case of "this is too hard to explai
 - The testing analogy will land with engineers: 100% test coverage isn't the goal either; coverage follows the journeys you need to protect.
 - "Deciding on the level of documentation is where you provide your judgment and expertise" echoes Dave's Chapter 12 point (the writer must understand the docs the way an engineer understands the codebase). Judgment may be a through-line of the whole book.
 - "You decide it with every update and every release" connects to Chapter 11's quality trajectory.
+- Decided: use "content gap" (not "content void") throughout the book.

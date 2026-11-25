@@ -32,7 +32,7 @@ Here are the six characteristics that I think help define content quality.
 
 * Meaning: Is the information you're providing relevant and actionable for the reader?
 
-I've listed these characteristics with what is basically a "yes/no" question to help define them. But it's important to understand that each one of these characteristics has nuance. Accuracy, for example, is more than just being factually correct. It requires understanding the user where they are in their journey. Someone new to a topic might need greater detail than someone with more experienced. And sometimes, the opposite is true. (I discuss this in more detail in Chapter 5.)
+I've listed these characteristics with what is basically a "yes/no" question to help define them. But it's important to understand that each one of these characteristics has nuance. Accuracy, for example, is more than just being factually correct. It requires understanding the user where they are in their journey. Someone new to a topic might need greater detail than someone with more experience. And sometimes, the opposite is true. (I discuss this in more detail in Chapter 5.)
 
 Completeness, on the other hand, means one thing when you're talking about a tutorial, and quite another when you're talking about an API reference. (I talk about that more in Chapter 6.)
 
@@ -61,4 +61,4 @@ This isn't a book about aikido, so I won't go into these principles in detail. B
 
 In other words, if you had one principle, you probably had all four. And if you didn't have one, you probably lacked all of them.
 
-The same is true of this quality characteristics. Each one intersects. What affects accuracy also affects completeness. What impacts conciseness also impacts meaning. And so on. You'll see, as you read through these chapters, that some of my examples could easily be moved to a different characteristic. I'm okay with that; after all, the point here is to build a vocabulary, not create another set of rules.
+The same is true of these quality characteristics. Each one intersects. What affects accuracy also affects completeness. What impacts conciseness also impacts meaning. And so on. You'll see, as you read through these chapters, that some of my examples could easily be moved to a different characteristic. I'm okay with that; after all, the point here is to build a vocabulary, not create another set of rules.

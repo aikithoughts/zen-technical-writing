@@ -4,7 +4,7 @@ When I think about accuracy, I think about TIMESTAMPS.
 
 Let me explain.
 
-One of the first projects I worked on for Google was documenting a SQL dialect. I didn't know a lot about SQL at the time, except for this famous comic from XCKD and running simple queries such as `SELECT * FROM table;`. But anything is learnable, and I set to work.
+One of the first projects I worked on for Google was documenting a SQL dialect. I didn't know a lot about SQL at the time, except for [this famous comic from XKCD](https://xkcd.com/327/) and running simple queries such as `SELECT * FROM table;`. But anything is learnable, and I set to work.
 
 One of the data formats I needed to document was `TIMESTAMP`. Timestamp represents an absolute point in time, independent of any time zone or convention like daylight saving time. That seems like a pretty simple explanation, but there is a lot of work to make this a reality. There are timezones, conventions like daylight savings time, leap seconds—all sorts of things go into making sure that the timestamp that's stored is correct. Or, to put another way, to make it accurate.
 
@@ -43,9 +43,9 @@ When you think about the accuracy of your content, you need to consider the know
 
 I first started thinking about this principle when I was the lead writer for Angular. Because Angular was an open source project, I had the opportunity to directly engage with members of the community, listening to their experiences and making decisions based on what they shared.
 
-It won't surprise you when I tell you that I found the Angular community incredibly diverse. On one end of the spectrum you had people who had been working with Angular from its very early days, who would regale you of their migration from Angular 1.0 (which became known as AngularJS) and Angular 2.0 (which turned into the Angular in use today). And on the other end of the spectrum we had people who were brand new to software development in general, let alone web development or JavaScript frameworks.
+It won't surprise you when I tell you that I found the Angular community incredibly diverse. On one end of the spectrum you had people who had been working with Angular from its very early days, who would regale you with their migration from Angular 1.0 (which became known as AngularJS) and Angular 2.0 (which turned into the Angular in use today). And on the other end of the spectrum we had people who were brand new to software development in general, let alone web development or JavaScript frameworks.
 
-This diversity is incredible. But it's also means that creating content that's accurate is more difficult than it might first appear. A good example of this challenge is with Angular's change detection. Change detection, as the name implies, is the process in which Angular updates component values in an application. For most Angular developers, the smart thing to do is to let Angular handle change detection on its own. It's simpler and, most of the time, it does the right thing at the right times. 
+This diversity is incredible. But it also means that creating content that's accurate is more difficult than it might first appear. A good example of this challenge is with Angular's change detection. Change detection, as the name implies, is the process in which Angular updates component values in an application. For most Angular developers, the smart thing to do is to let Angular handle change detection on its own. It's simpler and, most of the time, it does the right thing at the right times. 
 
 But not all the time. And for some situations and applications, it makes more sense for the developer to take control of when Angular makes updates. But doing so comes at a cost: at the time I worked on Angular, this decision applied to your entire application. There wasn't a way to tell Angular: handle change detection as you see fit, except in this case.
 
@@ -81,4 +81,4 @@ When you understand the state of your product, when you respect your users' know
 * Is alternate text for graphics comprehensive enough to stand alone?
 * Are all claims and statements backed by current data/research?
 
-You may not need all of these questions, or you may add a few of your own, but these questions are starting point for understanding how accurate your content is.
+You may not need all of these questions, or you may add a few of your own, but these questions are a starting point for understanding how accurate your content is.

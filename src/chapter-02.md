@@ -70,14 +70,4 @@ I was new to the company, so of course I didn't know. "Not a clue," I replied.
 
 Another major experience at Google was when I was the lead writer for Angular. That was when I needed to learn about strategy. The Angular docs were, at that time, an untended garden. It was probably nice at one point, but it was now overgrown and difficult to sift through. I had to advocate for focusing more on strategy—cleaning up outdated docs, deleting unneeded content—instead of constantly chasing new features. I had to learn, again, how to deal with senior leadership who thought their programming expertise automatically made them writing experts. And I needed to do this as a collaborator, not as an adversary.
 
-## The Quest for Quality {#the-quest-for-quality}
-
-There's one more thing about my Google experience that I need to share. It was at Google that I got set on my quest to define and champion content quality. But it wasn't a great experience.
-
-I had gone up for promotion one year, and I was declined. That isn't unusual. But the reason they declined really bothered me. I was told that they were concerned about my writing quality.
-
-Imagine how that feels, as a writer, to be told your writing isn't any good. I was absolutely devastated and more than a little angry. It took me months to get myself back together. When I finally did, I started asking: "What do we mean by content quality?" It turns out, as in Zen and the Art of Motorcycle Maintenance, folks knew quality when they saw it, but couldn't articulate what quality writing was. So I started my own journey to find—at least for me—what quality writing was and how you could define it.
-
-It's funny, but since that moment, my time at Google, and then later Stripe, at startup, and then back at Amazon—where I am now—has all been about answering a question: "How do we define quality content, and how do we ensure that content helps our customers succeed?"
-
-That green pen conversation started me on a career path I never expected. But that promotion feedback at Google started me on something more important: a quest to understand what makes content truly valuable. This book is the culmination of that quest—an attempt to give concrete shape to something we all recognize but struggle to define.
+That green pen conversation started me on a career path I never expected.

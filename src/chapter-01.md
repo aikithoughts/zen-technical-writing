@@ -2,7 +2,7 @@
 
 In a sleepy gated community on the outskirts of Augusta, Georgia, the event of the season is about to take place.
 
-It's a semi-occasional party that my parents throw. They call these parties, soirees, and they usually occur when a particular mood strikes them to do so. Both of my parents are talented musicians. My father, a renowned psychiatrist, has played piano for decades while my stepmother is a vocalist and skilled pianist in her own right. These soirees are often opportunities for my parents to share their considerable skills with select friends and family. The backyard is converted into an outdoor amphitheater. Special guests are invited to perform. The evening usually involves some very talented performances, accompanied by a reasonably polite amount of liquor.
+It's a semi-occasional party that my parents throw. They call these parties soirees, and they usually occur when a particular mood strikes them to do so. Both of my parents are talented musicians. My father, a renowned psychiatrist, has played piano for decades while my stepmother is a vocalist and skilled pianist in her own right. These soirees are often opportunities for my parents to share their considerable skills with select friends and family. The backyard is converted into an outdoor amphitheater. Special guests are invited to perform. The evening usually involves some very talented performances, accompanied by a reasonably polite amount of liquor.
 
 They're a good time.
 

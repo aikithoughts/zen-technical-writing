@@ -1,6 +1,6 @@
 # Chapter 12: The Weighted Rubric {#chapter-12:-the-weighted-rubric}
 
-> **Under development:** This chapter is still being written and may have entirely different words in it at any moment.
+> **Early draft:** This chapter is still being written and may change.
 
 One of my pet peeves around technical writing relates to the challenges around when you should engage with a technical writer, or even think about technical documentation. Often, when I bring this matter up, folks rightfully assume its because I’m annoyed that, once again, documentation has been left to the very last minute. I admit that’s annoying—but it’s a situation that can happen to a lot of engineering-adjacent disciplines. But what makes this a pet peeve for me is that we—technical writers—haven’t done a great job of explaining to teams when they should think about their project’s documentation.
 

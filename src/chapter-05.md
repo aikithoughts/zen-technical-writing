@@ -4,7 +4,7 @@ When I think about accuracy, I think about TIMESTAMPS.
 
 Let me explain.
 
-One of the first projects I worked on for Google was documenting a SQL dialect. I didn't know a lot about SQL at the time, except for this famous comic from XKCD and running simple queries such as `SELECT * FROM table;`. But anything is learnable, and I set to work.
+One of the first projects I worked on for Google was documenting a SQL dialect. I didn't know a lot about SQL at the time, except for [this famous comic from XKCD](https://xkcd.com/327/) and running simple queries such as `SELECT * FROM table;`. But anything is learnable, and I set to work.
 
 One of the data formats I needed to document was `TIMESTAMP`. Timestamp represents an absolute point in time, independent of any time zone or convention like daylight saving time. That seems like a pretty simple explanation, but there is a lot of work to make this a reality. There are timezones, conventions like daylight savings time, leap seconds—all sorts of things go into making sure that the timestamp that's stored is correct. Or, to put another way, to make it accurate.
 

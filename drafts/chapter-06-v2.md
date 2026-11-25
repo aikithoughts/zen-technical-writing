@@ -18,7 +18,7 @@ I think about this story when I think about completeness. Granted, the story is 
 
 ## Complete doesn't mean exhaustive
 
-When I worked on GoogleSQL, I remember thinking how complicated all of it was. Remember TIMESTAMP back in Chapter 5? That was just the tip of the iceberg! Every function had subtle nuances that could impact its behavior. But, 99.99% of the time, those nuances never came about. If I had tried to document everything to that level of completeness, I'd have ended up wasting a lot of time, writing about things that would rarely become relevant. That's true in a lot of cases: to document something fully almost means writing to distraction. That doesn't mean you shouldn't write about them. It means that you need to prioritize completeness correctly.
+When I worked on GoogleSQL, I remember thinking how complicated all of it was. Remember TIMESTAMP back in Chapter 5? That was just the tip of the iceberg! Every function had subtle nuances that could impact its behavior. But, 99.99% of the time, those nuances never came about. If I had tried to document everything to that level of completeness, I'd have ended up wasting a lot of time, writing about things that would rarely become relevant. That's true in a lot of cases: to document something fully almost means writing to distraction.
 
 ## Outstanding, Good, and Fair
 
@@ -30,7 +30,9 @@ At Microsoft, working on Windows meant working on something vast. Fully document
 
 Here's the thing: you don't WANT everything documented at the Outstanding level. It's a waste of time. If I have a function, `returnTimeSinceEpochInMillisecondsAsDouble`, I don't need a full description and example of what this function does. It's all right there. With this method, we could review the API and then decide which classes, properties, and methods needed to be at which level, and we could determine overall what percentage of our API reference should be in each category.
 
-## Deciding what level of completeness you need
+## Prioritizing completeness
+
+None of this means you shouldn't write about the nuances. It means that you need to prioritize completeness correctly.
 
 That's where things get interesting. You have to really think about the purpose of the content.
 

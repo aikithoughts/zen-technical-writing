@@ -2,7 +2,7 @@
 
 > **About this draft:** Everything here is Dave's own words from our 2026-11-25 conversation, rearranged into chapter order. Anything in [square brackets] was added by Claude as connective tissue or a note: rewrite it, keep it, or cut it. Nothing here has been published.
 
-[Claude: Opening suggestion. Start with the interview story, the same way Chapter 5 starts with TIMESTAMP.]
+When it comes to quality in technical writing, completeness matters. But knowing what completeness means matters even more.
 
 When I was interviewing to become a curriculum developer at Amazon (a brief foray into a world outside of technical writing), one of my interviewers asked me: "Are you an expert in cloud technologies?"
 

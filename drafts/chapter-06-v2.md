@@ -18,7 +18,7 @@ I think about this story when I think about completeness. Granted, the story is 
 
 ## Complete doesn't mean exhaustive
 
-When I worked on GoogleSQL, there were a lot of nuances. [Claude: This is the same project as the TIMESTAMP story in Chapter 5. Consider a callback, e.g., "Remember TIMESTAMP?"] Every function had subtle nuances that could impact its behavior. But, 99.99% of the time, those nuances never came about. So when you document to that level of completeness, you end up wasting time, writing about things that will rarely be relevant. That doesn't mean you shouldn't write about them. It means that you need to prioritize completeness correctly.
+When I worked on GoogleSQL, I remember thinking how complicated all of it was. Remember TIMESTAMP back in Chapter 5? That was just the tip of the iceberg! Every function had subtle nuances that could impact its behavior. But, 99.99% of the time, those nuances never came about. So when you document to that level of completeness, you end up wasting time, writing about things that will rarely be relevant. That doesn't mean you shouldn't write about them. It means that you need to prioritize completeness correctly.
 
 ## Outstanding, Good, and Fair
 

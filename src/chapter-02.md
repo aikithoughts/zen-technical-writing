@@ -78,6 +78,6 @@ I had gone up for promotion one year, and I was declined. That isn't unusual. Bu
 
 Imagine how that feels, as a writer, to be told your writing isn't any good. I was absolutely devastated and more than a little angry. It took me months to get myself back together. When I finally did, I started asking: "What do we mean by content quality?" It turns out, as in Zen and the Art of Motorcycle Maintenance, folks knew quality when they saw it, but couldn't articulate what quality writing was. So I started my own journey to find—at least for me—what quality writing was and how you could define it.
 
-It's funny, but since that moment, my time at Google, and then later Stripe, at startup, and then back at Amazon—where I am now—has all been about answering a question: "How do we define quality content, and how do we ensure that content helps our customers succeed?"
+It's funny, but since that moment, my time at Google, and then later Stripe, a startup, and then back at Amazon—where I am now—has all been about answering a question: "How do we define quality content, and how do we ensure that content helps our customers succeed?"
 
 That green pen conversation started me on a career path I never expected. But that promotion feedback at Google started me on something more important: a quest to understand what makes content truly valuable. This book is the culmination of that quest—an attempt to give concrete shape to something we all recognize but struggle to define.

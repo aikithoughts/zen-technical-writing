@@ -1,6 +1,6 @@
 # Chapter 11: The Quality Trajectory {#chapter-11:-the-quality-trajectory}
 
-> **Under development:** This chapter is still being written and may have entirely different words in it at any moment.
+> **Early draft:** This chapter is still being written and may change.
 
 When I interviewed at Google, I was asked the following question:
 
@@ -87,33 +87,6 @@ The good news: for Google Cloud Platform, some of those best practices that were
 
 This boom-and-bust approach to documentation quality is expensive, exhausting, and ultimately inefficient. It’s like only taking your car in for maintenance when the engine breaks down. Sure, you can do it, but regular maintenance would have everyone’s lives a lot easier. (Well, maybe the mechanic is okay with how things are, but that’s taking the analogy too far.)
 
-## Maintaining Upward Trajectory {#maintaining-upward-trajectory}
-
-Think about how a plane stays in the air. The engines don't fire once during takeoff and then shut off. They run continuously throughout the entire flight, providing constant thrust to keep the plane aloft. The moment the engines stop, the plane begins to descend.
-
-Documentation works the same way. You can't achieve quality once and then stop paying attention. Quality requires continuous energy and focus. Every product update, every new feature, every API change affects your documentation's trajectory. If you're not actively maintaining and improving your content, it's decaying—even if you can't see it happening yet.
-
-Maintaining an upward quality trajectory means always thinking about documentation. Is it accurate as the product evolves? Is it complete for the workflows users actually need? Is it still relevant, or has it been superseded by new approaches? Does it maintain consistency with newer content? Does it still connect to what users care about accomplishing?
-
-This is where the six characteristics framework becomes essential for sustainable quality. Each characteristic degrades over time if not maintained:
-
-* **Accuracy drifts** as products evolve. APIs change, features get deprecated, recommended practices shift. Documentation that was perfectly accurate at launch can become misleading or wrong months later.  
-* **Completeness develops gaps** as new features get added. Each product release potentially creates new user workflows that need documentation. The content set that felt complete last quarter may have significant holes today.  
-* **Conciseness suffers** as content accumulates. Teams add new information without removing obsolete content, leading to bloated topics that bury important information under outdated material.  
-* **Discoverability breaks down** as the information architecture strains under content growth. The navigation structure that worked for 50 topics becomes unwieldy with 500 topics.  
-* **Consistency fragments** as different people contribute content over time, especially if standards aren't actively maintained and reinforced.  
-* **Meaning erodes** as the gap between what documentation describes and what users actually need grows wider. Content written for last year's user journeys may not serve this year's use cases.
-
-The solution isn't occasional heroic efforts—it's continuous, sustainable attention to documentation quality. This requires:
-
-* **Partnership with engineering:** Documentation cannot be an afterthought that happens after code is complete. Writers need to be involved in planning conversations, understand what's changing and why, and have time allocated for documentation updates in every release cycle.  
-* **Regular content audits:** Systematically review existing content to identify accuracy problems, completeness gaps, and relevance issues before they compound into crisis-level problems. The rubric from Chapter 12 can help teams assess whether content is ready for production—and whether existing content is still production-ready.  
-* **Deprecation policies:** Just as engineering teams deprecate old code, documentation teams need clear policies for retiring outdated content. Keeping obsolete information around creates confusion and erodes trust.  
-* **Quality gates:** New content should meet the same quality standards as initial documentation. It's tempting to accept lower quality for "just one more feature" when deadlines loom, but each compromise accelerates the decay cycle.  
-* **Investment in foundations:** Sometimes you need to prioritize improving the documentation for existing features over documenting brand new features. Sometimes you need to refactor your information architecture rather than adding more content to a strained structure. These foundational investments maintain trajectory even though they don't produce visible new content.
-
-The goal is to make documentation quality a continuous practice rather than a periodic project. Small, consistent investments in maintenance prevent the decay that leads to crisis-level overhauls.
-
 ## Summing up {#summing-up}
 
-That interview conversation always reminds me that quality is a trajectory, not a fixed state. It reminds me that I need to balance my drive to improve the documentation experience (something that I will always consider to be of high priority) with my understanding that this experience may not always align with my team's objectives. Simultaneously, it is part of my role to ensure that the quality trajectory of our content is always trending up—through continuous attention to the six characteristics, through partnership with engineering, through regular maintenance rather than periodic heroics—making our users' lives better and their efforts more successful.
+That interview conversation always reminds me that quality is a trajectory, not a fixed state. It reminds me that I need to balance my drive to improve the documentation experience (something that I will always consider to be of high priority) with my understanding that this experience may not always align with my team's objectives. Simultaneously, it is part of my role to ensure that the quality trajectory of our content is always trending up.

@@ -53,6 +53,18 @@ It's a lot like testing code. What tests are important, what tests are trivial? 
 
 Another thing that was important. The goal might be to eventually get closer to (but you'll never quite reach) 100. So it's not that you decide a level of completeness once. You decide it with every update and every release.
 
+## Story: Stripe and AWS (where it goes wrong)
+
+There are so many examples here. But let's look at Stripe. Stripe has amazing documentation. But they also have an incredibly broad portfolio. So you onboard at Stripe. You go through the quickstart, you figure out how to accept a payment. You're up and running!
+
+Then what?
+
+Well, that depends, doesn't it? What kind of business are you? Do you sell goods or services? Are you in the United States or in Europe? What types of things do you sell? What kinds of things do you do? The list is endless, and Stripe can't make those decisions for you. You're on your own. But you don't know what you don't know yet.
+
+Another example: Migrating from an on-premises network to AWS. If you just lift and shift your network topology to AWS, you'll be paying a lot more money than you would have otherwise (or, at least, that was true in the early 2000s). But migrating to AWS meant you have to actually *know* your network and your business. What kind of database system do you need? SQL? NoSQL? Something else? What kind of capacity do you need, and when? AWS can help you get up and running, but it can't tell you which services to use and how to use them effectively.
+
+That's the content gap. At its worse, it's a case of "this is too hard to explain, so we don't bother."
+
 ## Claude's observations (not Dave's words)
 
 - Possible opening line / thesis: "We want to be far enough along the path that we can show them the way."

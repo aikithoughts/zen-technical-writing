@@ -69,7 +69,7 @@ That's the content gap. At its worse, it's a case of "this is too hard to explai
 
 - Possible opening line / thesis: "We want to be far enough along the path that we can show them the way."
 - The expertise-vs-empathy idea is the established "curse of knowledge."
-- The "easy things documented fully, hard things thinly" pattern may be the cause of the content void, at the level of a whole doc set. Check with Dave.
+- The "easy things documented fully, hard things thinly" pattern may be the cause of the content gap, at the level of a whole doc set. Check with Dave.
 - OGF is a tiered, deliberate version of "prioritize completeness correctly," and it sets a target mix across the whole reference. It's essentially a weighted rubric applied inside one characteristic, which is a natural bridge to Chapter 12.
 - Chapter 11 also opens with a job-interview story (Google). Consider where each interview story goes.
 - The testing analogy will land with engineers: 100% test coverage isn't the goal either; coverage follows the journeys you need to protect.

@@ -12,7 +12,7 @@ When I was interviewing to become a curriculum developer at Amazon (a brief fora
 
 "I disagree," I said. "Our users expect us to be able to explain to them how they can get their work done. The more we become experts, the further we are from their own journey, and the harder it is for us to empathize with their situation. We don't want to be experts. We want to be far enough along the path that we can show them the way."
 
-I think about this story when I think about completeness. Granted, the story is *really* about expertise, but they're really closely linked. You cannot document something completely without becoming an expert. And the moment you become the expert, you risk alienating those who are just beginning their journey.
+I think about this story when I think about completeness. Granted, the story is *really* about expertise, but they're closely linked. You cannot document something completely without becoming an expert. And the moment you become the expert, you risk alienating those who are just beginning their journey.
 
 [Claude: You may want one sentence here restating the Chapter 4 question for completeness: "Are you providing the information that users need to succeed in their specific workflows?"]
 

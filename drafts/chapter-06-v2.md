@@ -52,11 +52,19 @@ It's a lot like testing code. What tests are important, what tests are trivial? 
 
 Completeness is very closely tied with another characteristic: consistency. And that's for a very simple reason. It's rare for content to be consistently complete. Too often, the easily-explained is documented fully, and the harder to explain is documented more shallowly. That happened with Angular. The easy things to explain, like components, templates, data binding, event binding, and directives, were documented in full. Many of the harder things to explain, like change detection or content projection, were documented lightly or not at all.
 
-[Claude: Bridge into the old draft's lines, which were yours.]
+Teams love to create quickstarts. Teams also love to write deep technical tutorials. But let's be honest about why these two content types are popular.
 
-Teams love to create quickstarts. Teams also love to write deep technical tutorials. But if I'm being honest, they also love writing them because they get to show off. What about the content in between?
+Quickstarts are great because they're easy. They take a few minutes, they have an immediate impact on the user (when they're written well), and so on. Everyone loves to write a good quickstart.
 
-Let's look at Stripe. Stripe has amazing documentation. But they also have an incredibly broad portfolio. So you onboard at Stripe. You go through the quickstart, you figure out how to accept a payment. You're up and running!
+In-depth articles are fun for those who want to show off their expertise. Developer Advocates love these. When I was at Modular, it was common to write some really deep tutorials on how to do inference using Mojo, or something like that. It definitely showed the power of the technology, but also showed off the expertise of the writer.
+
+But what about the content in between?
+
+Writing that content is hard, and usually for one of two reasons: technical complexity of the product and scope of offering. I just mentioned Modular, which is a good example of what happens when your product is complex. Let's look at an example of when the scope of offering is broad.
+
+That'd be Stripe.
+
+Stripe has amazing documentation. But they also have an incredibly broad portfolio. So you onboard at Stripe. You go through the quickstart, you figure out how to accept a payment. You're up and running!
 
 Then what?
 

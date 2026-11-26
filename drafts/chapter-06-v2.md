@@ -36,7 +36,9 @@ Let's look at a more realistic example of where completeness matters. At Microso
 - **Good.** Everything in Fair, but with descriptions. What the intended purpose was for each method, etc.
 - **Outstanding.** Everything in Good, but it includes examples.
 
-Here's the thing: you don't WANT everything documented at the Outstanding level. It's a waste of time. If I have a function, `returnTimeSinceEpochInMillisecondsAsDouble`, I don't need a full description and example of what this function does. It's all right there. With this method, we could review the API and then decide which classes, properties, and methods needed to be at which level, and we could determine overall what percentage of our API reference should be in each category.
+Here's the thing: you don't WANT everything documented at the Outstanding level. It's a waste of time. If I have a function, `returnTimeSinceEpochInMillisecondsAsDouble`, I don't need a full description and example of what this function does. It's all right there. You don't need any more information, and providing that information would waste your time and mine.
+
+The OGF method was really helpful. With it, we could review the API and then decide which classes, properties, and methods needed to be at which level, and we could determine overall what percentage of our API reference should be in each category.
 
 ## Prioritizing completeness
 

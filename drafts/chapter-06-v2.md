@@ -30,7 +30,7 @@ One set of instructions is definitely more complete than the other. But one set 
 
 ## Outstanding, Good, and Fair
 
-At Microsoft, working on Windows meant working on something vast. Fully documenting the API would be a nearly-impossible task. Instead, they developed a system: OGF, which stood for Outstanding, Good, and Fair. This system helped us categorize the API reference:
+Let's look at a more realistic example of where completeness matters. At Microsoft, working on Windows meant working on something vast. Fully documenting the API would be a nearly-impossible task. Instead, they developed a system: OGF, which stood for Outstanding, Good, and Fair. This system helped us categorize the API reference:
 
 - **Fair.** The API is documented at a bare minimum. Classes, methods, and properties are described simply, along with signatures, expected parameters, and so on.
 - **Good.** Everything in Fair, but with descriptions. What the intended purpose was for each method, etc.

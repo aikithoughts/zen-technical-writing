@@ -20,6 +20,14 @@ I think about this story when I think about completeness. Granted, the story is 
 
 When I worked on GoogleSQL, I remember thinking how complicated all of it was. Remember TIMESTAMP back in Chapter 5? That was just the tip of the iceberg! Every function had subtle nuances that could impact its behavior. But, 99.99% of the time, those nuances never came about. If I had tried to document everything to that level of completeness, I'd have ended up wasting a lot of time, writing about things that would rarely become relevant. That's true in a lot of cases: to document something fully almost means writing to distraction.
 
+Let's take a simple example. You need to drive from my house to the store down the road. You ask me: "How do I get there?"
+
+If I want to answer that question fully, I might say: "Back out of my driveway and then go forward until you reach the intersection. Turn left. Accelerate up to 30 miles an hour. You will stop at 2 stop signs and one traffic light—unless the traffic light is green, in which case you can keep going. The store will be on your right, turn into the first driveway and park."
+
+That's a lot of instructions. Or I could just say: "Go to the intersection and turn left. The store will be on your right."
+
+One set of instructions is definitely more complete than the other. But one set takes less time and ultimately is more valuable to the reader. I'll leave it to you to decide which is which.
+
 ## Outstanding, Good, and Fair
 
 At Microsoft, working on Windows meant working on something vast. Fully documenting the API would be a nearly-impossible task. Instead, they developed a system: OGF, which stood for Outstanding, Good, and Fair. This system helped us categorize the API reference:
